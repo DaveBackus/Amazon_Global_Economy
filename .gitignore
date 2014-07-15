@@ -9,10 +9,6 @@
 
 ## Intermediate documents:
 *.dvi
-# these rules might exclude image files for figures etc.
-# *.ps
-# *.eps
-# *.pdf
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
 *.bbl
@@ -24,6 +20,7 @@
 
 ## Build tool auxiliary files:
 *.fdb_latexmk
+*.syntex 
 *.synctex.gz
 *.synctex.gz(busy)
 *.pdfsync
