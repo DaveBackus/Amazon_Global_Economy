@@ -1,0 +1,1020 @@
+\chapter{Macroeconomic Data}\label{chp:macd}
+\hypertarget{data}{}
+
+\textbf{Tools:} GDP; accounting identities; price and quantity indexes.
+
+\textbf{Key Words:} GDP; value added; real; nominal; index; deflator.
+
+\textbf{Big Ideas:}
+\vspace{-0.1in}
+\begin{itemize}
+\item GDP is three things at once:  production (value added by production units),
+income (payments to labor and capital),
+and expenditure (consumption, investment, government spending, net exports).
+%These three concepts are linked through accounting identities.
+\item Current price variables (such as nominal GDP) can be decomposed into measures of price and quantity.
+There are several ways to do this, but none of them are perfect.
+%The two methods to decompose current price variables into changes in prices and quantities are fixed price and %fixed basket price indexes. These two methods are useful, but not without problems.
+\end{itemize}
+\rule{\textwidth}{1pt}
+
+Gross Domestic Product (GDP) is our primary measure of
+macroeconomic performance:  the total value of output produced in
+a particular economy over some period of time (typically a year or
+a quarter). Countries with high GDP per person are said to be
+rich, and those in which GDP has gone down are said to be in
+recessions. But what is GDP and how is it measured?
+We review its definition and construction below.
+Along the way, we also
+note connections among output, income, and expenditures,
+and explain how we separate changes in quantities
+from changes in prices.
+
+The system that produces GDP and related numbers
+is known as the National Income and Product Accounts
+(NIPA).
+The national accounts are analogous to financial statements:
+They give us a picture of an economy,
+just as financial statements give us pictures of firms.
+Similar methods are used in most countries, so the numbers
+are (in principle) comparable.
+
+
+\section{Measuring GDP}
+
+GDP is the total value of goods and services produced in a given region,
+typically a country.
+In the US, for example, GDP was 15,075.1 billion US dollars in 2011:
+15.1 trillion dollars.
+With a population of 312 million (average for the year),
+that amounts to more than \$48,000 per person.
+But where does this number come from?  What does it mean?
+%Is it the value of output or income?  Is a higher number better?
+
+The standard approach to measuring GDP is to add up the value
+produced by every firm or production unit in the economy. The
+question is how we separate value produced by one firm from value
+produced by another in an economy in which the value chain
+typically involves many firms. Walmart, for example, has enormous
+sales, but most of the value is already
+built into products by suppliers. As a concrete example, consider
+a fictional firm that assembles PCs from parts made elsewhere. Its
+only other expense is labor. Let's say that the firm's income
+statement looks like Table \ref{tb:PC1}.
+%
+\begin{table}[b]
+\centering
+\caption{PC assembler's simple income statement.}
+\begin{tabular*}{0.7\textwidth}{l@{\extracolsep{\fill}}r}
+\toprule
+           Sales revenue    &  40,000,000      \\
+\midrule
+           Expenses         &  26,000,000      \\
+  \hspace{0.25in} Wages       &  20,000,000      \\
+  \hspace{0.25in} Cost of goods sold (parts)   &   6,000,000      \\
+\midrule
+\addlinespace
+           Net Income       &   14,000,000\\
+\bottomrule
+\end{tabular*}
+\label{tb:PC1}
+\end{table}
+%
+The question is how we measure this firm's contribution to output.
+The straightforward answer is 40m, the total value of its sales.
+But if we think about this a minute, we realize that 6m of this was
+produced somewhere else, so it shouldn't be counted as part of the
+firm's output. A better answer is 34m, the value the firm has
+added to the parts. That, in fact, is the accepted answer: We base
+GDP on \emph{value added}, not on sales.
+To get GDP for the whole economy, we sum the value added of every production unit.
+
+
+Another way to compute value added is to sum payments to labor and
+capital. In this case, we add 20m paid to workers (labor) to 14m
+net income paid to owners of the firm  (capital). That gives us
+total payments of 34m, the same number we found above using a
+different method. Since this approach is based on the income received by labor and capital,
+we see that the value of production and income are the same.
+More on this in the next section.
+
+Usually, when we compare the GDPs of two countries, we presume
+that the country with the larger GDP produces more in some
+useful sense. But suppose that they produce different goods:
+Country A produces 10 billion apples and country B produces 10
+billion bananas.  Which produces more? We generally assume that if
+apples are worth more than bananas, then country A produces more.
+The idea is that market prices tell us which goods are more valuable,
+apples or bananas. The same idea underlies our measurement of
+value added.
+
+To make this concrete, suppose the 40m sales of
+our fictitious company consists of 20,000 PCs at \$2,000 each. Our
+presumption is that the market price of \$2,000 reflects economic
+value, and we use it as part of our calculation of GDP. In some
+cases, this isn't so obvious. In, say, North Korea, prices do not
+generally reflect market forces, so it's not clear how we would calculate
+economic value.
+There are also some subtle issues in market economies
+about how to value non-market activities, such as
+washing your own clothes, and ``bads,'' such as pollution.
+Typically, neither is valued in the national accounts.
+We don't claim this is right, but it's what we do.
+
+\textbf{Example (salmon value chain)}. A fisherman catches a salmon
+and sells it to a smokehouse for \$5. After smoking it, the
+smokehouse sells it to Gourmet Garage for \$10, which, in turn,
+sells it to a restaurant for \$15. The same restaurant buys
+lettuce from a farmer at Union Square for \$3. The restaurant puts
+the lettuce and salmon together on a plate and sells it to an NYU
+student for \$25. How much does each production unit contribute to
+GDP? What is the overall contribution to GDP?
+
+Answer. The contributions (value added) are \$5 each for the
+fisherman, smokehouse, and Gourmet Garage, \$3 for the farmer, and
+\$7 for the restaurant, for a total of \$25.
+
+Note that we could
+have computed GDP by counting only the value of the final good
+in the value chain. This is true in general: GDP can be
+computed as the total value of final goods produced in the
+economy. Intermediate products (salmon, lettuce, PC parts) must
+then be ignored, as their value shows up at the end of the value
+chain.
+
+We'll finish this section with two subtle issues.
+One is the treatment of government services.
+We generally treat government as a producer of value added
+and measure its output at cost.
+If we pay the mayor \$100,000, that's counted as \$100,000
+of value added whether she does a good job or not.
+The other is that capital expenditures are not treated as
+intermediate inputs.
+Basically, we ignore them when we compute the value added of a firm.
+Why? Because the expense is balanced
+by an equal addition to the firm's value.
+With firms, financial statements do something similar:
+We spread the expense out over time in the form of depreciation.
+Here, we measure output gross of depreciation, so we ignore
+capital expenditures altogether as expense.
+It sounds a little strange, but that's what the national income
+and product accounts do.
+
+
+\section{Identities}
+
+
+Since every transaction has both a buyer and a seller, we can
+often approach any measurement problem from (at least) two directions.
+This gives rise to {\it identities\/}:
+relations that hold as a matter of accounting truth.
+They do not depend on any particular economic theory
+and, for that reason, are extremely useful.
+
+
+\textbf{Income (Gross Domestic Product = Gross Domestic Income)}.
+We've seen the first identity already:
+output and income are equal.
+%The point is (roughly) that one person's revenues are another's expense.
+Let's go back to our PC assembler to see this in action, adding a
+few things to make the example more realistic.
+In Table \ref{tb:PC2} we add two new expenses, interest and depreciation.
+These categories are counted as capital income.
+\begin{table}
+\centering
+\caption{PC assembler's complicated income statement.}
+\begin{tabular*}{0.7\textwidth}{ l@{\extracolsep{\fill}}r} %\hline
+\toprule
+                    Sales revenue      &40,000,000         \\
+\midrule %                                                        &  \\
+                    Expenses           &32,000,000         \\
+%                                                        &  \\
+         \hspace{0.25in} Wages         &20,000,000         \\
+         \hspace{0.25in} Cost of goods sold \hspace{0.25in}         & 6,000,000         \\
+         \hspace{0.25in} Interest      & 2,000,000         \\
+         \hspace{0.25in} Depreciation  & 4,000,000         \\
+  \midrule
+                    Net income         & 8,000,000\\
+          \bottomrule
+\end{tabular*}
+\label{tb:PC2}
+\end{table}
+In the previous section, we computed (its contribution to) GDP as value added of 34m.
+Here, we compute GDI (I for Income) from payments to labor (20m)
+and capital (14m).
+Capital payments include the net income paid to owners of the firm,
+interest income paid to the debt holders, and depreciation.
+Adding labor income and capital income, we arrive at GDI of 34m.
+The answer, of course, is the same.
+
+Since we include depreciation in our measures of output and income,
+we refer to them as \textit{gross} --- gross of depreciation.
+In principle, we could compute Net Domestic Product
+by subtracting depreciation, but most people stick with GDP because
+economic depreciation (as opposed to what shows up on financial
+statements and tax returns) is difficult to measure.
+
+
+The national income and product accounts do this at the aggregate level:
+namely, measure output by adding up payments to inputs.
+By construction, then, output and income are the same.
+To give you a sense of real numbers look like, we report
+the income for the US economy  in Table \ref{tb:US-GDI}.
+The statistical discrepancy is a reminder that the measurement
+system isn't perfect.
+
+\begin{table}[h!]
+\centering
+\caption{Income components of US GDP.}
+\label{tb:US-GDI}
+\begin{tabular*}{0.7\textwidth} {l@{\extracolsep{\fill}}r}
+\toprule
+        Compensation of employees \hspace{0.2in}   &8,303.2\\
+        Proprietor's income          &1,157.3 \\
+        Corporate profits            &1,388.1 \\
+        Rental income                &409.7\\
+        Net Interest income          &706.4\\
+        Taxes and miscellaneous     &1,142.3 \\
+        Depreciation                 & 1,936.8 \\
+     \midrule
+        Gross Domestic Income              &15,043.8 \\
+        \addlinespace
+        Statistical Discrepancy            &31.9                 \\
+            \bottomrule
+\end{tabular*}
+\begin{minipage}{0.7\textwidth}
+\footnotesize{%
+\smallskip
+The numbers are for 2011, billions of US dollars,
+from the BEA's
+\href{http://www.bea.gov/iTable/iTableHtml.cfm?reqid=9&step=3&isuri=1&903=51}{NIPA Table 1.10}.
+}
+\end{minipage}
+\end{table}
+
+
+\textbf{Expenditures (Gross Domestic Product = Gross Domestic Expenditure)}.
+Our second identity comes from the perspective of expenditures on final goods---the last stage in the value chain.
+We distinguish both who buys them (consumers, firms, governments, or foreigners)
+and whether they are consumption or investment.
+% in new plant and equipment
+%(what accountants refer to as capital expenditures or CAPEX).
+The most common decomposition
+of this sort is: GDP equals consumer expenditures $C$ by households
+plus business and residential investment $I$
+plus government purchases of goods and services $G$
+plus net exports \NX; in more compact notation,
+\begin{eqnarray}
+    Y &=& C+I+G+\NX .
+    \label{eq:exp-identity}
+\end{eqnarray}
+We refer to this as the {\it expenditure identity\/}.
+On the left, $Y$ is the letter we use for GDP.
+(It's not clear where the letter $Y$ comes from, but we follow a long tradition in using it this way.)
+On the right are the expenditure components of GDP.
+The point is that the two are equal:
+Everything that's produced is sold --- to someone.
+(And if it's not sold, we call it an addition to inventories
+and include it in $I$.
+The idea is that firms produce the output and sell it to themselves.)
+
+
+We refer to $C$ as (personal or household) consumption.
+Investment ($I$) is primarily accumulation of physical capital by firms:
+purchases of new buildings and machines, plant and equipment in
+the language of national income accountants (two-thirds of the
+famous PPE and capex of financial accounting). It also includes new housing construction.
+In some sources, the sum of construction outlays and spending on equipment and software is referred to as ``gross fixed capital formation.''
+Investment also includes, as noted, additions to the stock of inventories,
+a category that is small, on average, but highly variable.
+
+
+Government purchases $G$ consist of spending on goods and
+services (mainly wages) for both consumption and investment purposes.
+They do not include government outlays
+for social security, unemployment insurance, or medical care.
+We think of them, instead, as transfers since no goods or
+services are involved.
+It also omits interest payments on government debt, which we track separately.
+Net exports ($\NX$) are exports minus imports: the trade balance, in other words.
+
+Some recent numbers for the US are reported in Table \ref{tb:gdp_exp}.
+
+\begin{table}[h!]
+\centering
+\caption{Expenditure components of US GDP.}
+\label{tb:gdp_exp}
+\begin{tabular*}{0.95\textwidth}{l@{\extracolsep{\fill}}rrr}
+\toprule
+                                        &        & \$ billions & Percent of GDP\\%
+                      \midrule
+Consumption                             & 10,729.0 &              & 69.3         \\%
+\hspace{.5cm}Durable goods              &         & 1,146.4        &                \\%
+\hspace{.5cm}Nondurable goods           &         & 2,478.4     &                \\%
+\hspace{.5cm}Services                   &         & 7,104.2     &                \\%
+Gross private  investment       & 1,854.9 &              & 15.7         \\%
+\hspace{.5cm}Nonresidential             &         & 1,479.6      &                \\%
+\hspace{.5cm}Residential                &         & 338.7        &                \\%
+\hspace{.5cm}Change in inventories      &         & 36.6      &                \\%
+Government consumption                  & 3,059.8 &              &18.4          \\%
+Net exports of goods \& services       & --498.1 &              &--3.4          \\%
+\hspace{.5cm}Exports                    &         & 2,094.2      &10.3          \\%
+\hspace{.5cm}Imports                    &         & 2,662.3      &13.7          \\%
+%                                        &        &              &                \\%
+\midrule
+Gross domestic product                   &15,075.7&              &100.0          \\%
+
+%                                        &        &             &                \\%
+%Net Factor Income  from abroad          &21.9    &             &                \\%
+%                                       &        &             &                \\%
+%$\GNP$                                  &10,104.1&             &                \\%
+\bottomrule
+\end{tabular*}
+\begin{minipage}{0.95\textwidth}
+\footnotesize{%
+\smallskip
+The numbers are for 2011, billions of US dollars,
+from the BEA's
+\href{http://www.bea.gov/iTable/iTableHtml.cfm?reqid=9&step=3&isuri=1&903=5}{NIPA Table 1.1.5}.
+}
+\end{minipage}
+\end{table}
+
+
+
+\textbf{Flows of funds.} The expenditure identity follows the goods, but you can also follow
+the ``money'' (the financial funds) that goes along with the goods.
+For households, you might think about how income compares to consumption.
+If it's higher, we call what's left saving, which is a source of funds
+that can be used by others.
+We might also think about how firms finance investment in new plant and equipment.
+They might, for example, raise funds in capital markets from households.
+
+
+Let's be specific.
+We'll look at two similar relations, both based on the expenditure
+identity.
+One is
+\begin{eqnarray}
+           S &=& Y-C-G  \;=\;  I + \mbox{\em NX},
+\end{eqnarray}
+where $S$ is (gross domestic) saving.
+%You might think about how to derive this from the expenditure identity.
+This is a consolidated measure of saving in which we subtract
+both household and government expenditures from income.
+It's also a gross measure since income (GDP) includes depreciation.
+Investment is also gross, so the two sides of the relation balance.
+The other relation separates household and government activities:
+$$
+                         S_p + S_g \;\equiv\; (Y-T-C) + (T-G)
+                            \;=\;  I + \mbox{\em NX},
+$$
+where $T$ is taxes collected by the government net of transfer
+payments and interest,
+$S_p = Y-T-C$ is (gross) private saving; and
+$S_g = T-G$ is government ``saving''
+(the negative of the government deficit).
+Clearly, $S_p$ and $S_g$ are two components of national saving $S$.
+Most countries report a further breakdown of saving by
+households, governments, and firms, but this will be enough for us.
+
+
+We refer to both versions as {\it flow of funds identities\/}.
+What do they tell us?
+Roughly speaking, the left side is a source of funds and the right a use
+of funds, and sources and uses balance.
+In the first version, saving is a source of funds that can be used
+to purchase corporate securities
+(which finance firms' new investment in plant and equipment)
+or foreign securities (which finance a trade deficit by the rest of the world
+ if $ \mbox{\em NX\/} $ is positive).
+If net exports are negative, it's the reverse, of course:
+We sell securities to the rest of the world, which is then a source of funds.
+In the second version, household saving can also be used to purchase government securities
+(if government saving is negative).
+% ?? help!
+
+\textbf{Example (PC assembler, continued)}.
+Suppose that 10m of the 40m in sales are sold abroad.
+If this is the only firm in the economy, what are $Y$, $\NX$, $C$, and $S$?
+Assume that investment and the government deficit are zero.
+
+
+Answer.  GDP remains 34m:  production hasn't changed.
+Net exports equal exports (10m) minus imports (6m) or 4m.
+With no investment or government deficit, the 30m of local sales must be consumption.
+Saving is, therefore, 4m = 34m -- 30m (income minus consumption).
+The flow-of-funds identity then tells us that saving of 4m is used to purchase 4m
+in foreign securities. Stated differently, the rest of the world (everyone but us) must have a trade deficit
+of 4m, which they finance by borrowing from us (the saving we mentioned).
+
+
+\section{Distinguishing prices from quantities}
+
+
+You'll see various versions of the terms {\it real\/} and {\it nominal\/} GDP.
+Nominal GDP measures output in dollars (or local currency units),
+and real GDP measures the quantity of output once overall changes in prices have been
+(somehow) taken out.
+A {\it price index\/} or {\it deflator\/} is a measure of the
+overall level of prices --- what we call the {\it price level\/}.
+If the price level rises over time, we say that the economy experiences
+inflation; if the price level decreases, the economy experiences
+deflation.
+
+The question for this section is how we separate changes in quantities
+(real GDP growth) from changes in prices (inflation).
+The former is good (we have more stuff), but the latter is bad (prices are going up),
+so it makes some difference to us which we have.
+Like sales,
+GDP and related objects are values: products of price and quantity.
+You might well ask:  How much of a change in value is a change
+in quantity, and how much a change in price?
+With one product, the answer is easy.
+With more than one, you need to average the prices or quantities somehow,
+and (sad to say) there's no obvious best way to do this.
+There are, instead, many ways to do it, and they give us
+different answers.
+We'll charge ahead anyway, but it's something to keep in mind.
+
+% ?? symmetry of prices and quantities
+
+One difficulty in separating prices and quantities
+is that prices of specific products change in different ways, and it's not clear how to
+average them to get a measure of ``overall'' prices. Two sensible
+approaches, known as fixed-basket and fixed-weight, respectively,
+give different answers. In practice, this isn't a huge problem (the
+answers usually aren't much different), but it adds another
+element of fuzziness to macroeconomic data. The issue is that the
+economy has many goods and services whose prices and quantities
+change by different amounts over time. If all prices rose by ten percent
+between last year and this year, we would say that inflation is ten percent and
+divide this year's nominal output by 1.10 to get real output. But
+when prices of different products change by different amounts,
+things aren't that easy.
+
+The Consumer Price Index (CPI) is
+based on a fixed-basket approach which measures the change in the
+price level as the change in the total cost of a given basket of
+products (two quarts of milk, one hamburger, five newspapers,
+etc). The difficulty here is that people change what they consume
+over time, partly in response to price changes and partly because
+tastes and products change. Should we use last year's typical
+basket or this year's? The GDP deflator is based on a
+fixed-weight approach, and is constructed in two steps. We first
+compute a measure of real GDP by evaluating (typically
+different) expenditure quantities at constant prices. The price
+deflator is then the ratio of nominal to real GDP. The
+difficulty is, again, that prices change over time. So, should we use
+last year's prices or this year's?
+
+\textbf{Fixed-basket approach}. The CPI indicates the change in
+the total cost of a basket of goods and services that is
+representative of a typical household's spending habits at a given
+date. Such a basket might include, say, five gallons of gasoline,
+one haircut, two pounds of chicken, three bottles of soda, and so
+on. Government statistical agencies do this by sending people to
+stores to check the prices of all the products in the basket. The
+CPI is the cost of the whole basket, normalized to equal 100 at
+some date. It's the same idea, really, as the Dow Jones Industrial
+Average or the S\&P 500. Producer price indexes apply a similar
+methodology to goods purchased by firms.  An example shows how the
+fixed-basket approach works.
+
+\textbf{Example (fish and chips).} Consider an economy with two
+goods, fish and chips. At date 1, we produce 10 fish and 10 chips.
+Fish sell for 25 cents and chips for 50 cents. At date 2, the
+prices of fish and chips have risen to 50 cents and 75 cents,
+respectively. The quantities have changed to 8 and 12. We
+summarize the data in Table \ref{tab:fishdata}.
+%
+\begin{table}[h!]
+\centering
+\caption{Price and quantity data.}
+\begin{tabular*}{0.7\textwidth}{l@{\extracolsep{\fill}}cccc} %\hline
+\toprule
+        &\multicolumn{2}{c}{Chips}             &\multicolumn{2}{c}{Fish} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5}
+Date    & Price  & Quantity & Price & Quantity  \\%
+\midrule
+ 1  & 0.5             & 10                & 0.25          & 10                \\%
+ 2  & 0.75            & 12                & 0.50          &  8                \\%
+\bottomrule
+\end{tabular*}
+\label{tab:fishdata}
+\end{table}
+%
+Note that the two prices have not gone up by the same amount: the
+price of fish has doubled, while chip prices have gone up by only 50
+percent. Another way to say the same thing is that the relative
+price of chips to fish has fallen from 2 ($=.50/.25$) to 1.5
+($=.75/.50$). What is the inflation rate?
+
+\begin{table}[h!]
+\centering
+\caption{Consumer price index computation.}
+\begin{tabular}{cc} %\hline
+\toprule
+Date  & CPI     \\%
+\midrule
+1     & $7.50 = .50\times 10+.25\times 10$     \\%
+2     & $12.50 = .75\times 10+.50\times 10$    \\%
+\bottomrule
+\end{tabular}
+\label{tab:cpi}
+\end{table}
+Answer.  We construct the CPI using date 1 quantities.
+The index is shown in Table \ref{tab:cpi}.
+%
+
+%
+The inflation rate by this measure is $\pi = 12.50/7.50 - 1 = 0.667 = 66.7\%$).
+Since nominal GDP growth is 73.3 percent, real GDP growth is 4 percent:
+%
+$$
+    g_{Y} \;\;=\;\;
+\frac{1+g_{NY}}{1+\pi}-1 \;\;=\;\;
+\frac{1+0.733}{1+0.666}-1 \;\;=\;\; 0.04.
+$$
+%
+By convention, the CPI in the base year (year 1 in this case)
+is normalized to 100. Normalizing is straightforward: Just divide
+all the values of the CPI by its value in the base year and
+multiply by 100. In our example, the index is 100 in year 1 and
+166.7 in year 2.
+
+\textbf{Fixed-weight approach.}
+Price deflators are typically computed from the ratio of GDP
+(or one of its other expenditure components) at current- and base-year prices (these are called
+nominal and real GDP.) Over several periods, this
+fixed-weight approach applies a constant set of prices to changing
+quantities. As before, this is easiest to see in an example.
+
+\textbf{Example (fish and chips, continued).} We compute GDP at current
+prices and date 1 prices in Table \ref{tab:gdp computations}.
+The GDP deflator (the ratio of nominal to real GDP) is 1.0
+in year 1. This is trivial, as nominal and real GDP must
+coincide in the base year. In year 2, the deflator is $ 1.625 =
+13/8 $, implying an inflation rate of 62.5 percent. Note the difference
+from the inflation rate computed with the CPI.
+\begin{table}[!h]
+\centering
+\caption{Nominal and real GDP computation.}
+\begin{tabular}{cccc}
+\toprule
+Date    & Nominal GDP (current prices)    & Real GDP (date 1 prices)        \\%
+        \midrule
+1  & $\$7.50 \;(=.50\times 10+.25\times 10)$   & $\$7.50 \;(=.50\times 10+.25\times 10)$  \\%
+2  & $\$13.00 \;(=.75\times 12+.50\times 8)$   & $\$8.00 \;(=.50\times 12+.25\times 8)$   \\%
+\bottomrule
+\end{tabular}
+\label{tab:gdp computations}
+\end{table}
+In short, different approaches lead to different measures of
+inflation. The conceptual difficulty with both methods is that
+it's not clear how to measure the price level when relative prices
+are changing. What can we do? We content ourselves with the
+knowledge that the differences are typically small and remind
+ourselves that macroeconomic measurement (like financial
+accounting) is as much art as science.
+
+\section{Fine points}
+
+Some other issues you may run across:
+
+\textbf{Causality.}
+You might be tempted to interpret identities as saying that one side of an identity causes the other.
+Don't be.
+For example, you might hear someone say that
+low consumption is causing low output
+(``We need consumers to spend more.'').
+However, the identity says only that if output goes down,
+then so must one or more of its components.
+No causality is implied.
+We could as easily say that consumption falls because output did.
+The point is not that there is no causal connection,
+but that no such connection is built into the identity.
+
+\textbf{Underground economy.}
+Standard GDP figures do not include the value of goods and
+services produced by the so-called ``underground" economy. This
+term generally refers to businesses that are not licensed to
+operate, such as sellers of counterfeit CDs in the streets of
+Bangkok, and businesses evading either income or social security
+taxes, such as Southern Spain's farms employing illegal immigrants
+as day laborers.  Such activity is generally not reported and,
+therefore, does not show up in official statistics. In advanced
+economies such as the US and Japan, the size of the underground
+economy is thought to be small.  But in developing countries, such
+as Peru and Lebanon, it has been estimated to be as large as 50 percent
+of official estimates of GDP.
+
+\textbf{Capital gains.} We've seen that GDP reflects income, but
+there are kinds of income that are not included in GDP. The
+prime example is capital gains. They are part of your income, but
+do not show up in GDP because they do not reflect (at least not
+directly) the production and sale of current output. And since
+they're not in GDP, they're not in saving either.
+One curious result is that net worth can rise even when saving is zero.
+In the US, capital gains are a larger fraction of changes in net worth
+than saving.
+For similar reasons, GDP does not include interest on government debt.
+Why?  Because it isn't a payment
+made for producing goods and services.
+
+
+\textbf{GDP v. GNP.}
+While GDP measures output produced within the borders of a
+given country, Gross National Product (GNP) measures output produced by
+inputs owned by the citizens of that country. For example, to
+compute Bangladesh's GNP, we need to add to GDP the income
+paid to Bangladeshi capital invested abroad and subtract income
+paid to capital installed in Bangladesh but owned by citizens of
+other countries. Similarly, with labor, we need to add the wages
+earned abroad by Bangladeshi people and subtract the wages earned
+in Bangladesh by foreign nationals. Thus, GNP is a measure of
+the income received by ``locally-owned" labor and capital. In most
+countries, the differences between GDP and GNP are small.
+One exception is Ireland, where a large amount of foreign capital
+makes GNP significantly smaller than GDP (by about 20 percent last
+time we looked).
+
+\textbf{Net exports v. current account.} You may hear people refer
+to the US ``current account'' deficit. What are they talking
+about? The current account (we'll label this $\mbox{\it CA\/}$
+later in the course) is net exports (the trade balance) plus net
+receipts of foreign capital and labor income plus miscellaneous
+transfers from abroad. In the US, there's usually little difference, but Ireland is a different story.  We'll generally use the terms
+current account, net exports, and trade balance as synonyms.
+Current account sounds a little cooler and can be used to make
+people believe you're an expert.
+
+
+\textbf{Chain weighting.}
+The US --- and many other countries, too ---
+now uses a method that's somewhere between fixed-weight and fixed-basket methods:  chain-weighting.
+It mitigates some of the problems of applying the same prices over
+long periods of time (when relative prices often change dramatically),
+but doesn't eliminate them.
+If we told you exactly what it is, your eyes would glaze over.
+But trust us, it's an improvement.
+
+\textbf{Prices and quality change.} Many people feel that price
+indexes do not adequately account for increases in product
+quality. As a result, price increases are (slightly) overstated,
+and quantity increases are understated.
+Separating prices from quantities is particularly
+difficult with services because the quantity produced is inherently
+difficult to measure. (It sounds like the start of a joke:  How
+can you tell when a lawyer is more productive?)  Our best guess is
+that this adds less than  1 percent to the inflation rate:  that is,
+inflation is probably 0.5 percent to 1 percent lower than reported.
+Not a lot, but it adds up over time.
+
+\textbf{Expenditure deflating.}
+In most countries, real GDP is computed by
+applying price deflators to final goods, typically using the expenditure components.
+This isn't real GDP; it's real GDE (gross national {\it expenditure\/}).  The two are often similar, but need not be if production is largely exported.
+As an extreme example, Saudi Arabia produces oil for export.
+If we adjust GDP for changes in prices of Saudi purchases
+(food, shelter, imported cars, and electronic equipment),
+then an increase in the price of oil can lead to an increase in real GDP,
+even if the quantity of oil produced hasn't changed.
+An alternative is to adjust production quantities directly for price changes,
+which some countries do.
+
+\textbf{PPP-adjusted data.} When we compare output across countries, people have noticed that
+if (say) the euro increases in value relative to the dollar, then
+it appears that Europeans have become richer than Americans. We
+say ``appears" because we haven't taken into account that dollar
+prices of non-tradable goods, such as, haircuts and car-washes, are
+typically higher in Europe when the euro is strong. In other
+words, this is a change in prices, not quantities. A similar issue
+arises when comparing GDPs of a rich country such as Germany, and a
+developing country, such as Botswana. If we use local prices and
+simply convert them to dollars or euros at the spot exchange rate,
+Botswana will look poorer than it actually is because local
+prices of many basic goods are much lower in Botswana. The
+state-of-the-art way to address this issue is to apply the same
+prices to output in both locations to produce real GDP based on ``purchasing power
+parity'' (PPP). The logic is the same as with the
+GDP deflator, but the comparison is across countries rather
+than across time.
+
+
+\textbf{Seasonal adjustment.} Quarterly or monthly data often exhibit systematic variations by season.
+Quarterly GDP, for example, typically has a sharp increase in the fourth quarter
+(holidays).
+Most macroeconomic data have been smoothed to eliminate this seasonal variation.
+The same thing happens with business data: Analysts often report changes relative to the same period the year before,
+which will help eliminate any seasonal effect.
+
+
+
+\section*{Executive summary}
+
+\setlength{\leftmargini}{.5\oldleftmargini}
+\begin{enumerate}
+\item GDP measures the total value of production measured at market prices,
+the sum of value-added by every production unit in the economy.
+
+\item Identities.
+
+   \begin{itemize}
+
+   \item Output (GDP) = Income (payments to labor and capital,
+   gross of depreciation).
+
+   \item Output (GDP) = Expenditures (purchases of goods):  $Y = C+I+G+\NX$
+
+   \item Flow of funds (How is investment financed?):  $S =I + \NX$
+
+   \end{itemize}
+
+\item We use magic to separate changes in quantities from changes in prices:
+\begin{itemize}
+\item Quantity indexes, such as real GDP, measure the overall movement of quantities.
+\item Price indexes measure the overall movement of prices.
+\end{itemize}
+%\item Data are like sausages:
+%you don't want to think too much about what goes into them.
+
+\end{enumerate}
+\setlength{\leftmargini}{\oldleftmargini}
+
+
+\section*{Review questions}
+
+\setlength{\leftmargini}{.5\oldleftmargini}
+\begin{enumerate}
+
+\item Value added.  Company A sells four tires to Company X for \$400.
+Company B sells a CD player to Company X for \$300.
+Company X installs both in a car, which it sells for \$5000.
+What is the total contribution to GDP of these transactions?
+
+Answer.  The contribution to GDP is \$5000: \$400 from A, \$300 from B,
+and the rest from X.
+
+\item Expenditures.
+Place each transaction into the appropriate expenditure component of US GDP:%
+%
+\begin{enumerate}
+\item Boeing sells an airplane to the Air Force.%
+\item Boeing sells an airplane to American Airlines.%
+\item Boeing sells an airplane to Virgin Atlantic airline.%
+\item Boeing sells an airplane to Halle Berry.%
+\item Boeing builds an airplane but fails to sell it.%
+\end{enumerate}
+
+\needspace{4\baselineskip}
+Answer.
+%
+\begin{enumerate}
+\item G -- It's a government purchase, as the Air Force is part of the Federal Government.%
+\item I -- It's investment, as American Airlines will use the aircraft as capital good.%
+\item NX -- It's export, since Virgin Atlantic is incorporated in the United Kingdom.%
+\item C -- It's consumption (durable consumption), because Halle Berry will use the plane for her personal travel.%
+\item I -- It's investment, because the plane will increase Boeing's inventory of unsold products.%
+\end{enumerate}
+
+
+\item Prices and quantities.
+The following data describe the NYU economy:
+\begin{center}
+\tabcolsep = 0.1in
+\begin{tabular*}{0.8\textwidth}{cccccccc}
+\toprule
+  & \multicolumn{3}{c}{Prices} &&   \multicolumn{3}{c}{Quantities} \\
+  \cmidrule{2-4} \cmidrule{6-8}
+Year  &  PCs  &  Pizza  &  Beer  && PCs  &  Pizza  &  Beer  \\
+\midrule
+2000  &  100 & 10 & 5 && 25 & 100 & 250  \\
+2005  &  50  & 20 & 15 && 50 & 125 & 200 \\
+2010  &  25  & 30 & 30 && 100 & 150 & 150 \\
+\bottomrule
+\end{tabular*}
+\end{center}
+\begin{enumerate}
+\item Compute real and nominal GDP and the GDP deflator using
+2000 as the base year.
+\item Compute the CPI using 2000 quantities as your basket.
+%\item How do the indexes differ?
+\end{enumerate}
+Answer.  The numbers are
+\begin{center}
+%\tabcolsep = 0.1in
+\begin{tabular}{ccccccc}
+\toprule
+Year  &  Nominal GDP & Real GDP & Deflator  & CPI  & Base = 100 \\
+\midrule
+2000 & 4750  & 4750 & 100.00 &  4750 & 100.00 \\
+2005 & 8000 & 7250  & 110.34  & 7000 & 147.37  \\
+2010 & 11500  & 12250 & 93.88 & 11125 & 234.21 \\
+\bottomrule
+\end{tabular}
+\end{center}
+The point is that different methods give different answers.
+This is most striking if we compare the fourth and last columns.
+The last one is the CPI, indexed so that it's value is 100 in 2000.
+Note that the deflator has prices going down in 2010,
+and the CPI has prices rising---a lot!
+The reason is that the CPI has a fixed basket and doesn't account for the substitution effect:
+our tendency to buy more PCs as their price falls.
+
+
+\item Investment and depreciation.
+This problem was suggested by Frederic Bouchacourt, MBA 09.
+The issue is how we deal with investment and depreciation;
+we need to make sure that they show up in output, expenditures, and income
+in the same way so that we get the same GDP number all three ways.
+Imagine an economy with three companies,
+named D, E, and F,
+which operate over years 1 and 2 as follows:
+\begin{itemize}
+\item D produces apples and sells them to F for \$10
+    in years 1 and 2.
+    This \$10 is paid to workers.
+\item E builds a machine to can apples and sells it for \$10 to F in year 1 and does nothing in year 2.
+    It pays its workers \$10 in year 1, nothing in year 2.
+\item  F buys apples from D for \$10 in years 1 and 2 and buys a machine to can apples from E for \$10 in year 1.
+    F pays its workers \$10 each year.
+    With the help of this machine, F produces canned apples in years 1 and 2 that are sold to final consumers for \$30 in each year.
+The machine is amortized equally over the two years:  \$5 per year.
+\end{itemize}
+In this economy:
+\begin{enumerate}
+\item What is GDP in years 1 and 2?
+\item What are consumption and investment?
+\item What are capital and labor income?
+\item What is net domestic product in each year
+(GDP minus depreciation)?
+\end{enumerate}
+
+Answer.
+\begin{enumerate}
+\item[(a,b)]
+We can find GDP two ways:  as value added (summed across producers)
+or as expenditures (summed across categories).
+If we compute value added for each firm and sum, we have
+%
+    \begin{center}
+    \begin{tabular}{lcc}
+    \toprule
+            &  Year 1  & Year 2 \\
+            \midrule
+    Firm D  &  10      &  10   \\
+    Firm E  &  10      &  0 \\
+    Firm F  &  20      &  20  \\
+    \midrule
+    GDP     &  40   &    30\\
+    \bottomrule
+    \end{tabular}
+    \end{center}
+%
+Note that investment does not count as part of the cost
+of materials:  That's the way the national accounts work.
+It's similar to financial accounting in that we don't consider
+new plant and equipment (``capex'') an expense,
+although we may include depreciation of existing capital.
+The latter doesn't show up here because we measure output
+gross of depreciation.
+
+If we look at the expenditure identity, we have consumption $C$
+of \$30 each year (canned apples) and investment $I$
+of \$10 in the first year only.
+Expenditures add to \$40 the first year, \$30 the second,
+so we get the same answer.
+
+\item [(c)] Value added is payments to capital and labor.  Since
+we know value added and payments to labor,
+payments to capital are the difference.
+Payments to labor are \$30 in year 1, \$20 in year 2.
+In year 1, capital receives $(10-10) + (10-10) + (20-10) = \$10$,
+of which \$5 is depreciation.
+In year 2, capital receives $(10-10) + 0 + (20-10) = \$10$,
+of which \$5 is depreciation.
+
+\item[(d)] Net domestic product is GDP minus depreciation.
+Since depreciation is 5 each year,
+NDP is \$35 (=40--5) the first year, \$25 (=30--5) the second.
+Effectively, we've subtracted off the cost of the investment,
+but unlike other material costs, we do it over time rather
+than all at once.
+That's the logic of amortization:  to spread the cost over time,
+since the benefits are presumably spread the same way.
+You can also calculate net domestic income just as we did
+gross domestic income, except that you subtract depreciation
+from capital income each period.
+That way, net domestic product equals net domestic income.
+\end{enumerate}
+
+\item Real-world data.  Find the appropriate data for US
+income and expenditures from the Bureau of Economic Analysis (BEA) online
+\href{http://www.bea.gov/National/nipaweb/index.asp}{interactive tables},
+particularly Tables \href{http://www.bea.gov/iTable/iTableHtml.cfm?reqid=9&step=3&isuri=1&903=51}{1.10} and \href{http://www.bea.gov/iTable/iTableHtml.cfm?reqid=9&step=3&isuri=1&903=5}{1.1.5}.
+%
+\begin{enumerate}
+\item What are the expenditure components of GDP?
+How does the official version differ from ours?
+What is the share of consumption in Gross Domestic Product?
+\item What are the components of Gross Domestic Income?
+How does the official version differ from ours?
+What is the share of labor compensation in Gross Domestic Income?
+\item Are Gross Domestic Product and Gross Domestic Income
+the same?
+Why or why not?
+\end{enumerate}
+\end{enumerate}
+\setlength{\leftmargini}{\oldleftmargini}
+
+\section*{If you're looking for more}
+
+Most macroeconomics textbooks cover similar material.
+If you're interested in how measurement issues affect
+international comparisons, here are two
+particularly interesting papers on the subject:
+%
+\begin{itemize}
+\item Ben Bernanke,
+``\href{http://www.federalreserve.gov/newsevents/speech/bernanke20120806a.htm}{Economic measurement},''
+    relates GDP to measures of ``economic well-being'' and ``happiness.''
+
+\item Rob Feenstra, Hong Ma, Peter Neary, and Prasada Rao,
+``\href{http://papers.nber.org/papers/w17729}{Who shrunk China?}''
+describe the impact of various measurement issues on
+estimates of China's GDP.
+
+\item Chad Jones and Pete Klenow,
+``\href{http://klenow.com/Jones_Klenow.pdf}{Beyond GDP},''
+look at the relation between GDP per person and
+various other measures of individual welfare.
+\end{itemize}
+
+
+\section*{Symbols and data used in this chapter}
+
+\begin{table}[H]
+\centering
+\caption{Symbol table.}
+\begin{tabular*}{0.99\textwidth}{l@{\extracolsep{\fill}}l}
+\toprule
+Symbol &  Definition\\
+\midrule
+$Y$        &Gross domestic product (= Expenditure = Income)\\
+$C$        &Private consumption\\
+$I$        &Private investment (incl. residential and business investment)\\
+$G$        &Government purchases of goods and services (not transfers)\\
+$X$        &Exports\\
+$M$        &Imports\\
+$\NX$    &Net exports $(=X-M)$\\
+$S$        &Gross domestic saving ($=Y-C-G=I+NX$)\\
+$S_p$    &Private saving ($=Y-T-C$)\\
+$S_g$    &Government saving ($=T-G$)\\
+$T$        &Taxes collected net of transfer payments and interest\\
+$ \pi = g_{P}$    &Discretely-compounded growth rate of price index (inflation)\\
+$ g_{Y}$    &Discretely-compounded growth rate of real GDP\\
+$ g_{NY}$    &Discretely-compounded growth rate of nominal GDP\\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+
+\begin{table}[H]
+\centering
+\caption{Data table.}
+\begin{tabular*}{0.95\textwidth}{l@{\extracolsep{\fill}}l}
+\toprule
+Variable & Source\\
+\midrule
+Nominal GDP                        &GDP \\
+Compensation of employees        &COE\\
+Proprietor's income                &PROPINC\\
+Corporate profits                &CP\\
+Rental income                    &RENTIN\\
+Depreciation                    &COFC\\
+Consumption                     &PCE\\
+Durable goods                     &PCDG\\
+Nondurable goods                &PCND\\
+Services                        &PCESV\\
+Gross private domestic investment    &GPDI\\
+Nonresidential investment         &PNFI\\
+Residential investment            &PRFI\\
+Change in inventories            &CBI\\
+Government consumption            &GCE\\
+Net exports of goods and services    &NETEXP\\
+Exports                            &EXPGS\\
+Imports                            &IMPGS\\
+Gross private savings            &GPSAVE\\
+Gross government savings        &GGSAVE\\
+GDP deflator                    &GDPDEF\\
+Consumer price index            &CPIAUCSL\\
+Nominal GNP                        &GNP\\
+Current account                    &NETFI\\
+\bottomrule
+\addlinespace
+\end{tabular*}
+\begin{minipage}{0.95\textwidth}
+\footnotesize{To retrieve the data online, add the identifier from the source column to \url{http://research.stlouisfed.org/fred2/series/}.  For example, to retrieve nominal GDP, point your browser to \url{http://research.stlouisfed.org/fred2/series/GDP}}
+\end{minipage}
+\end{table}

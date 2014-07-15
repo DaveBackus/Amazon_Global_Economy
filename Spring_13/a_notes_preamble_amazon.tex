@@ -1,0 +1,106 @@
+\documentclass[8pt,twoside,pdftex]{book}
+
+% nice book overview: http://www.math.mun.ca/~edgar/thesis.html
+% see esp indexing w/ package makeidx
+% more at:  http://en.wikibooks.org/wiki/LaTeX/Indexing
+
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{comment}
+\usepackage{layout}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{setspace}
+\usepackage{float}
+
+% link colors etc:  black for Amazon, blue for the online version
+\usepackage[colorlinks=true,
+            allcolors=blue,
+%            linkcolor=black,
+%            citecolor=black,
+%            urlcolor=blue,
+            bookmarks=false,
+            pdfstartview={FitV},
+            pdftitle={The Global Economy},
+            pdfsubject={A course in macroeconomics for business students},
+            pdfauthor={The NYU Stern Economics Team}
+            ]{hyperref}
+
+% Adjust fonts for chapter and section headings
+% old version
+\usepackage[medium, compact]{titlesec}
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesection}{1em}{}
+
+% LC  version
+%\usepackage[medium, compact, sf, bf]{titlesec} % edited by LC
+%\titleformat{\section}{\large\bfseries\sffamily}{\thesection}{1em}{}  % edited by LC
+%\titleformat{\subsection}{\normalsize\bfseries\sffamily}{\thesection}{1em}{}  % edited by LC
+%\titleformat{\part}{\bfseries\huge\sffamily\uppercase}{}{0pt}{Part \thepart\\}  % edited by LC
+%\titleformat{\chapter}{\bfseries\huge\sffamily\uppercase}{}{0pt}
+%        {\ifnum\thechapter>0\resizebox{!}{30pt}{\thechapter}\\ \fi}  % edited by LC
+
+% to kill off awkward pagebreaks
+\usepackage{needspace}
+% example:  \needspace{4\baselineskip} makes sure we have four lines available before pagebreak
+
+% for left spacing of problems, summary, etc
+\newlength{\oldleftmargini}
+\setlength{\oldleftmargini}{\leftmargini}
+% use these commands:
+%\setlength{\leftmargini}{.5\oldleftmargini}
+%\setlength{\leftmargini}{\oldleftmargini}
+
+% for spacing of table of contents
+% see http://tex.stackexchange.com/questions/49877/table-of-contents-spacing
+% problem:  messes up spacing and fonts of table and figure lists in toc, so killed them off
+\usepackage{tocloft}
+\renewcommand\cftchapafterpnum{\vskip10pt}
+
+%%%%%%%%%%%%%%%%%%%%%%Margins%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% http://en.wikibooks.org/wiki/LaTeX/Page_Layout
+\usepackage{geometry}
+\geometry{paperwidth=6in, paperheight=9in, outer=0.6in, inner=0.85in, bottom=0.6in}
+%\usepackage[cam,letter,center,pdftex]{crop}
+
+% indentation and para skips
+\setlength{\parindent}{0in}
+\setlength{\parskip}{\bigskipamount}  % this is diddled further in the front_matter
+\raggedbottom
+
+%%%%%%%%%%%%%%%%%%%%Tighten up the lists%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\let\OLDdescription\description
+\renewcommand\description{\OLDdescription\setlength{\itemsep}{-2mm}}
+
+%%%%%%%%%%%%%%%%%%%%%%Headers and Footers%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
+\fancyhead[RO]{\leftmark \hspace{0.25in} \thepage}
+\fancyhead[RE]{}
+\fancyhead[LE]{\thepage \hfill Global Economy @ NYU Stern}
+
+%%%%%%%%%%%%%%%%%%%%%%Special Characters%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\GDP}{\mbox{\em GDP\/}}
+\newcommand{\NDP}{\mbox{\em NDP\/}}
+\newcommand{\GNP}{\mbox{\em GNP\/}}
+\newcommand{\NX}{\mbox{\em NX\/}}
+\newcommand{\NY}{\mbox{\em NY\/}}
+\newcommand{\CA}{\mbox{\em CA\/}}
+\newcommand{\NFA}{\mbox{\em NFA\/}}
+
+\newcommand{\Def}{\mbox{\em Def\/}}
+\newcommand{\DS}{\mbox{\em DS\/}}
+\newcommand{\CPI}{\mbox{\em CPI\/}}
+\newcommand{\POP}{\mbox{\em POP\/}}
+\newcommand{\CU}{\mbox{\em CU\/}}
+\newcommand{\RE}{\mbox{\em RE\/}}
+\newcommand{\MB}{\mbox{\em MB\/}}
+\newcommand{\MONE}{\mbox{\em M1\/}}
+\newcommand{\MTWO}{\mbox{\em M2\/}}
+\newcommand{\IP}{\mbox{\em IP\/}}
+\newcommand{\RER}{\mbox{\em RER\/}}
+

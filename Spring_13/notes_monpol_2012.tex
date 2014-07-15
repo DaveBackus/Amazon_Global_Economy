@@ -1,0 +1,1052 @@
+\chapter{Money and Interest Rates}\label{chp:mpir}
+\hypertarget{monpol}{}
+
+\textbf{Tools:} Open market operations; central bank balance sheet; Taylor rule.
+
+\textbf{Key Words:} Real interest rate; nominal interest rate; expected inflation; real money balances; inflation targeting; interest-rate rules; rules vs. discretion; zero lower bound; quantitative easing; credit easing; policy duration commitment.
+
+\textbf{Big Ideas:}
+\vspace{-0.1in}
+\begin{itemize}
+\item In conventional practice, central banks use open market operations
+to manage interest rates.
+These policy actions are equivalent to managing the money supply directly.
+\item The Taylor rule provides a guide to how central banks manage their target interest rates
+in response to data on inflation and (real) GDP growth.
+\item When interest rates are at or near zero, a central bank can resort to unconventional monetary policy,
+ including quantitative easing, credit easing, and policy-duration commitments.
+ These policies have been in widespread use since 2008.
+\end{itemize}
+\rule{\textwidth}{1pt}
+
+Where do interest rates come from?
+We doubt this was your first question when you were growing up,
+but you probably have an opinion about it now.
+Most people say they're set by the Fed --- or the appropriate central bank if you're in another country.
+There's some truth to that, but it can't be that simple. We had interest rates before the Fed was established,
+and, if anything, they varied more then than now.
+It's probably better to say that the Fed ``manages'' interest
+rates --- that is they vary the supply of money to set the market interest rate
+they think is appropriate, consistent with market conditions. Market
+interest rates reflect, after all, the behavior of private
+borrowers and lenders, as well as the Fed.
+
+We outline how this works, starting with
+a review of interest rates (there are lots of them)
+and moving on to monetary policy as practiced in most
+developed countries these days.
+Along the way, we show how you would expect new information
+about inflation or economic growth to affect interest rates.
+
+\begin{comment}
+*** predictability critical...
+
+Commitment devices...
+Gold and commodity money?  fixed exch rate?
+Independent central bank?
+\end{comment}
+
+
+\section{Interest rates}
+
+Here's a quick review of interest rates:  real and nominal,
+short and long, risk-free and risky.
+
+\textbf{Real and nominal.} It may not strike you at first, but interest rates have units.
+The  interest rates we're used to are reported in currency units:
+A one-period bond pays currency later in return for
+currency now.
+That's one of the reasons why interest rates differ around the world:
+If countries have different currencies, their interest rates
+are measured in different units.
+Since they're measured in currency units, we refer to them
+as nominal interest rates,
+just as GDP measured in currency units is referred to
+as nominal GDP.
+
+It's traditional, as we saw in Chapter \ref{chp:mpin},
+to decompose a nominal interest rate $i$
+into a real interest rate $r$
+and expected inflation $\pi^e$:
+%
+\begin{eqnarray}
+    i &=& r + \pi^e .
+    \label{eq:fisher}%
+\end{eqnarray}
+%
+The real interest rate
+``corrects'' the nominal rate for the loss of purchasing power
+reflected in the inflation rate.
+In words:  A nominal interest rate of five percent
+delivers greater purchasing power in a year
+if the inflation rate is two percent than if it is five percent.
+
+\textbf{Short and long.}
+Bonds differ, of course, by maturity:  that's
+the idea behind the ``term structure of interest rates,''
+a popular finance topic.
+If we consider a zero-coupon bond of maturity $m$ years,
+the price and (nominal) interest rate or yield are related by
+\[
+    q_m \;\;=\;\;  100/(1+i_m)^m .
+\]
+The interest rate has been annualized --- that's what the exponent does --- but it applies
+to a bond whose maturity can be something besides one year.
+
+
+Interest rates on long bonds often differ from those on short bonds.
+Long rates are higher than short rates, on average,
+but not always.
+We commonly attribute the difference to two factors.
+The first is expected differences in interest rates over the life of the bond:
+If we expect short-term interest rates to rise over the life
+of the bond, then its interest rate should be higher
+as a result.
+The second is risk.
+Long bonds have greater exposure to the risk of changing interest rates.
+Their price and yield, therefore, incorporate adjustments for this risk.
+We can express this in an equation as
+\[
+    i_m \;\;=\;\; \mbox{Expected Future Short Rates}
+                  +  \mbox{Risk Premium} .
+\]
+Note that the concepts here are similar to those discussed in the Appendix to Chapter \ref{chp:bcin} discussing the \hyperref[sec:yield_curve]{yield curve}.
+
+
+Long-term interest rates have a similar distinction between real and nominal.
+The equation is the same with the appropriate maturities noted:
+\[
+    i_m \;\;=\;\; r_m + \pi_m^e .
+\]
+For example, the expected inflation rate in this case is the one
+that applies to the period from now until $m$ years from now.
+
+\textbf{Credit risk.} There's another source of risk
+that comes up later in the course:
+the possibility that the borrower defaults.
+We tend to ignore that in the US Treasury market, although
+credit default swaps now price in some such risk.
+With bonds issued by banks, corporations, and foreign ``sovereigns''
+(governments), the risk can be substantial.
+We might see, for example, that interest rates on Argentine or Greek
+government bonds are several hundred basis points above US Treasuries
+of similar maturity.
+(A basis point is one hundredth of a percent.)
+
+
+\section{Changing the money supply (review)}
+
+We'll come back to interest rates shortly.
+But before we do, we consider monetary policy,
+which plays a central role in their short-term movements.
+Central banks control the quantity of currency
+in circulation (money, for our purposes).
+We show here how that works,
+then move on in later sections to describe
+how they use their control over money to influence interest rates.
+Our analysis of the central bank's control
+of the money supply involves the balance sheets of the treasury,
+the central bank, and individuals and firms.
+You've seen this before, but it's
+important enough to run through again.
+We'll see it again when we look at fixed exchange rates.
+
+
+Day-to-day monetary policy in most countries consists of what we term
+{\it open-market operations\/}:
+purchases or sales by the central bank of government securities (bonds).
+At any point in time, the treasury's balance sheet looks
+something like this:
+%
+\begin{center}
+\begin{tabular}{lr|lr}
+\multicolumn{4}{l}{Treasury} \\
+\hline
+Assets\phantom{ities} & \phantom{100}&  Liabilities \\
+\hline
+\phantom{Bonds} & \phantom{200} & Bonds & 200
+\end{tabular}
+\end{center}
+%
+The central bank's looks like this:
+%
+\begin{center}
+\begin{tabular}{lr|lr}
+\multicolumn{4}{l}{Central bank} \\
+\hline
+Assets\phantom{ities} &\phantom{100}&  Liabilities \\
+\hline
+Bonds &  100 & Money & 100
+\end{tabular}
+\end{center}
+%
+And the private sector's looks like this:
+%
+\begin{center}
+\begin{tabular}{lr|lr}
+\multicolumn{4}{l}{Private sector} \\
+\hline
+Assets\phantom{ities}  &&  Liabilities \\
+\hline
+Money &  100  &  \phantom{Money} & \phantom{100} \\
+Bonds &  100  \\
+Other &  500
+\end{tabular}
+\end{center}
+%
+If it seems strange to treat money as a liability of the
+central bank, think of it as a bond with the unusual
+feature that its nominal interest rate is zero.
+That's what it is, which makes it a good deal for the borrower.
+
+
+An open-market purchase of bonds results in an increase
+in bonds held by the central bank and an equal increase in its
+monetary liability.
+The private sector does the opposite;  it sells bonds to
+the central bank, reducing its holdings of bonds and
+increasing its holdings of money (currency).
+For example, a central bank purchase of 20 dollars worth of bonds would change
+the balance sheets to
+%
+\begin{center}
+\begin{tabular}{lr|lr}
+\multicolumn{4}{l}{Central bank} \\
+\hline
+Assets\phantom{ities}  &&  Liabilities \\
+\hline
+Bonds &  120 & Money & 120
+\end{tabular}
+\end{center}
+%
+%and
+%
+\begin{center}
+\begin{tabular}{lr|lr}
+\multicolumn{4}{l}{Private sector} \\
+\hline
+Assets\phantom{ities}  &&  Liabilities & \phantom{100} \\
+\hline
+Money &  120  &  \phantom{Money} & \phantom{100} \\
+Bonds &  \phantom{1}80 \\
+Other &  500
+\end{tabular}
+\end{center}
+%
+Note that this doesn't change anyone's net worth;
+it's a portfolio shift, which changes only the composition
+of assets and liabilities.
+The result is an increase in the amount of money in private hands
+since the private sector (the other side of this transaction)
+has reduced its holdings of government bonds
+and increased its holdings of money.
+Similarly, an open-market sale of bonds would reduce the amount of money in
+private hands.
+
+
+\section{Managing the interest rate}
+
+Typically, we describe monetary policy in terms of
+managing the short-term interest rate,
+which is different from what we've described before
+(namely, controlling the money supply).
+How does managing the money supply relate to managing the short-term interest rate?
+Let's work through the impact of a change in the supply of money in a simple model.
+
+This is essentially a supply and demand exercise,
+and the first step is to describe the demand for money.
+Consider a modified version of the quantity theory:
+\begin{eqnarray}
+    M_t/P_t  &=&  Y_t / V(i_t).
+    \label{eq:md}
+\end{eqnarray}
+Here (as before), $M$ is the supply of money (think currency),
+$P$ is the price level (think price index),
+$Y$ is real output (real GDP),
+and $V(i_t)$ is velocity.
+We refer to the $M/P$ as {\it real balances\/}:  the real value of money
+issued by the central bank and held by the public.
+
+Our key innovation here is allow velocity to increase with the nominal interest rate.
+When the nominal interest rate is high, we will assume that velocity is high,
+and vice versa.
+As a result, real money balances ($M/P$) decline when the nominal interest rate rises.
+We noted the same thing in Chapter \ref{chp:mpin},
+where we noted that at high inflation rates people did anything they could to avoid money,
+thereby raising its velocity.
+They same rationale applies in less extreme settings:
+when the nominal interest rate is high,
+people shift their portfolios from non-interest-bearing money to interest-bearing assets.
+
+
+In Figure \ref{fig:ms=md} we plot supply and demand curves for money with the
+nominal interest rate $i$ on the y-axis and real money balances $M/P$ on the x-axis.
+The downward-sloping line is the demand for real balances.
+Its slope illustrates the relationship between real balances and the nominal interest rate:
+As the nominal interest rate rises, the quantity of money demanded falls.
+The vertical line is the supply of real balances.
+At a given value of $P$, this line is vertical
+because supply is determined by the central bank.
+
+We now have a model of the supply and demand for real balances
+and can explore the relation between the supply of money and the nominal interest rate.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Supply and demand diagram
+\begin{figure}[h!]
+\caption{Supply and demand for money.}
+\label{fig:ms=md}
+%
+\centering
+\setlength{\unitlength}{0.075em}
+\begin{picture}(250,200)(0,0)
+%\footnotesize
+\thicklines
+
+% horizontal axis
+\put(-30,0){\vector(1,0){300}}
+\put(255,-16){$M/P$}
+
+% vertical axis
+\put(0,-20){\vector(0,1){200}}
+\put(-15,155){$i$}
+
+% demand
+\put(25,165){\line(4,-3){200}}\put(230,10){$Y/V$ (demand)}
+
+% supply
+\put(120,0){\line(0,1){170}} \put(106,176){$M/P$}
+\put(160,0){\line(0,1){170}} \put(146,176){$M'/P$ (supply)}
+
+% equilibrium labels
+\put(108,80){\footnotesize A}
+\put(148,53){\footnotesize B}
+% dotted lines
+%\qbezier[31]{(133,0)(133,46)(133,92)}
+%\qbezier[45]{(0,92)(67,92)(133,92)}
+%\qbezier[45]{(0,72)(67,72)(133,72)}
+
+\end{picture}
+\begin{minipage}{0.7\textwidth}
+\vspace{0.4in}
+{\footnotesize The very short-run impact of an increase in the money supply
+is a shift right in the vertical supply curve ($M/P$)
+and a movement down the demand curve ($Y/V$) from A to B.}
+\end{minipage}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textbf{What happens if the central bank increases the supply of money $M$?} There are two outcomes, one in the long run and one in the short run.
+In the long run, the price level increases proportionally with the money supply, and the supply curve stays in the same place and nothing changes. That's the logic of the quantity theory taken literally: Any increase in money (in the long run) results in an increase in prices.
+
+In the short run, the results differ. In the short run, we might guess that production plans won't change ($Y$ is fixed), and we generally think that prices won't change either ($P$ is fixed).
+Then the money-supply curve shifts out and the interest rate falls.
+In the figure, we move from point $A$ to point $B$.
+In words: By increasing the supply of money, the central bank drives down the interest rate.
+
+The key point here is that we can think of changes in the interest
+rate as reflecting changes in the money supply.
+Put this way, there's little difference between changing the money supply
+and changing the interest rate.
+
+One last thought:  Context matters here.
+If the context is relatively stable prices, changes in the
+money supply affect the interest rate as described.
+But if an increase in the money supply is interpreted as a sign
+that the central bank is abandoning price stability,
+then we could see an increase in the supply of money
+raise the interest rate rather than lower it.
+% ?? more
+That's why you hear central bankers talk about ``anchoring expectations''
+and ``maintaining credibility'' for stable prices.
+More on that shortly.
+
+\section{Goals of monetary policy}
+
+If the tools of monetary policy are the money supply and the short-term
+interest rate, what is the goal?
+Should central banks focus
+on inflation, growth, or some combination?
+This, in turn, raises the question of what they're capable of doing.
+There is clear evidence that monetary policy affects inflation,
+at least over periods of several years.
+Persistent high inflation is invariably associated with
+high rates of money growth.
+There is also clear evidence that
+countries with high and variable inflation rates have poor
+macroeconomic performance,
+although the cause and effect are less clear. Is high inflation the cause of poor economic performance,
+or the result?
+
+With these facts in mind, most countries charge their central
+banks with producing stable and predictable prices. In practice,
+this is typically understood to mean a stable inflation rate of
+about 2 percent a year.
+Many advanced economies have also made their
+central banks independent --- in the sense that they can set their
+policy instrument (usually an interest rate) without being overridden
+by a legislature or a government for short-run political reasons.
+(Argentina did this, too, but it didn't last very long.)
+
+Why have so many countries granted their central banks such
+ ``instrument independence?" One reason is that it helps overcome
+ a classic  \hyperref[sec:time_cons]{time-consistency problem}.
+If people expect a government
+with a short time horizon to set monetary policy, they would expect it to stimulate
+the economy now even if that spells high inflation later.
+%Professor Kenneth
+%Rogoff (former IMF chief economist) has shown that
+But if countries appoint conservative central bankers,
+they can --- in theory, at least --- reduce inflation without loss of output.
+When an independent monetary authority can commit credibly to keep
+inflation low, it lowers inflation expectations today and improves
+both inflation and output performance.
+
+In the US, the Federal Reserve Act asks the Fed ``to promote the
+goals of maximum employment, stable prices, and moderate long-term
+interest rates."
+This is, to be sure, the usual political mush --- the Fed should
+accomplish ``all of the above.''
+The term ``maximum employment'' is interpreted to mean
+that the Fed should act to reduce the magnitude and duration of
+fluctuations in output and employment.
+What role does monetary policy play in these fluctuations?
+In the long run, expert opinion is that the impact is close to zero;
+the long-term growth rate of the economy depends on its productivity and institutions,
+not on its monetary policy.
+But in the short run, expansionary monetary policy
+(high money growth, low interest rate)
+probably has a modest positive effect on
+employment and output.
+The connection is fragile, in the sense that too much monetary expansion seems to lead not to higher
+output but to high inflation, higher interest rates,
+and, perhaps, lower output.
+Most experts suggest, therefore,
+that central banks (including the Fed) should emphasize
+price stability and give secondary importance to output and
+employment.
+
+
+One of the arguments in favor of price stability is that
+our attempts to do more
+have been notably unsuccessful.
+Ben Bernanke put it this way in a 2003
+\href{http://www.federalreserve.gov/boarddocs/Speeches/2003/20030203/default.htm}
+{speech} at NYU (``Constrained discretion''):
+%
+\begin{quote}
+The early 1960s [were] a period of what now appears to have been
+substantial over-optimism about the ability of [monetary]
+policymakers to `fine-tune' the economy. Contrary to the expectation
+of that era's economists and policymakers, the subsequent two
+decades were characterized not by an efficiently managed, smoothly
+running economic machine but by high and variable inflation and an
+unstable real economy, culminating in the deep 1981-82 recession.
+Although a number of factors contributed to the poor economic
+performance of this period, I think most economists would agree that
+the deficiencies of ... monetary policy --- including over-optimism
+about the ability of policy to fine-tune the economy ... played
+a central role.
+\end{quote}
+%
+Another way to put this: Economists should be humble about what we can
+accomplish.
+(And to paraphrase Winston Churchill, we have a lot to be humble about!)
+
+
+The focus on price stability is often expressed as
+a desire for predictability.
+Firms, investors, and workers all need to have a clear picture
+of future inflation --- hence, future monetary policy --- since the consequences of current decisions depend on it.
+Built into this statement is a belief that many such decisions ---
+prices of bonds, wages and salaries, long-term supply contracts ---
+are expressed in units of currency, whose future value depends on policy.
+Therefore, it's helpful for policy to be predictable, so that these
+decisions can be made according to their economic merits
+rather than on guesses of future policy.
+As Bernanke suggests,
+the unpredictability of policy in the 1970s was a factor in
+the poor macroeconomic performance of that decade.
+Big inflations are an extreme example,
+in which even day-to-day price changes are not only large, they're wildly uncertain.
+In such conditions, capital markets typically either disappear
+or shift to another currency.
+
+With these ideas in mind,
+many central banks now follow procedures that focus on price
+stability (so that people can make long-term decisions)
+and transparency
+(so that their actions are well understood).
+In the industrial world, targeting inflation over the medium term (say, over
+several years) has become common. The Federal Reserve announced
+a quantitative inflation goal (of 2 percent) for the first time in 2012.
+In developing countries, fixed exchange rates are a common device
+in which a currency is tied to one that is thought to be more predictable.
+Most commonly, there has been a move toward interest-rate rules
+that connect (at least approximately)
+interest rates set by central banks with inflation and (possibly) output.
+
+
+\begin{comment}
+For those who are left, I also want to show how future policy affects
+the market reaction to current policy,
+which leads us back to the conclusion
+that monetary policy should be reasonably predictable.
+
+Now to the second issues:  the impact of future policy on the present.
+Even in this relatively simple setting, you can get a sense
+of the challenges of thinking through the dynamic effects of monetary policy.
+The nominal interest rate, for example, is the real interest rate plus
+expected inflation:
+\[
+    i_t \;=\; r_t + \pi_{t+1}.
+\]
+From this, you can see that the impact of any policy change
+depends in part on its impact on expected inflation.
+If the impact is zero, you get what we had above.
+But if an increase in the current money supply leads
+people to expect higher inflation
+(remember:  the long-run impact is a rise in the price level),
+then this could offset the impact on the interest rate.
+People will demand higher interest rates to compensate them for
+higher inflation.
+How will people make these calculations?
+They need to know what policies are likely to follow the current change in
+the money supply.
+Will the money supply stay at its new level indefinitely?
+Will the increase be offset in a month or two?
+None of these issues show up in the figure,
+but they're central to the impact of the policy.
+
+%\begin{comment}
+The same issues show up when we take a closer look at the AS/AD model.
+You might think from our earlier analysis that we can change
+output as we like simply by shifting the aggregate demand curve around.
+For example, if we increase the money supply,
+that shifts AD to the right, increasing output and prices.
+The only question is how much inflation we're willing to tolerate
+to get higher output.
+That's the Phillips curve tradeoff that many of you are familiar with:
+high inflation or high unemployment (hence low output)?
+In a dynamic theory, as in real life, it's not that easy.
+Suppose the aggregate supply curve is based on sticky wages.
+What wages will workers and firms set?
+Generally they will need to take into account future monetary policy,
+since it will have an impact on future inflation and hence
+the purchasing power of any nominal wage rate.
+That tells us, in essence, that we can't determine the
+impact of current policy until we've said what future policy will be.
+It's a central feature of a dynamic world:
+that you can't separate the present from expectations about the future.
+The same is true of economic activity more generally,
+which is why institutions are so important:
+they give us some assurance that future policies will not
+be wildly different from the present.
+%\end{comment}
+
+The bottom line:  one goal of modern central bankers is
+to make clear to market participants how they make decisions
+about monetary policy ---  not just current decisions but future
+ones as well.
+Anything less could lead to the chaos and poor performance
+we saw in the 1970s.
+That leads us to consider policy rules...
+\end{comment}
+
+
+\section{The Taylor rule: the bond trader's guide}
+
+One way to make monetary policy predictable and transparent
+is to follow a rule.  The rule tells us how policy will be set,
+at least approximately, both now and in the future,
+which makes policy more predictable
+to market participants, including bond traders.
+
+As we saw in previous chapters, concerns about \hyperref[sec:time_cons]{time consistency}
+tend to favor rules over discretion in setting economic policy.
+In the case of monetary policy, a well-designed rule can help anchor
+inflation expectations and stabilize economic activity.
+It does so by limiting the scope for future policymakers to renege on
+their commitment to low inflation in return politically popular short-term output gains.
+
+The rules vs. discretion debate has a long history,
+and a number of monetary policy have been proposed over the years.
+One of the most famous is Milton Friedman's $k$-percent rule,
+which called for the central bank to increase the supply of  money at a constant rate of $k$-percent.
+Subsequent research suggests that a ``feedback rule'' which responds to economic conditions will be more effective
+in stabilizing inflation and economic growth over business cycles.
+In addition, most research --- and virtually all central bank practice ---
+focuses on rules for setting the policy interest rate, rather than the supply of money.
+
+Of these interest-rate feedback rules, the most famous and widely used is the {\it Taylor rule\/}.
+John Taylor %, a Stanford economist and former treasury official,
+suggested in 1993 that an interest-rate rule would provide a
+relatively simple summary of monetary policy in many countries.
+It's a guideline really, not a rule, but it nevertheless goes
+by the name ``Taylor rule.''
+It consists of the following equation:
+\begin{equation}
+    i_t  \;\;=\;\;  r^* + \pi_t + a_1 (\pi_t - \pi^*)
+            + a_2 (y_t - y_t^* )   ,
+    \label{eq:taylorrule}
+\end{equation}
+where $i_t$ is the short-term nominal interest rate;
+$r^*$ is a ``normal'' or long-term average real interest rate;
+$\pi_t  $ is the inflation rate;
+$\pi^*$ is the target inflation rate;
+$y_t$ is (the logarithm of) real output;
+and $y_t^*$ is the ``normal'' (sometimes called ``potential") level of output (also in logarithms).
+The parameters $a_1,\ a_2$ indicate the sensitivity of the interest rate to
+inflation and output.
+
+
+Let's walk through equation (\ref{eq:taylorrule}) piece by piece,
+as applied in the US:
+%
+\begin{itemize}
+\item \textbf{Nominal interest rate $i$.}
+Standard practice in the US is to use the ``fed funds rate.''
+In the US, commercial banks and other ``depository institutions'' have accounts (deposits) at the Federal Reserve that are referred to as fed funds.  They trade these deposits among themselves in an
+overnight fed funds market.
+The Fed currently indicates its policy stance by setting an explicit
+target for the interest rate on these trades
+and performs open-market operations
+to bring the market rate close to the target.
+This rate anchors the very short end of the yield curve.
+
+\item \textbf{Normal real interest rate $r^*$.}  Experience suggests that the real fed funds rate (nominal
+rate minus inflation) has averaged about two percent over the last two decades, but it moves around over time, both over long periods of time
+(real interest rates were unusually high in the 1980s
+and low in the 2000s)
+and over the business cycle.
+Most people simply set $r^* = 2\%$.
+The first component of the target fed funds rate is,
+thus, the target real rate (two percent) plus the current inflation rate, thus giving us a nominal interest rate target.
+
+\item \textbf{Inflation deviation $(\pi - \pi^*)$.}  The next term is a reaction to the difference between current inflation ($\pi$)
+    and the target ($\pi^*$).
+If the target is two percent and actual inflation is three percent, then we
+increase the nominal fed funds rate by $a_1$ percent.
+Typically $a_1 > 0$, meaning that we increase the
+interest rate in response to above-target inflation.
+Why?  Because higher interest rates are associated with slower money growth
+and, therefore, (eventually) lower inflation.
+Larger values of $a_1$ indicate more aggressive reactions to inflation.
+Since inflation enters equation (\ref{eq:taylorrule}) both directly \emph{and} as part of this term,
+any increase in inflation leads to a greater increase in the nominal
+interest rate.
+This ``overreaction'' is intended to stabilize the inflation rate.
+
+\item \textbf{Output deviation $( y - y^*)$.}
+The final term is a reaction of the interest rate
+to deviations of output from its normal or potential level.
+Some people use a smooth trend for $y^*$
+or a measure of potential output.
+(You may recall the discussion of Chapter \ref{chp:pasad}.)
+If we think of the world as the AS/AD model, then potential output is
+what the economy would generate if wages and prices weren't sticky --- whatever that is!
+The Fed's goal, in this case,
+is to offset the impact of those frictions on output.
+The practical difficulty is distinguishing
+increases in $y$ from increases in $y^*$.
+One approach is to use the difference in the year-on-year
+growth rate from its mean.
+This is easier to measure,
+but has the same issue:  it's not obvious that our measure
+(the mean growth rate) is the same as the long-run equilibrium.
+
+
+\item \textbf{Parameters $(a_1, \ a_2)$.}
+Taylor suggested $a_1 = a_2 = 1/2$,
+giving equal weight to inflation and output deviations.
+Some recent studies of actual central bank behavior find larger values of $a_1$
+and smaller values of $a_2$ --- say
+$a_1 = 0.75$ and $a_2 = 0.25$.
+By some interpretations, the European Central Bank (ECB)
+places greater weight than the Fed on inflation
+and less weight on output.
+\end{itemize}
+
+That's the rule.
+The bond traders' perspective is that it's a reasonable guide to how
+short-term interest rates respond to data releases,
+as bond traders respond to how they see monetary policy reacting
+to new information about economic conditions.
+If a high inflation number comes out, the interest rate goes up.
+Why?  Because they know that this will lead the central bank to raise
+the short-term interest rate.
+Even if the Fed doesn't respond immediately,
+long yields may rise in anticipation of future interest-rate changes.
+Ditto a high output number: Short- and long-term interest rates rise.
+The timing may differ somewhat from the rule,
+but its overall impact is generally similar.
+
+
+There are several issues you run across in practice.
+One is that the Fed (or other central banks) may deviate from
+the rule, perhaps on principle, perhaps because of special circumstances.
+Despite its widespread use, no central bank is on record
+saying that it follows such a rule.
+Another is the difficulty in determining $y^*$.
+If output goes up, do we decide that the economy is overheating
+and raise the interest rate?
+Or do we decide that productivity has gone up,
+increasing the growth of the economy and $y^*$?
+That's exactly the issue that the Fed faced in the late 1990s.
+Some felt that the rule dictated higher interest rates,
+but Greenspan argued that $y^*$ had gone up because
+productivity growth had accelerated.
+This goes back to our distinction between
+supply shocks and demand shocks.
+In the AS/AD framework,
+demand shocks should generally be resisted,
+but supply shocks should be accommodated/acquiesced to. Yet another issue is that the
+normal real interest rate $r^*$ may change over time (for example, it might be high
+when productivity growth is high, reflecting the marginal productivity of capital).
+
+Despite these open issues, the Taylor rule has been a reasonably
+reliable guide to policy
+and a useful indication of how bond markets respond to announcements
+of macroeconomic activity.
+
+
+\begin{comment}
+\section{FOMC statements}
+
+The Federal Open Market Committee (FOMC), the monetary policy arm
+of the Federal Reserve System,
+now issues short statements immediately following each of their meetings.
+The statements are important both for their announcement
+of the target fed funds rate ($i$ in the Taylor rule)
+and for their analysis of the economy and what future policy may bring.
+Here's the complete statement from January 31, 2007 [numbers added]:
+%
+\begin{quote}
+1. The Federal Open Market Committee decided today to keep its
+target for the federal funds rate at 5-1/4 percent.
+
+2. Recent indicators have suggested somewhat firmer  economic
+growth, and some tentative signs of stabilization have appeared in
+the housing market. Overall, the economy seems likely to expand at a
+moderate pace over coming quarters.
+
+3. Readings on core inflation have improved modestly  in recent
+months, and inflation pressures seem likely to moderate over time.
+However, the high level of resource utilization has the potential to
+sustain inflation pressures.
+
+4. The Committee judges that some inflation risks remain.  The
+extent and timing of any additional firming that may be needed to
+address these risks will depend on the evolution of the outlook for
+both inflation and economic growth, as implied by incoming
+information.
+\end{quote}
+See
+\href{http://www.federalreserve.gov/boarddocs/press/monetary/2007/20070131/default.htm}
+{link}.
+
+%
+Let's go through it line by line.
+Line 1 says that they have decided not to change the fed funds rate.
+That speaks for itself.  But why?
+Line 2 says that the housing market, a current concern,
+is thought to be stabilizing.
+This is more positive than the previous statement that
+the housing market exhibited ``substantial cooling.''
+The last sentence suggests that the Fed now sees output growth as stronger
+than in the previous statement,
+where a similar statement included the qualification ``on balance.''
+The interpretation in both cases is that there is less reason to suspect that the Fed will respond by reducing rates ---
+roughly speaking, the output component of the Taylor rule.
+Line 3 says that inflation numbers have come down, which on its own
+suggests less reason to raise interest rates --- the Taylor rule again.
+Line 4 says that any change in policy will depend on
+how inflation and output growth evolve in the coming months.
+Taken together, they give us a picture of what future policy
+is likely to be.
+\end{comment}
+
+
+
+\section{Quantitative easing, credit easing, and signaling the future}
+
+If the short-term interest rate falls to zero, or close to it,
+is the central bank powerless?
+This issue came up in Japan in the 1990s and
+much of the developed world after 2008.
+The answer is no, but let's review the logic --- and the collection of acronyms that go along it.
+
+The so-called {\it zero lower bound\/} (ZLB) is a practical
+limit on how low nominal interest rates can go.
+Why can't they go lower?
+Because currency guarantees a nominal interest rate of zero,
+so there's no reason to accept anything lower.
+Transaction costs and regulations that give preference
+to short-term government securities have let interest rates
+go a little below zero, but, as a practical matter, that's the limit.
+
+If you follow (say) a Taylor rule and it indicates a negative interest rate,
+what do you do?
+Your first guess might be that you're stuck:  zero is it.
+But remember:  You can always increase the money supply,
+even if it doesn't lead to a fall in the nominal interest rate.
+This change in the quantity of money is generally referred to as
+{\it quantitative easing\/} (QE).
+For those of us who grew up thinking about monetary policy in
+terms of the supply of money,
+this has a back-to-the-future ring to it:
+Isn't that how we used to talk?
+The key is the new terminology,
+which makes an old idea sound modern.
+That marketing lesson apparently works as well in economics
+as with consumer products.
+
+In contrast to QE, which increases the size of the central bank's
+balance sheet,
+{\it credit easing\/} (CE) shifts the composition of the balance sheet
+from default-free assets toward assets with credit (or other kinds of) risk.
+A classic example of CE is for the central bank to sell Treasury debt
+and buy mortgage-backed securities of the same maturity. Another example
+is to exchange short-term assets for long-term assets (as in the Fed's
+so-called Operation Twist).
+Only the mix of assets has changed.
+CE is thought to lower the cost and increase the supply of credit,
+particularly when private markets are illiquid.
+
+A different approach to policy at the ZLB is to commit future monetary
+policy to keeping interest rates low.
+If policymakers believe that inflation will stay below their target,
+they can promise to keep their interest-rate target low
+for an extended period.
+The Fed has used {\it policy-duration commitments\/}
+extensively since 2008, and occasionally before that.
+
+
+\subsubsection*{Executive summary}
+
+\setlength{\leftmargini}{.5\oldleftmargini}
+\begin{enumerate}
+\item Most central banks use interest rates as their primary policy tool.
+
+\item Theory and experience suggest that monetary policy
+should emphasize price stability and predictability.
+
+\item The Taylor rule is an approximate description of how
+central banks set interest rates: They raise them in response to
+increases in inflation and reductions in output.
+
+\item When interest rates hit zero, central banks can still implement
+policy through quantitative easing, credit easing, or
+commitments to future policy actions.
+\end{enumerate}
+\setlength{\leftmargini}{\oldleftmargini}
+
+
+%\begin{comment}
+\section*{Review questions}
+
+\setlength{\leftmargini}{.5\oldleftmargini}
+\begin{enumerate}
+\item Real and nominal interest rates.
+Consider the following information about inflation and US interest rates.
+%\begin{enumerate}
+%\item
+If we ignore the difference between actual and expected inflation,
+what was the real interest rate in each year presented in the table?
+When was it highest?
+%\end{enumerate}
+
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+        & Inflation Rate & One-Year Yield \\
+\midrule
+1980 & 8.75 & 12.05\\
+1990 & 3.80 & 7.88\\
+2000 & 2.15 & 6.11\\
+2010 & 1.33 & 0.32\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Answer.  The real interest rates for the four dates
+were 3.30, 4.08, 3.96, and 1.01.
+The highest was 1990, but 2000 is close.
+By far the lowest is 2010. 
+
+\item Money supply mechanics.  How does a central bank increase the money supply?
+What is the likely effect on the short-term interest rate?
+
+Answer.
+It purchases government bonds from private agents,
+giving them money in return.
+An increase in the money supply reduces the short-term
+interest rate.
+The argument is that this increases liquidity in markets, reducing
+the rate.
+It depends on an overall environment of price stability.
+
+\item Taylor rule in action.  If the inflation rate rises,
+how would a central bank following a Taylor rule respond?
+Why?
+
+Answer.  It would raise the interest rate.
+Note that the interest rate rises by more than one-for-one
+with inflation.
+
+%\item In some countries, including the US,
+%we can find $r$ directly from inflation-indexed
+%bonds.  For these bonds, coupons and
+%principal are adjusted for inflation: If prices increase 5 percent, then coupons
+%and principal are increased 5 percent.
+%Show that the yield on such a bond is, in fact,
+%the real interest rate $r$.
+%
+%Answer.  Apply the definitions.  What is the price now?
+%What is the payment one year from now?
+
+\item The Cleveland Fed has a beautiful
+\href{http://www.clevelandfed.org/research/data/credit_easing/index.cfm}{chart}
+that describes the asset side of the Fed's balance sheet since January 2007.
+Search:  ``cleveland fed credit easing.''
+Which features of the chart represent quantitative easing (QE)?
+Which represent credit easing (CE)?
+
+Answer.
+The large increase in the size of the Fed's asset positions in 2008
+represents QE.
+CE is less striking in its timing, but the increase in mortgage-backed
+agency debt (brown) in 2009 is a good example.
+
+\end{enumerate}
+\setlength{\leftmargini}{\oldleftmargini}
+
+\section*{If you're looking for more}
+
+For more on the art and science of monetary policy:
+%
+\begin{itemize}
+\item Ben Bernanke's speeches are typically clear and thoughtful.
+See especially:
+\begin{itemize}
+\item
+``\href{http://www.federalreserve.gov/boarddocs/speeches/2003/20030203/default.htm}
+{Constrained discretion},'' February 2003.
+
+\item ``\href{http://www.federalreserve.gov/boarddocs/Speeches/2004/20041202/default.htm}
+{The Logic of monetary policy},'' December 2004.
+
+\item
+``\href{http://www.federalreserve.gov/BoardDocs/Speeches/2005/20050330/default.htm}
+{Implementing Monetary Policy},''
+March 2005.
+
+\end{itemize}
+\item The Cleveland Fed's
+\href{http://www.clevelandfed.org/Research/Com2003/0703.pdf}
+{\it Taylor rule guide\/}.
+
+\end{itemize}
+
+\section*{Symbols and data used in this chapter}
+
+\begin{table}[H]
+\centering
+\caption{Symbol table.}
+\begin{tabular*}{0.85\textwidth}{l@{\extracolsep{\fill}}l}
+\toprule
+Symbol & Definition\\
+\midrule
+$\pi^e$     &Expected Inflation\\
+$i$                &Nominal interest rate\\
+$r$                &Real interest rate ($= i- \pi^e$)\\
+$q_m$             &Price of $m$-year bond \\
+$i_m$           &Nominal interest rate or yield on $m$-year bond\\
+$\pi^e_m$       &Expected Inflation over $m$ years\\
+$M$                &Money stock\\
+$V(i)$             &Velocity of money as a function of interest rate $i$\\
+$P$                &Price level\\
+$Y$               &Real output or GDP\\
+$Y^*$          &Equilibrium or potential real output\\
+$r^*$          &Equilibrium real interest rate\\
+$\pi^*$        &Target inflation rate\\
+$y$               &Natural logarithm of $Y$ ($=ln[Y]$)\\
+$y^*$          &Natural logarithm of $Y^*$\\
+$a_1,a_2$      &Coefficients or weights in Taylor rule\\
+%$\MB$           &Monetary base\\
+%$M$              &Monetary aggregate (generic)\\
+%M1           &Monetary aggregate ``M1''\\
+%M2           &Monetary aggregate ``M2''\\
+%$\CU$           &Currency\\
+%$D$                &Deposits\\
+%$RE$           &Reserves\\
+%$\gamma$        &$\CU/D$\\
+%$\rho$            &$RE/D$\\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\begin{table}[htb]
+\centering
+\caption{Data table.}
+\begin{tabular*}{0.85\textwidth}{l@{\extracolsep{\fill}}l}
+\toprule
+Variable & Source\\
+\midrule
+Federal funds rate    &FEDFUNDS\\
+2yr Treasury yield    &GS2\\
+10yr Treasury yield    &GS10\\
+Moodyâ's Baa corporate yield    &BAA\\
+BofA Merrill public sector     &BAMLEMPBPUBSICRPIEY\\
+\phantom{mm}emerging market yield &\\
+CBO real potential GDP    &GDPPOT\\
+Real GDP    &GDPC1\\
+Consumer price index    &CPIAUCSL\\
+\bottomrule
+\addlinespace
+\end{tabular*}
+\begin{minipage}{0.85\textwidth}
+\footnotesize{To retrieve the data online, add the identifier from the source column to \url{http://research.stlouisfed.org/fred2/series/}.  For example, to retrieve the Federal funds rate, point your browser to \url{http://research.stlouisfed.org/fred2/series/FEDFUNDS}}
+\end{minipage}
+\end{table}
+
+
+
+%
+%THE FEDERAL RESERVE ACT LAYS OUT the goals of monetary policy. It specifies that, in conducting
+%monetary policy, the Federal Reserve System and the Federal Open Market Committee should seek "to
+%promote effectively the goals of maximum employment, stable prices, and moderate long-term
+%interest rates."
+%
+%ECB
+%
+%The tasks of the ESCB and of the Eurosystem are laid down in the Treaty establishing the European
+%Community. They are specified in the Statute of the European System of Central Banks (ESCB) and of
+%the European Central Bank (ECB). The Statute is a protocol attached to the Treaty.
+%
+%The Treaty text refers to the 'ESCB' rather than to the 'Eurosystem'. It was drawn up on the
+%premise that eventually all EU Member States will adopt the euro. Until then, the Eurosystem will
+%carry out the tasks. Objectives "The primary objective of the ESCB shall be to maintain price
+%stability".
+%
+%And: "without prejudice to the objective of price stability, the ESCB shall support the general
+%economic policies in the Community with a view to contributing to the achievement of the
+%objectives of the Community as laid down in Article 2." (Treaty article 105.1)
+%
+%The objectives of the Union (Article 2 of the Treaty on European Union) are a high level of
+%employment and sustainable and non-inflationary growth.
+%
+%BOJ Act Chapter I General Provisions
+%
+%(Objectives) Article 1       The objective of the Bank of Japan, as the central bank of Japan, is
+%to issue banknotes and to carry out currency and monetary control. 2.      In addition to what is
+%prescribed by the preceding Paragraph, the Bank's objective is to ensure smooth settlement of
+%funds among banks and other financial institutions, thereby contributing to the maintenance of an
+%orderly financial system.
+%
+%(The principle of currency and monetary control) Article 2       Currency and monetary control
+%shall be aimed at, through the pursuit of price stability, contributing to the sound development
+%of the national economy.
+%
+%(Respecting the autonomy of the Bank of Japan and ensuring transparency) Article 3       The Bank
+%of Japan's autonomy regarding currency and monetary control shall be respected.

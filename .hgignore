@@ -1,0 +1,19 @@
+syntax: glob
+*.out
+*.aux
+*.log
+*.nav
+*.toc
+*.snm
+*.lof
+*.lot
+*.blg
+*.sav
+*.bbl
+*.bak
+*.idx
+*.ilg
+*.ind
+*.synctex
+The_Global_Economy_Amazon.pdf
+The_Global_Economy_Amazon_nolig.pdf

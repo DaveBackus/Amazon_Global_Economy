@@ -1,0 +1,713 @@
+\chapter{Sources of Economic Growth}\label{chp:grth}
+\hypertarget{growth}{}
+
+\textbf{Tools:} Cobb-Douglas production function; level and growth accounting;
+continuously-compounded growth rates.
+
+\textbf{Big Ideas:}
+\vspace{-0.1in}
+\begin{itemize}
+\item Level and growth accounting allow us to \emph{quantify} the sources of growth:
+  the contributions of capital, labor, and total factor productivity (TFP) to growth in real GDP.
+\item TFP accounts for most of the cross-country differences in output per worker 
+and in differences in the growth rate of output per worker.
+\end{itemize}
+\rule{\textwidth}{1pt}
+
+If saving rates aren't responsible for
+the enormous differences we see in living standards, what is?
+The answer is productivity, but our purpose here is to develop
+a tool that will give us the answer, whatever it might be.
+Our ingredients are data (always a good thing)
+and a little bit of theory (the production function).
+The combination allows us to attribute differences in output and its
+growth rate to differences in inputs (capital and labor)
+and total factor productivity (everything else).
+The answer, as noted, is mostly productivity:
+Rich countries are rich because they're productive,
+and countries that are growing quickly typically
+have rapid productivity growth, as well.
+Robert Solow gets credit for this line of thought, too.
+
+
+\section{Cross-country differences in output per worker}
+
+%In class we've looked at per capita GDP as measure
+%of aggregate performance:  output/income per person.
+%Here we'll look at GDP per worker.  The two are connected by
+%\begin{eqnarray}
+%    Y/\POP &=& (Y/L) (L/\POP) .
+%\end{eqnarray}
+%Any differences in GDP per capita reflect either GDP per worker
+%or the ratio of workers to population.
+%We'll focus on the former now, but return to the latter
+%when we get to labor markets.
+
+The production function gives us some insight into cross-country differences
+in GDP per worker.
+You'll recall that the production function connects an economy's output
+(real GDP)
+to the quantity of inputs used in production (capital and labor)
+and the efficiency with which those inputs are used (productivity).
+In equation form:
+\begin{equation}
+    Y \;=\; A F(K,L) \;=\; A K^\alpha L^{1-\alpha},
+    \label{eq:pf_source}
+\end{equation}
+where (as before)
+$Y$ is real GDP or output,
+$A$ is total factor productivity (TFP),
+$K$ is the capital stock,
+and $L$ is the quantity of labor (typically employment).
+More commonly, we divide both sides by $L$ and
+express output per worker as
+\begin{equation}
+    Y/L \;=\;  A (K/L)^\alpha ,
+    \label{eq:YL}
+\end{equation}
+so that output per worker depends on total factor productivity
+($A$) and capital per worker ($K/L$).
+%Our ability to convert this into a relation in ratios follows from the
+%constant-returns-to-scale property of the production function.
+For most countries, we have reasonably good data for GDP,
+employment, and the capital stock,
+and productivity can be found as a residual:
+\begin{equation}
+    A \;=\; {Y}/(K^\alpha L^{1-\alpha}) .
+\end{equation}
+We'll continue to use $\alpha = 1/3$, so there is nothing about
+equations (\ref{eq:pf_source}) and (\ref{eq:YL}) that we don't know.
+In this sense, the production function is no longer an abstract idea,
+but a practical tool of analysis.
+
+
+\begin{table}[h]
+\centering
+\caption{Growth accounting data for Mexico and the US.}
+\begin{tabular*}{0.8\textwidth}{l@{\extracolsep{\fill}}cccc}
+\toprule
+%\cline{2-7}%
+                &   Employment   & Education & Capital  & GDP \\%
+\midrule
+Mexico          &     46.94    &    7.61    &  4,278   &  1,293 \\%
+%\hline%
+US              &    155.45    &    12.27   & 42,238   &  12,619 \\%
+\bottomrule
+\addlinespace
+\end{tabular*}
+\begin{minipage}{0.8\textwidth}
+\footnotesize{{\small Aggregate data for 2009 (education for 2007).
+Employment is expressed in millions, education in years,
+and capital and GDP in billions of 2005 US dollars.
+}}
+\end{minipage}
+\label{tab:mexus}
+\end{table}
+
+The production function allows us to make explicit
+comparisons across countries.  If we apply equation (\ref{eq:YL})
+to two countries  and take the ratio, we get
+\begin{equation}
+    \frac{(Y/L)_1}{(Y/L)_2} \;=\;
+             \left[ \frac{A_1}{A_2} \right]
+             \left[ \frac{(K/L)_1}{(K/L)_2} \right]^\alpha ,
+        \label{eq:levelcomp}
+\end{equation}
+where the subscripts 1 and 2 refer to the two countries.
+The ratio of output per worker is, thus, attributed to
+some combination of the ratios of
+TFP and capital per worker.
+Exercises based on (\ref{eq:levelcomp}) are referred to as
+{\it level comparisons\/}.
+If we have data, we can say which of these factors is most important.
+%We can do a similar analysis of output.
+If we did this in logarithms, the components would add rather than multiply. The analysis in logarithms has the nice feature that each component can be expressed as a percent contribution of the total.
+
+
+\textbf{Example (Mexico and US).} You occasionally hear
+people in the US say that Mexican workers are paid so much less
+that they pose a threat to American jobs. (In Mexico, you hear the
+same thing about Chinese workers.) We can't address that issue (yet) but we can say something about the source of differences
+in output per worker, which is closely related to differences in
+wages. The data in Table \ref{tab:mexus} imply that output per
+worker is 2.95 times higher in the US, but why?
+We'll use the data in Table~\ref{tab:mexus} to come up with an answer.
+
+Let's start with TFP.
+For Mexico, the data in the table imply that
+\[
+    A_M \;=\; 1293 / [ 4278^{1/3} 46.94^{2/3} ] \;=\; 6.12.
+\]
+A similar calculation for the US gives us $A_{US} = 12.53$.
+Thus, TFP is 2.05 ($= 12.53/6.12$) times higher in the US.
+Similarly, the capital-labor ratio is 2.98 times higher in the US.
+The impact on output per worker is summarized by
+\begin{eqnarray*}
+     \frac{(Y/L)_{US}}{(Y/L)_{M}}  &=&  \frac{A_{US}}{A_M}
+                        \left[ \frac{(K/L)_{US}}{(K/L)_{M}} \right]^{1/3} \\
+                         &=&   (2.05) (2.98)^{1/3} \\ %\phantom{\sum^i} \\
+                         &=&   (2.05) (1.44) \;=\; 2.95 . %\phantom{\sum^\infty}
+\end{eqnarray*}
+It seems, therefore, that both TFP and capital per
+worker play a role in accounting for the
+2.95-to-1 ratio of US to Mexican output per worker.
+So the reason why output per worker is higher in the US is a
+combination of higher productivity and
+higher capital per worker.
+
+This is your chance for speculation:
+Why do you think the capital-labor ratio is lower in Mexico?
+Why do you think productivity is lower?
+
+%[Note: differences between the US and Mexico are smaller with this data,
+%which has been PPP-adjusted, than if we had simply multiplied
+%Mexican GDP by the exchange rate to express it in dollars. The
+%reason:  many goods and services are cheaper in Mexico than the
+%US, so when we apply the same prices to both countries the
+%differences are smaller.
+%See the discussion of PPP adjustment in
+%the notes on national income and product accounts.]
+
+%Our next task is to apply similar methods to
+%account for differences in growth rates. Before proceeding, we
+%need to be clear about what we mean by growth rates. For many
+%purposes in this course, we will define the growth rate of a
+%variable $x$ between dates $t$ and $t+1$ as
+%\begin{equation}
+%    \gamma \;=\; \ln x_{t+1} - \ln x_{t} \;=\; \Delta \ln x_{t+1} .
+%\end{equation}
+%The expression ``$\ln$'' here means the natural log,
+%the function LN in a spreadsheet.
+%We refer to $\gamma$ as the {\it continuously-compounded growth rate\/}
+%for reasons we will ignore.
+%(See the ``Math Review'' if you're interested.)
+%Typically the dates are years, so $\gamma$ is an annual growth rate.
+%If we want to express it as a percentage, we multiply by 100.
+%The average growth rate between $t$ and $t+n$
+%has a similar definition:
+%\begin{equation}
+%    \gamma \;=\; \left( \ln x_{t+n} - \ln x_{t} \right) / n  .
+%\end{equation}
+%The terminology here is that $\gamma$ is the average continuously compounded
+%growth rate.
+%
+%You might want to know
+%why aren't using the traditional definition of a growth rate,
+%say $g$ in
+%\begin{equation}
+%    1 + g \;=\; x_{t+1}/x_t  \;\;\; \Leftrightarrow
+%                \;\;\; g \;=\; (x_{t+1} - x_t)/x_t .
+%\end{equation}
+%Why use $\gamma$ rather than $g$?
+%The answer is that what follows works out more neatly with $\gamma$.
+%Otherwise we get the kinds of annoying compounding terms you might recall
+%from bond pricing.
+%
+%You can stop here if you like; in fact,
+%we order you to go immediately to the next section
+%unless you are reasonably comfortable with mathematics.
+%If you are, then here's a more elaborate explanation:
+%\begin{itemize}
+%\item There's little difference if the growth rates are small.
+%This isn't an argument in favor of our definition, but it's good to know.
+%Suppose $x_t = 100$ and $x_{t+1} = 110$.  Then $g = 0.100 $ and
+%$\gamma = \ln 110 - \ln 100 = 0.0953$,
+%so the growth rates are 10\% and 9.53\%.
+%If the growth rate were smaller, the difference would be smaller, too.
+%If you're not mathematically inclined, go immediately to the next point.
+%If you are, we would tell you that $g$ is a first-order Taylor series approximation to $\gamma$.
+%Note that $\gamma$ is a function of $g$:
+%\[
+%    \gamma \;=\; \ln x_{t+1} - \ln x_t \;=\; \ln (x_{t+1}/x_t) \;=\; \ln (1+g) .
+%\]
+%This follows from a property of logarithms:  $\ln x - \ln y = \ln(x/y)$.
+%A first-order approximation of the function around the point $g=0$ is
+%\[
+%    \gamma \;\approx\; \ln (1) + (1) (g-0)  \;=\;  g,
+%\]
+%where ``$\approx$'' means ``approximately equal to.''
+%Higher-order terms are $g^2/2$, $g^3/6$, and so on,
+%which are very small if $g$ is small.
+%
+%\item Growth rates are additive.
+%Suppose you're interested in the growth rate of a product $xy$.
+%For example, $x$ might be the price deflator and $y$ real output, so that $xy$ is nominal output.
+%With the traditional measure, the growth rate of $xy$ is
+%\[
+%    1 + g_{xy} \;=\; \frac{x_{t+1} y_{t+1}}{x_t y_t } \;=\; (1+g_x) (1+g_y).
+%\]
+%If $g_x = g_y = 0.10$, then $g_{xy} = 0.21$.
+%But note what happens with our definition:
+%\[
+%    \gamma_{xy} \;=\; \ln \left( \frac{x_{t+1} y_{t+1}}{x_t y_t } \right)
+%                \;=\; \ln \left( \frac{x_{t+1}}{x_t} \right) + \ln \left( \frac{y_{t+1}}{y_t} \right)
+%                \;=\; \gamma_x + \gamma_y .
+%\]
+%They add up! Thus the growth rate of a product is the sum of the
+%growth rates. That's not quite true for traditional growth rates,
+%because of the ``compound interest'' effect:  $ (1+g_x) (1+g_y) =
+%1 + g_x + g_y + g_x g_y$. The last term is small if the growth
+%rates are, but it's not zero. This additive feature of continuously compounded growth
+%rates is the primary reason we use them. For similar reasons, the
+%continuously compounded growth rate of $x/y$ equals the growth rate of $x$ minus the
+%growth rate of $y$.
+%
+%
+%\item Averages are easy to compute.  Suppose we want to know the average growth rate of
+%$x$ over $n$ periods:
+%\[
+%    \gamma \;=\; \frac{ (\ln x_{t+1}-\ln x_t) + (\ln x_{t+2}-\ln x_{t+1})
+%                    + \cdots + (\ln x_{t+n} - \ln x_{t+n-1}) }
+%                {n} .
+%\]
+%If you look at this for a minute, you might notice that most of the terms cancel.
+%The term $\ln x_{t+1}$, for example, shows up twice, once with a positive sign, once with a negative sign.
+%If we eliminate the redundant terms, we find that the average growth rate is
+%\[
+%    \gamma \;=\; \frac{ \ln x_{t+n}-\ln x_t }  {n}  \;=\; \frac{ \ln (x_{t+n}/x_t) }  {n} .
+%\]
+%We can compute it, then, from the initial and final values of $x$.
+%
+%\end{itemize}
+%Finally, to go from growth rates back to levels,
+%we need to use a method that corresponds to the growth rate we are using.
+%For a traditional growth rate, we update levels by
+%$ x_{t+1} = (1+g) x_t$.
+%For continuously-compounded growth rates, we use
+%$ x_{t+1} = \exp(\gamma) x_t $.
+
+
+\section{Cross-country differences in growth rates}
+
+Our next task is to apply similar methods to account for cross-country differences in \emph{growth rates} rather than levels.
+
+\textbf{Warning, growth rates ahead:} Before you continue, you might want to go back and review
+\hyperref[sec:growth_math_cc]{continuously-compounded growth rates}
+in the Mathematics Review, Chapter \ref{chp:math}.
+
+As before, the starting point is the production function.
+If we take the natural logarithm of both sides of the production function (\ref{eq:pf_source}),
+we find that
+\[
+    \ln Y_t \;=\;  \ln A_t + \alpha \ln K_t
+            + (1-\alpha) \ln L_t
+\]
+for any date $t$.
+This follows from two properties of logarithms:  $ \ln (xy) = \ln x + \ln y$
+and $\ln x^a = a \ln x$.
+If we take the difference between two adjacent periods $t$ and $t-1$ we get
+\[
+    \ln Y_t -  \ln Y_{t-1} \;=\;  (\ln A_t - \ln A_{t-1}) + \alpha (\ln K_t-\ln K_{t-1})
+            + (1-\alpha) (\ln L_t - \ln L_{t-1}).
+\]
+Notice that each of the components should be recognizable as continuously-compounded growth rates discussed in the \hyperref[sec:growth_math_cc]{growth-rate discussion}.
+
+If we consider differences over $n$ periods, we can divide each term by the number of periods to get
+\begin{eqnarray*}
+    \left( \frac{ \ln Y_{t} - \ln Y_{t-n} }{n} \right) &=&
+                    \left( \frac{\ln A_{t} - \ln A_{t-n}} {n} \right)
+                    + \alpha \left( \frac{ \ln K_{t} - \ln K_{t-n}} {n} \right) \\
+        && + \; (1-\alpha) \left( \frac{\ln L_{t} - \ln L_{t-n}} {n} \right).
+\end{eqnarray*}
+Notice that we have expressed the average, continuously-compounded growth rate of GDP into the average, continuously-compounded growth rate of each component of the production function (i.e., TFP, capital, and labor). Using our notation convention that continuously-compounded growth rates are represented by $\gamma$,
+we can express the formula above more succinctly as
+\begin{equation}
+    \gamma_Y \;=\; \gamma_A + \alpha \gamma_K + (1-\alpha) \gamma_L.
+    \label{eq:gammaY}
+\end{equation}
+In words, this equation says that the growth rate of output can be attributed to growth in TFP, capital, and labor. Moreover, the terms add up because of our use of logarithms and continuously compounded growth rates. Additivity is nice, as it allows us to make statements about the contributions of each component to the growth of GDP.
+
+As with levels, we can do the same for the growth rate of output per worker:
+\begin{eqnarray}
+    \gamma_{Y/L} &=& \gamma_Y - \gamma_L \nonumber \\
+            &=&  \gamma_A + \alpha (\gamma_K - \gamma_L) \nonumber \\
+        &=& \gamma_A + \alpha \gamma_{K/L} .
+    \label{eq:gammaYL}
+\end{eqnarray}
+Exercises based on (\ref{eq:gammaY}) and (\ref{eq:gammaYL}) are referred to as
+{\it growth accounting\/}, which allows us to make statements about the contributions of each component in accounting for the growth of GDP (\ref{eq:gammaY}) or GDP per worker (\ref{eq:gammaYL}).
+
+Both versions of growth accounting give us some insight into the sources of economic
+growth, as the example below shows.
+
+
+\textbf{Example (Chile between 1965 and 2009).}
+GDP increased by almost a factor of five between 1965 and 2009.
+Can we say why? The relevant data are reported in Table \ref{tab:chile}.
+\begin{table}[h]
+\centering
+\caption{Chilean aggregate data for 1965 and 2009.}
+\begin{tabular}{lcccc}
+\toprule
+%\cline{2-7}%
+                &   Employment   & Education & Capital  & GDP \\%
+\midrule
+1965            &     2.71    &    4.77   & 65.63  &  33.62 \\%
+%\hline%
+2009            &     7.52    &    7.97   & 819.81 & 199.2 \\%
+\bottomrule
+\end{tabular}
+\label{tab:chile}
+\end{table}
+
+The first step is to compute growth rates.
+Over this period, the average annual growth rate of real GDP was
+\[
+    \gamma_{Y} \;=\; \frac{\ln Y_{2009} -\ln Y_{1965}}{44}
+            \;=\; (5.29-3.52)/44 \;=\; 0.0404,
+\]
+or 4.04 percent.
+Using the same method,
+we find that the growth rates of the other variables we need are
+ $\gamma_{K}=5.74$ percent and $\gamma_{L}=2.32$ percent.
+The growth rate of total factor productivity is the residual
+in equation (\ref{eq:gammaY}):
+\[
+    \gamma_A \;=\; \gamma_Y - \left[ \alpha \gamma_K +
+            (1-\alpha) \gamma_L \right]
+                \;=\; 0.58\% .
+\]
+(You could also compute $A$ for each period
+and calculate the growth rate directly.)
+So why did output grow?
+Our numbers indicate that of the 4.04 percent growth in output,
+0.58 percent was due to TFP; 1.91 percent [$=5.74\times\frac{1}{3}$] was due to increases in capital;
+and 1.55 percent [$=2.32 \times (2/3)$] was due to increases in employment.
+
+What about output per worker?
+That seems to be the more interesting comparison,
+because it's closer to an average living standard.
+The growth rate of output per worker is
+$ \gamma_{Y/L} = 1.72$ percent.
+Its components are
+\begin{eqnarray*}
+    \gamma_{Y/L} &=& \gamma_A + \alpha \gamma_{K/L} \\
+      1.72   &= & 0.58 + (1/3) 3.42.
+\end{eqnarray*}
+In this case, most of the growth in output per worker came from
+capital per worker, rather than TFP.
+
+
+\section{Extensions}
+
+We will sometimes use modifications of these tools.
+Two of the more common ones are based on
+(i) more-refined measures of labor
+and/or (ii) GDP per capita rather than GDP per worker.
+The logic is the same as before, but we gain an extra term or two.
+%We recommend you skip this the first time through.
+
+
+\textbf{Labor measures.} Consider a measure of labor that includes
+adjustments for hours worked $h$ and human capital $H$.
+If the labor input is $hHL$ (with $L$ the number of people employed),
+the production function becomes
+\begin{equation}
+    Y \;=\; A F(K,hHL) \;=\; A K^\alpha (hHL)^{1-\alpha} .
+    \label{eq:pf-aug}
+\end{equation}
+How does this change our analysis of levels and growth rates?
+In a  level comparison, this leads to
+\[
+    \frac{Y_1}{Y_2} \;=\;
+             \left[ \frac{A_1}{A_2} \right]
+             \left[ \frac{K_1}{K_2} \right]^\alpha
+             \left[ \frac{L_1}{L_2} \right]^{1-\alpha}
+             \left[ \frac{h_1}{h_2} \right]^{1-\alpha}
+             \left[ \frac{H_1}{H_2} \right]^{1-\alpha} .
+\]
+The subscripts 1 and 2 again represent countries.
+You can derive further modifications for output per worker ($Y/L$)
+and output per hour worked ($Y/hL$).
+In a growth-rate analysis,
+the augmented production function (\ref{eq:pf-aug})
+leads to
+\begin{eqnarray*}
+    \gamma_Y &=& \gamma_A + \alpha \gamma_K + (1-\alpha)
+        (\gamma_h + \gamma_H + \gamma_L)
+\end{eqnarray*}
+for output and
+\begin{eqnarray*}
+    \gamma_{Y/L} &=&  \gamma_A
+                + \alpha \gamma_{K/L}
+                    + (1-\alpha) (\gamma_h + \gamma_H ) \\
+    \gamma_{Y/hL} &=&  \gamma_A
+                + \alpha \gamma_{K/hL}
+                    + (1-\alpha) \gamma_H
+\end{eqnarray*}
+for output per worker and output per hour, respectively.
+If this sounds complicated, remember that the choice of tool
+depends on the question we're trying to answer.
+
+We have some choices when it comes to measuring human capital.
+One simple choice is to equate human capital with years of school:
+$H = S$ if we want to give it mathematical form.
+A more sophisticated choice is to give education a rate of return,
+so that
+\begin{equation}
+    H \;=\; \exp( \sigma S ) ,
+    \label{eq:mincer}
+\end{equation}
+where $\sigma$ is kind of a rate of return on school,
+as each year raises human capital proportionately.
+Estimates of $\sigma$ are in the range of $0.07$,
+so that each year of school raises human capital by
+about $7$ percent.
+
+
+\textbf{Per capita GDP.} The analysis above concerned GDP per worker (rather than per capita).
+How can we adapt our analysis to account for GDP per capita?
+Here's a trick:
+start with equation (\ref{eq:YL}) and multiply both sides by
+the ratio of employment to population:
+\[
+    Y/\POP \;=\; (L/\POP) (Y/L) \;=\; (L/\POP) A (K/L)^\alpha .
+\]
+In a level comparison, this gives us an extra term:  the ratio
+of $L/\POP$ across countries.
+In growth rates, we'd add an extra term for the growth rate of
+the employment ratio:
+\begin{eqnarray*}
+    \gamma_{Y/POP} &=&  \gamma_{L/POP}  + \gamma_A
+                + \alpha \gamma_{K/L}  .
+\end{eqnarray*}
+And if you want to get fancy, you can add hours and human-capital terms,
+as we did above.
+
+
+\textbf{Example (Mexico and US, revisited).}
+How does our analysis of the US and Mexico change if
+we incorporate differences in human capital?
+We set human capital $H$ equal to years of school
+and redo our earlier analysis.
+TFP is now
+\[
+    A_M \;=\; 1293 / [ 4278^{1/3} (7.61 \times 46.94)^{2/3} ] \;=\; 1.58
+\]
+for Mexico and $A_{US} = 2.36$ for the US.
+Note that the ratio has fallen from 2.05 to 1.49.
+Why?  Because part of the previous difference
+now shows up in human capital.
+[Reminder:  $A$ is a residual, so
+any change in the analysis changes our measure of it.]
+We now attribute some of the difference in output per worker
+to a difference in education:
+\begin{eqnarray*}
+     \frac{(Y/L)_{US}}{(Y/L)_{M}}  &=&  \frac{A_{US}}{A_M}
+                        \left[ \frac{(K/L)_{US}}{(K/L)_{M}} \right]^{1/3}
+                        \left[ \frac{H_{US}}{H_M} \right]^{2/3}_{\phantom{X_X}}   \\
+                         &=&   (1.49) (2.98)^{1/3} (1.61)^{2/3}  \\%\phantom{\sum^i} \\
+                         &=&   (1.49) (1.44) (1.38) \;=\; 2.95 . %\phantom{\sum^\infty}
+\end{eqnarray*}
+It appears that more than half of our earlier difference in TFP
+stems from differences in education.
+We amend our previous analysis to add:
+A substantial part of the difference between output per worker
+in the US and Mexico stems from differences in education.
+
+An alternative is to measure human capital using our
+rate-of-return formula, equation (\ref{eq:mincer}).
+If we do this, the ratio of human capital is 1.39,
+which is less than we had before.
+This choice makes an even bigger difference with countries
+like India, which have low average education.
+If years of school go from two to three, is that a 50-percent increase
+in human capital or a seven-percent increase?
+You be the judge.
+Of course, it may depend on what they learn in school, too.
+
+
+\section*{Executive summary}
+
+\setlength{\leftmargini}{.5\oldleftmargini}
+\begin{enumerate}
+\item Recall that a production function links output to inputs and productivity.
+
+\item Therefore, differences in output and growth rates across countries
+stem from differences in the levels and growth rates
+of inputs and productivity (TFP).
+
+\item Level accounting and growth accounting allows us to quantify
+the differences in output and growth arising from differences in inputs and total factor productivity.
+\end{enumerate}
+\setlength{\leftmargini}{\oldleftmargini}
+
+\section*{Review questions}
+
+\setlength{\leftmargini}{.5\oldleftmargini}
+\begin{enumerate}
+\item France and the UK.  In 2007, the data were:
+%
+\begin{center}
+\begin{tabular}{lcccc}
+\toprule
+%\cline{2-7}%
+                &   Employment   & Education & Capital  & GDP \\%
+\midrule
+France  &  29.51 &  8.48 &  6,478 &  1,986 \\
+UK      &  31.79 &  9.88 &  5,243 &  2,070 \\
+\bottomrule
+\end{tabular}
+\end{center}
+%
+Which country had higher output per worker?  Why?
+You should assume that human capital is equal to years of school.
+
+Answer.  Ratios were as follows:
+\begin{eqnarray*}
+    \left( \frac{(Y/L)_{F}}{(Y/L)_{UK}} \right) &=& \left( \frac{A_{F}}{A_{UK}} \right)
+                        \left( \frac{(K/L)_{F}}{(K/L)_{UK}} \right)^{1/3}
+                        \left( \frac{H_{F}}{H_{UK}} \right)^{2/3}  \\
+            1.03              &=&   (1.04) (1.33)^{1/3} (0.86)^{2/3}  . \phantom{\sum^\infty}
+\end{eqnarray*}
+That is, France had slightly higher TFP and more capital per worker,
+but a lower level of education than the UK.
+%Note, too, that France has a better soccer team.
+
+
+\item Growth rates.  Take the following data:
+%
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+                & Output $Y$  & Employment $L$ \\
+\midrule
+1950 \hspace*{0.25in} &  10 & 2 \\
+2000  &  50 & 3 \\
+\bottomrule
+\end{tabular}
+\end{center}
+%
+\begin{enumerate}
+\item What are the average annual continuously-compounded growth rates of $Y$ and $L$?
+\item What is the analogous growth rate of $Y/L$?
+\end{enumerate}
+
+Answer.
+\begin{enumerate}
+\item The growth rate of output is
+\begin{eqnarray*}
+    \gamma_Y &=& [\ln (50) - \ln (10)]/(2000-1950) \;\;=\;\; 0.0322 ,
+\end{eqnarray*}
+or 3.22\% per year.
+A similar calculation gives us $\gamma_L = 0.0081$ = 0.81\% per year.
+\item We can do this two ways.  The easiest is
+\begin{eqnarray*}
+    \gamma_{Y/L} &=& \gamma_{Y} - \gamma_{L} \;\;=\;\; 0.0241.
+\end{eqnarray*}
+You can also do it directly using the same method we used in (a).
+\end{enumerate}
+
+
+\item US and Japan.
+Explain why output grew faster in Japan between 1970 and 1985.
+Data:
+%
+\begin{center}
+\small
+\begin{tabular*}{0.9\textwidth}{lcrrccrrc}
+\toprule
+&&  \multicolumn{3}{c}{United States} && \multicolumn{3}{c}{Japan}        \\
+                        \cmidrule{3-5}  \cmidrule{7-9}
+&&              1970  & 1985 & Growth && 1970 & 1985 & Growth \\
+\midrule
+GDP && 2083 &  3103  &  2.66    &  &   620  & 1253  &  4.69   \\
+Capital      && 8535 & 13039  &  2.83    &  &  1287  & 3967  &  7.50   \\
+Labor  && 78.6 & 104.2  &  1.88    &  &  35.4  & 45.1  &  1.61   \\
+\bottomrule
+\end{tabular*}
+\end{center}
+%
+Employment is measured in millions of workers,
+GDP and capital in
+billions of 1980 US dollars.
+Growth rates are continuously-compounded average annual percentages.
+
+Answer.
+In levels (as opposed to growth rates), we see that
+the US had much greater output per worker in 1970:
+26.5 (thousand 1980 dollars per worker) vs 17.5.
+Where did this differential come from?  One difference is that American
+workers in 1970 had three times more capital to work with:
+$K/L$ was 108.6 in the US, 36.4 in Japan.  If we use our production
+function, we find that total factor productivity $A$
+was also slightly higher in the US in 1970:  5.55 v. 4.50.
+Thus, the major difference between the countries in
+1970 appears to have been in the amount of capital:  American workers had more
+capital and, therefore, produced more output, on average.
+
+By 1985, much of the difference had disappeared.
+%It's obvious from the
+%numbers that the biggest difference between Japan and the US over the 1970-85
+%period is in the rate of growth of the capital stock.
+For the US, the output growth rate of 2.66 percent per year can be divided
+into 0.94 percent due to capital and 1.26 percent due to employment growth.
+That leaves 0.47 percent for growth in total factor productivity.
+For Japan, the numbers are 2.48 percent for capital, 1.08 percent for
+labor, and 1.13 percent for productivity.
+Evidently, the largest difference between the two
+countries was in the rate of capital formation:  Japan's capital stock
+grew much faster, raising its capital-labor ratio from
+36.4 in 1970 to 88.0 in 1985.
+\end{enumerate}
+\setlength{\leftmargini}{\oldleftmargini}
+
+\section*{Symbols used in this chapter}
+
+\begin{table}[H]
+\centering
+\caption{Symbol table.}
+\begin{tabular*}{0.9\textwidth}{l@{\extracolsep{\fill}}l}
+\toprule
+Symbol & Definition\\
+\midrule
+$Y$                            &Output (real GDP)\\
+$\POP$                      &Population\\
+$A$                            &Total factor productivity (TFP)\\
+$K$                            &Stock of physical capital (plant and equipment)\\
+$L$                            &Quantity of labor (number of people employed)\\
+$F(K,L)$                    &Function of inputs K and L in production function\\
+$\alpha$                     &Exponent of $K$ in Cobb-Douglas production function \\
+                            &(= capital share of income)\\
+$\gamma_x$                  &Continuously-compounded growth rate of variable $x$\\
+$g_x$                       &Discretely-compounded growth rate of variable $x$\\
+$\ln$                        &Natural logarithm (inverse operation of $\exp$)\\
+$\exp$                      &Exponential function (inverse operation of $\ln$)\\
+$h$                         &Hours worked per worker\\
+$H$                         &Human capital\\
+$\sigma$                     &Value of an extra year of schooling \\
+                            &(= rate of return on schooling)\\
+$Y/\POP$                        &Output per capita\\
+$L/\POP$                        &Ratio of employment to population\\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\section*{If you're looking for more}
+
+Our calculations are based on the
+\href{https://pwt.sas.upenn.edu/php_site/pwt_index.php}{Penn World Table},
+
+\vspace*{\parskip}
+\centerline{\url{https://pwt.sas.upenn.edu/php_site/pwt_index.php},}
+
+which includes data on GDP per worker and related variables constructed
+on a consistent basis for most countries in the world.
+We typically post a spreadsheet of the latest version for our classes,
+modified to include capital stocks and education levels.
+If you're interested and can't find it online,
+send us an email and we'll send you a link.
+
+The tools of growth accounting are widely used by industry analysts.
+Some of the most interesting applications have been done by McKinsey,
+whose studies have connected cross-country differences in TFP to
+government regulation, management practices, and the competitive environment.
+Some of this work is summarized in William Lewis's
+{\it The Power of Productivity\/}
+(University of Chicago Press, 2004).
+Other examples are available on \href{http://www.mckinsey.com/insights/mgi/research/productivity_competitiveness_and_growth}{McKinsey's web site};
+search ``mckinsey productivity.''
+
+
+% ?? Bloom
+

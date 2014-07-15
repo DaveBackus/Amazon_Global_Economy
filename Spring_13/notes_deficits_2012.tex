@@ -1,0 +1,749 @@
+\chapter{Government Debt and Deficits}\label{chp:dbdf}
+\hypertarget{deficits}{}
+
+\textbf{Tools:} Government budget constraint; debt dynamics.
+
+\textbf{Key Words:} Government budget; government debt and deficits; primary deficit/surplus;
+the debt-to-GDP ratio; hidden liabilities.
+
+\textbf{Big Ideas:}
+\vspace{-0.1in}
+\begin{itemize}
+\item Government spending must be paid for, either now through taxes, or in the
+future.
+\item Current debt must be balanced by future primary surpluses.
+\item Changes in the ratio of debt to GDP have three sources:
+interest, growth, and primary deficits.
+\end{itemize}
+\rule{\textwidth}{1pt}
+
+The fundamental principle of government finance is that
+governments must finance spending with taxes.
+Issuing debt postpones this obligation but does not eliminate it.
+If a government doesn't collect enough tax revenue now,
+it must collect it later --- or face default.
+Since investors like to be repaid, they pay close attention
+to government debt and deficits.
+If they're too high, investors may demand higher yields
+or even stop buying government securities altogether.
+The consequences of this sequence of events are never pretty.
+
+Debt finance poses a \hyperref[sec:time_cons]{\textit{time-consistency} problem} because
+(i) governments have an incentive to issue debt and tax future
+generations who do not vote today;
+and (ii) future governments may have an incentive to inflate away
+or repudiate past debt.
+Countries with good governance solve this problem either through
+sound budget policy or institutional design.
+Otherwise, not so much.
+
+
+\section{Government revenues, expenses, and debt}
+
+We start with a quick overview of
+government spending and revenue decisions ---
+what is conventionally called {\it fiscal policy\/}.
+
+Countries differ in the size of government relative to the economy,
+in the sources of tax revenues,
+and in their expenditures.
+Governments everywhere
+purchase goods and services (schools, police, courts, roads, military),
+transfer money to individuals (social insurance, health care),
+and collect revenue (largely through taxes).
+The distinction between purchases and transfers is important.
+Only purchases show up in the expenditure identity.
+Transfers are, nevertheless, a large part of total expenses in many economies,
+particularly developed economies.
+Governments also pay interest on outstanding government debt,
+an expense we track separately.
+
+We'll look at data for each of these in class.
+As a rule, government spending and revenue are a larger fraction of GDP
+in rich countries than in poor ones.
+Rich countries also spend more on transfers.
+There is, however, a lot of variation at all levels of development.
+
+We put these elements together in a relation we'll call
+the {\it government budget constraint\/}.
+On the expense side, we label government purchases of goods and services $G$,
+transfers $V$, and interest payments $iB$
+(the product of the government debt $B$ and whatever interest rate $i$
+the government pays on it).
+On the revenue side, we label tax revenue $T$.
+(Note: $T$ is tax revenue, not the tax rate.)
+By convention, all of these things are nominal:
+they're measured in local currency units.
+The government budget constraint is, then,
+\begin{eqnarray}
+    G_t + V_t + i_t B_{t-1} - T_t  &=& B_{t} - B_{t-1} .
+    \label{eq:gbc}
+\end{eqnarray}
+Here, $B_{t-1}$ is the amount of debt outstanding at the end of
+period $t-1$.
+The left-hand side of (\ref{eq:gbc})
+is the government deficit,
+the right the change in the quantity of debt.
+The equation says, in essence, that any surplus or deficit is matched
+by a change in the quantity of debt.
+A government deficit, for example, is financed by issuing more debt.
+
+
+The elements of equation (\ref{eq:gbc})
+are often used to generate summary measures
+of fiscal policy.
+The most common are ratios  of
+the government deficit and government debt to GDP.
+We'll look at both, as well as the connection between them.
+
+
+%\end{document}
+\section{Debt and (primary) deficits}
+
+
+Governments need to finance their spending with taxes.
+It's not quite true --- governments have other sources of revenue --- but it's close enough to be worth remembering.
+Issuing debt allows a government to postpone taxes,
+just as a credit card allows an individual to postpone paying
+for purchases,
+but does not eliminate the obligation.
+Delay, in fact, comes with a cost:  We need to pay the original
+obligation, plus interest.
+In the rest of this section, we make the same point more formally.
+
+We're going to take our budget constraint, equation (\ref{eq:gbc}),
+and use it to relate debt to past and future deficits.
+To make things a little simpler,
+define the {\it primary deficit\/} $D$ as the deficit
+net of interest payments (sort of an ``EBITDA'' number):
+\begin{eqnarray*}
+    D_t &=&  G_t + V_t - T_t .
+\end{eqnarray*}
+(This is sometimes reported with the opposite
+sign and called the primary budget balance or surplus.)
+With this simplification, (\ref{eq:gbc}) can be expressed as
+\begin{eqnarray}
+    B_{t}   &=& (1+i) B_{t-1} + D_t
+   \label{eq:gbc-bdynamics1}
+\end{eqnarray}
+or
+\begin{eqnarray}
+    B_{t-1}  &=&  B_{t}/(1+i) - D_t/(1+i) .
+    \label{eq:gbc-bdynamics2}
+\end{eqnarray}
+They're the same equation, but the first one looks backward from $t$ to $t-1$,
+and the second looks forward from $t-1$ to $t$.
+We'll put both to work.
+The $i$ in these equations is the \textit{nominal interest rate} that the government pays on its debt.
+We'll assume it is constant for now --- it makes the math simpler ---
+but allow it to change in the next section.
+
+Equation (\ref{eq:gbc-bdynamics1}) tells us where the debt came from.
+If we substitute over and over again, back to some period $t-n$,
+we have
+\begin{eqnarray*}
+    B_{t}  &=& D_t + (1+i) B_{t-1} \\
+            &=& D_t + (1+i) [(1+i) B_{t-2} + D_{t-1}] \\
+            &=& D_t + (1+i) D_{t-1} + (1+i)^2 D_{t-2} + \cdots + (1+i)^n B_{t-n}.
+\end{eqnarray*}
+In words:  The current debt is the debt we started with $n$ periods ago
+plus the current value of past deficits plus accumulated interest.
+It's like your credit card bill: Your current balance consists of past shortfalls plus accumulated interest.
+
+
+Equation (\ref{eq:gbc-bdynamics2}) tells us what we need to do in the future
+to service the current debt.
+If we substitute repeatedly, we find
+\begin{eqnarray*}
+    B_{t-1}   &=&  B_{t+1}/(1+i)^2 - [D_t/(1+i)+ D_{t+1}/(1+i)^2] \\
+            &=&  B_{t+2}/(1+i)^3 -
+                [D_t/(1+i)+ D_{t+1}/(1+i)^2 + D_{t+2}/(1+i)^3] \\
+            &=&  B_{t+n-1}/(1+i)^n -
+                [D_t/(1+i)+ \cdots + D_{t+n-1}/(1+i)^n] .
+%    \label{eq:gbc-bdynamics-rec}
+\end{eqnarray*}
+If we assume that debt can't grow faster than the interest rate forever,
+then, as we continue to substitute, the first term goes to zero.
+[The technical condition is $B_{t+n}/(1+i)^n$ goes to zero as $n$
+approaches infinity.
+It amounts to not allowing the government to run a Ponzi scheme,
+paying off old debt by issuing new debt, forever.]
+The relation then becomes
+\begin{eqnarray}
+    B_{t-1}   &=&  -[D_t/(1+i)+ D_{t+1}/(1+i)^2 +
+                   D_{t+2}/(1+i)^3] +   \cdots ]  \nonumber \\
+            &=& - \mbox{Present Discounted Value of Primary Deficits}
+                \phantom{\sum} \nonumber \\
+            &=& \mbox{Present Discounted Value of Primary Surpluses} .
+            \label{eq:debt-future-surpluses}
+\end{eqnarray}
+In words:   The current government debt must be matched
+by the present discounted value of future primary surpluses.
+As we said at the start, all spending must be financed by tax revenue --- eventually.
+It's not enough to shrink the deficit.
+Eventually we have to run surpluses, measured net of interest payments.
+
+Analysis of this sort often uses the term {\it sustainable\/}.
+We say the debt is sustainable if current debt is balanced
+by plans for future surpluses, as in equation (\ref{eq:debt-future-surpluses}).
+If not, we say the government's budget is {\it unsustainable\/}.
+In this case, we can paraphrase the economist Herbert Stein:
+``Something must change, so it will.''
+
+
+\begin{comment}
+Although (primary) government deficits must eventually be reversed,
+they can affect the economy while they last.
+One route is distribution.
+If taxes are delayed long enough, the tax burden
+will be shifted from current to future generations.
+Thus the US contribution to World War II was financed largely with debt,
+shifting some of the burden from those alive at the time to those born later.
+
+Is deficit financing a good or bad thing?
+One approach to this question is based on tax smoothing.
+As we mentioned in ``Notes on taxes,''
+the economic disincentives built into taxes are minimized
+by having relatively constant tax rates even if tax revenues
+vary over time.
+On average this is likely to lead to governments running (modest)
+surpluses in booms and deficits in recessions,
+as tax revenues go up and down with the economy.
+\end{comment}
+
+
+%\end{document}
+\section{Debt dynamics}
+
+Investors watch government debt and deficits
+for signs that a government may not honor its debts.
+Even a hint of this can change the rate at which the government
+borrows or even its ability to access capital markets.
+In practice, it's common to look at them as ratios to GDP.
+In such ratios, we measure both in local currency units,
+so we have (for example) the ratio of the nominal debt to nominal GDP.
+
+So how does the debt-to-GDP ratio change from one period to the next?
+There's a useful decomposition of changes
+into components due to the real interest rate, GDP growth, and the
+primary deficit.
+It's a little complicated, so we'll work our way up to it.
+Recall that debt evolves according to
+\begin{eqnarray}
+    B_{t} &=& D_t + i_t B_{t-1} + B_{t-1}  ,
+    \label{eq:gbc-bdynamics1a}
+\end{eqnarray}
+where $D$ is the primary deficit
+and $D_t + i_t B_{t-1}$ is the total deficit.
+You should recognize this as equation (\ref{eq:gbc-bdynamics1})
+in slightly different form.
+Here's how it looks with real numbers.
+
+{\bf Example (US, 2012).}
+Consider the numbers for US government debt and deficits,
+expressed in trillions of US dollars:
+
+\begin{center}
+\begin{tabular}{lcr}
+\toprule
+%
+%\midrule
+Government debt, year end 2011  &  $B_{t-1}$    & 12.103 \\
+Total deficit, 2012             &  $ D_t + i_t B_{t-1}$ & 1.010 \\
+Primary deficit, 2012           &  $D_t$        &  0.674 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The data are October 2012 estimates from the IMF's
+\href{http://www.imf.org/external/ns/cs.aspx?id=28}{World Economic Outlook database}.
+
+Use what we know about debt dynamics to compute debt $B_t$ at the end of 2012.
+What is the interest rate $i_t$ paid on the debt?
+
+Answer.
+Debt at the end of 2012 follows from equation (\ref{eq:gbc-bdynamics1a}):
+$B_t = 1.010 + 12.103 = 13.113$.
+Interest payments are the difference between the two deficit numbers:
+$ i_t B_{t-1} = D_t + i_t B_{t-1} - D_t = 1.010 - 0.674 = 0.336 $.
+The implied interest rate on the debt is
+the ratio of interest payments to debt:
+$ i_t B_{t-1}/B_{t-1} = 0.336/12.103 = 0.0278 = 2.78\%$.
+
+
+Now back to the dynamics of the debt-to-GDP ratio.
+The bottom line is the relation
+\begin{eqnarray}
+    \frac{B_{t}}{Y_{t}}
+            &\approx&
+                \frac{B_{t-1}}{Y_{t-1}} + (i_t-\pi_t) \frac{B_{t-1}}{Y_{t-1}}
+                - g_t \frac{B_{t-1}}{Y_{t-1}}
+             +    \frac{D_{t}}{Y_{t}}  .
+    \label{eq:debtdynamics}
+\end{eqnarray}
+Circle this equation, it's important.
+It gives us three sources
+of change in the ratio of debt to GDP.
+The first is the real interest on the debt, which accumulates
+as long as the debt and real interest rate are positive.
+The second is the growth of the economy,
+which reduces the ratio by increasing the denominator.
+The third is the primary deficit.
+Each makes a contribution to changes in the debt-to-GDP ratio.
+
+
+It's not required, but if you're interested in where this comes from,
+here are the details.
+We divide equation (\ref{eq:gbc-bdynamics1a}) by nominal GDP $Y_t$ to get
+\begin{eqnarray*}
+    \frac{B_{t}}{Y_{t}} &=& %\frac{D_{t}}{Y_{t}} + \left( 1+i_t \right)  \frac{B_{t-1}}{Y_{t}}
+%        \;\;=\;\;
+            \frac{D_{t}}{Y_{t}}
+            +  (1+i_t) \frac{B_{t-1}}{Y_{t}}  .
+%           \label{eq:debtdynamics1}
+\end{eqnarray*}
+In the last term, note that the denominator is $Y_t$, not $Y_{t-1}$.
+If the growth rate of real GDP is $g_t$ and the inflation rate is $\pi_t$,
+then the growth rate of nominal GDP is approximately $g_t + \pi_t$.
+Therefore,
+\[
+    Y_{t} \;\;\approx\;\; (1+g_t+\pi_t) Y_{t-1}.
+\]
+The ratio of debt to GDP then follows
+\begin{eqnarray*}
+    \frac{B_{t}}{Y_{t}}
+            &\approx&
+                \left( \frac{1+i_t}{1+g_t+\pi_t} \right)  \frac{B_{t-1}}{Y_{t-1}}
+             +    \frac{D_{t}}{Y_{t}}  \nonumber \\
+            &\approx&
+                \left[ 1 + i_t - (g_t+\pi_t) \right]  \frac{B_{t-1}}{Y_{t-1}}
+             +    \frac{D_{t}}{Y_{t}}   \nonumber \\
+            &\approx&
+                \frac{B_{t-1}}{Y_{t-1}} + (i_t-\pi_t) \frac{B_{t-1}}{Y_{t-1}}
+                - g_t \frac{B_{t-1}}{Y_{t-1}}
+             +    \frac{D_{t}}{Y_{t}}  .
+%    \label{eq:debtdynamics}
+\end{eqnarray*}
+The second equation is based on the approximation
+\begin{eqnarray*}
+    \frac{1+i_t}{1+g_t+\pi_t} &\approx& 1 + i_t - g_t - \pi_t ,
+\end{eqnarray*}
+good for small values of $i_t$, $g_t$, and $\pi_t$.
+All you need to know is that the right side is simpler than the left.
+The third rearranges terms, combining $i_t-\pi_t$ into a real
+interest-rate term.
+We're left with (\ref{eq:debtdynamics}), as promised.
+
+
+This is a mechanical analysis, but a useful one.
+By looking at the components of equation (\ref{eq:debtdynamics}),
+we can get a sense of the origins of past changes in the debt-to-GDP ratio
+and the potential sources of future changes.
+
+
+{\bf Example (US, 2012, continued).}
+The numbers we saw earlier look this way expressed as ratios to GDP:
+
+\begin{center}
+\begin{tabular}{lcr}
+\toprule
+%
+%\midrule
+Government debt, year end 2011  &  $B_{t-1}/Y_{t-1}$ & 0.8028 \\
+Primary deficit, 2012           &  $D_t/Y_t$         & 0.0431 \\
+Interest rate                   &  $i_t$             & 0.0278 \\
+Real GDP growth rate            &  $g_t$             & 0.0217 \\
+Inflation rate                  &  $\pi_t$           & 0.0213 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+What is the ratio of debt to GDP at the end of 2012?
+
+Answer.  We apply the formula, equation (\ref{eq:debtdynamics}):
+\begin{eqnarray*}
+    {B_{t}}/{Y_{t}} &=&  0.8028  + (0.0278-0.0213)*0.8028 - 0.0217*0.8028 + 0.0431 \\
+            &=&  0.8028 + 0.0052 - 0.0174 + 0.0431 \;\;=\;\; 0.8337.
+\end{eqnarray*}
+In words:  the ratio of debt to GDP rose from 80.3 percent to 83.4 percent,
+an increase of 3.1 percent of GDP.
+The primary deficit contributes 4.3 percent of the change (more than the total),
+and growth drives it the other way by 1.7 percent.
+
+\textbf{Example (Peru, 2003-2007).}
+Between 2003 and 2007,
+Peru's debt fell from 47 percent of GDP to 25 percent.
+Using the numbers in the table below, what happened?
+What was the primary source of this decline?
+
+\begin{center}
+%\begin{table}
+\begin{tabular*}{\textwidth}{lcccc}
+\toprule
+        & Debt   & Interest &  Growth
+            & \phantom{x}Deficit\phantom{x} \\
+        &  $B_{t}/Y_{t}$ &  $(i_t-\pi_t)B_{t-1}/Y_{t-1}$  &  $-g_t B_{t-1}/Y_{t-1}$
+                & $D_t/Y_t$ \\
+\midrule
+2003\phantom{xxxx}
+            & 47.1 &  \\
+2004        & 44.3 & 0.2 & $-2.4$ & $-0.6$  \\
+2005        & 37.7 & 1.1 & $-3.0$ & $-4.6$  \\
+2006        & 33.1 & 1.0 & $-2.9$ & $-2.7$  \\
+2007        & 30.9 & 1.1 & $-2.9$ & $-0.4$  \\
+2008        & 25.0 & $-0.3\phantom{-}$ & $-3.0$ & $-2.5$ \\
+\midrule
+Sum         &      & 3.1 & $-14.3$ & $-10.9$ \\
+\bottomrule
+\end{tabular*}
+\end{center}
+% Data:  WEO, Sep 2011.  Numbers don't add right, so I made the primary deficit
+% the residual -- ie, it's dummied up
+%\end{comment}
+
+Answer.  You can see from the final row that
+growth and a primary deficit both played large roles.
+Growth probably gets some credit even for the latter term, too,
+since it tends to increase government revenue.
+
+
+
+\section{What's missing?}
+
+Our summary of debt dynamics,
+captured in equation (\ref{eq:debtdynamics}), buries some issues beneath the mathematics.
+
+One issue is the link between the interest rate
+and the fiscal situation (the debt and deficit).
+If investors start to worry about a government's
+willingness to honor its debt,
+they may demand higher interest rates,
+which, in turn, raises future debt --- and so on.
+%It's not a cycle you want to get caught in.
+Such credit spreads can rise sharply
+if the government has not shown sufficient
+fiscal discipline.
+(Here, ``sufficient'' means whatever is needed to reassure
+investors.)
+It can also rise because global financial markets
+place a higher premium on risk,
+as they did during the 2008-09 financial crisis.
+Over this period, spreads on emerging market debt of all kinds
+widened, even in countries with fundamentally sound
+fiscal positions.
+%For that reason, it's often useful to consider scenarios
+%in which the interest rate on government debt rises sharply.
+
+Another issue is the link between growth and deficits.
+If growth rises, as in Peru (example, above),
+that reduces the debt-to-GDP ratio through
+the impact on $g$ in equation (\ref{eq:debtdynamics}).
+But it also generates higher tax revenues and, hence,
+a lower primary deficit, even if tax {\it rates\/}
+do not change.
+This, in turn, reduces future debt further.
+That's one reason that Peru's fiscal situation improved:
+The economy boomed.
+Growth, then, is the cure for many problems.
+
+A third issue is hidden government liabilities.
+The idea behind our analysis
+is that the primary deficit determines how the debt evolves.
+In fact, current decisions often involve commitments
+for future expenditures that don't show up in the
+current government budget but are nevertheless important.
+In principle these {\it hidden liabilities\/}
+should show up in the budget when they're incurred,
+but in practice they don't.
+Here are some common examples:
+%
+\begin{itemize}
+\item Social security and pensions.
+Many countries have implicit commitments to pay
+money to retired people in the future
+that are not accounted for properly.
+In the US, for example, we simply look at the current cash flow of
+social security receipts and payments.
+In principle, there should be an entry for unfunded pension
+liabilities,
+as there is for firms.
+In many countries, aging populations have made these looming payments
+a serious concern.
+Healthcare payments are similar.
+
+\item Financial bailouts.
+We tend to treat these as one-offs, but, in fact, they happen all the time and they're invariably expensive.
+A country that bails out its banks may find its debt rise sharply.
+
+\item Regional governments.
+Relations between central governments and local authorities
+differ widely around the world.
+In the US, the precedent was set in the 1840s for state and local
+governments to finance their own activities without help from
+the central government.
+In other countries, debt problems of regional governments are often
+passed to the central government.
+These implicit liabilities of the central government were a concern in
+Argentina and Brazil in the 1990s and in Spain right now.
+\end{itemize}
+
+A serious analysis of fiscal policy should, therefore,
+start with equation (\ref{eq:debtdynamics})
+but go on to consider all possible sources of change in its components.
+It's no different from financial accounting for firms:
+you need to know what lies behind the numbers.
+
+
+\section{How much debt is too much?}
+
+How much debt is too much?
+At what point should investors be concerned?
+There is, unfortunately, no clear answer.
+Or rather there is an answer, which is that
+the quality of governance is more important than the debt numbers.
+Argentina defaulted with debt of about 40 percent of GDP,
+but the UK had debt well over 100 percent of GDP after World War II
+and didn't generate undue concern.
+In many cases you're stuck trying to guess how the local politics will play out.
+%There's no shortcut for that.
+
+With that warning, here are some rules of thumb:
+\begin{itemize}
+\item Worry if the government debt is above 50 percent of GDP.
+This is very rough, but it's a start.
+
+\item Worry if the deficit is above 5 percent of GDP ---
+and is expected to stay that way.
+The issue is not so much any particular deficit,
+but the long-term posture.
+
+\item Use higher numbers for sovereigns with strong institutions,
+lower numbers for those with weak institutions. The institutions
+that matter most are those that help contain the \hyperref[sec:time_cons]{time-consistency problem}:
+namely, the risk that a future policymaker will repudiate or
+inflate away the debt. Relevant institutions would include an
+independent central bank (to limit inflation), a robust financial system
+(that promotes market discipline and limits bailouts), and fiscal arrangements
+that limit debt accumulation or prevent its repudiation (e.g., transparent
+and comprehensive long-term budgeting, pay-go or balanced budget
+rules, and legal requirements for prioritizing debt payments).
+
+\item Worry if the debt is primarily short-term or denominated in
+foreign currency.
+Even if the debt is stable, countries
+may find themselves in difficulty if they have to refinance
+a large fraction of their debt over a short period of time.
+(Companies are no different:  think Lehman Brothers, or Drexel before that.)
+In late 1994, for example, Mexico had much of its debt in short-term
+securities.
+When investors refused to buy new issues, it triggered a crisis.
+This despite relatively modest debt and deficits.
+
+Foreign debt has similar risks.
+Many developing countries issue debt denominated in hard currency
+(dollars, say, or euros), but it's a mixed blessing.
+Investors use it to avoid the risk of a currency collapse,
+but if the currency collapses,
+a country's debt can rise sharply,
+perhaps increasing the odds of default.
+Depending on how it plays out, the Euro Area could be an example,
+if the debt of an exiting country remains denominated in euros.
+%For example, if a country exits the Euro Area, its existing debt will become foreign currency debt.
+\end{itemize}
+
+
+
+\section*{Executive summary}
+
+\setlength{\leftmargini}{.5\oldleftmargini}
+\begin{enumerate}
+
+\item Countries differ enormously in the magnitude and composition
+of government spending, taxes, and debt.
+
+\item Government spending must be paid for, either now through
+taxes or in the future by running primary surpluses.
+
+\item The following factors govern changes in the debt-to-GDP ratio:
+(a)~interest on the debt;
+(b)~GDP growth;
+and (c)~the primary deficit.
+
+\item Institutions that limit the incentive of future governments to inflate
+away or repudiate the debt can help to promote fiscal discipline.
+
+\end{enumerate}
+\setlength{\leftmargini}{\oldleftmargini}
+
+%\begin{comment}
+\section*{Review questions}
+
+\setlength{\leftmargini}{.5\oldleftmargini}
+\begin{enumerate}
+\item Deficits down under.
+Consider these data for Australia:
+%
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+        & 2010 & 2011 \\
+\midrule
+Real GDP growth (annual percent) & 2.6 & 2.9 \\
+Inflation  (annual percent)      & 5.2 & 4.8 \\
+Interest rate  (annual percent)  & 5.3 & 5.9 \\
+Government deficit (primary, percent of GDP)    & 2.9 & 0.7 \\
+Government deficit (total, percent of GDP)      & 4.1 & 2.2 \\
+Government debt (end of period, percent of GDP) & 25.3 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\begin{enumerate}
+\item Why are the primary and total government deficits different?
+%\item What is the implied interest rate on government debt in 2011?
+\item What is the government debt ratio at the end of 2011?
+\end{enumerate}
+
+Answer.
+\begin{enumerate}
+\item The difference is interest payments on government debt.
+Apparently in 2011 they amounted to 1.5 percent of GDP.
+%\item Evidently 5.9 percent = 1.5/25.3.
+\item We use the debt dynamics equation:
+\begin{eqnarray*}
+    \frac{B_{t}}{Y_t}
+            &=&
+                \frac{B_{t-1}}{Y_{t-1}} + (i_t-\pi_t) \frac{B_{t-1}}{Y_{t-1}}
+                - g_t \frac{B_{t-1}}{Y_{t-1}}
+                +  \frac{D_{t}}{Y_{t}}  \\
+             &=& 25.3 + (0.059-0.048)*25.3 - 0.029*25.3 + 0.7 \\
+%             &=& 25.3 + 0.3 [=(0.059-0.048)*25.3] - 0.7 [=0.029*25.3] + 0.7 \\
+             &=&  25.6 .
+\end{eqnarray*}
+We used a shortcut here on the interest rate, taking the number
+from the table (a typical market rate) rather than computing
+the interest rate paid on government debt.
+\end{enumerate}
+
+
+\item How the US financed World War II.
+The short answer is that they issued debt,
+but how did they pay off the debt?
+Between 1945 and 1974, the ratio of debt to GDP fell from 66 percent to 11 percent.
+What led to the change?
+George Hall and Thomas Sargent (source below) computed the following:
+
+\begin{center}
+%\begin{table}
+\begin{tabular*}{0.9\textwidth}{l@{\extracolsep{\fill}}ccc}
+\toprule
+       & Interest &  Growth & Primary Deficit \\
+       &  $(i_t-\pi_t)B_{t-1}/Y_{t-1}$  &  $-g_t B_{t-1}/Y_{t-1}$
+                & $D_t/Y_t$ \\
+\midrule
+1945-1974  & --12.5  & --21.6  &  --20.8 \\
+\bottomrule
+\end{tabular*}
+\end{center}
+All numbers are percentages.
+
+Answer.  If you look at the numbers, they tell you that
+growth (the same debt looked smaller when GDP grew)
+and primary surpluses account for most of this.
+You also see a negative contribution from real interest
+payments.
+What does this tell us?
+With hindsight,
+we would say that investors lost money in real terms
+because inflation was higher than they expected when they
+purchased government debt.
+If the government had paid (say) a one percent real return,
+this contribution would have been positive
+and the 1974 debt level would have been higher.
+In that sense, the US used inflation to reduce the debt burden.
+
+
+\end{enumerate}
+\setlength{\leftmargini}{\oldleftmargini}
+
+\section*{If you're looking for more}
+
+It's too technical for this course,
+but some of the material on debt dynamics was adapted from
+Craig Burnside, ed., {\it Fiscal Sustainability in Theory and Practice\/},
+World Bank, 2005.
+
+More user-friendly (and very good)
+is George Hall's summary of his work with Thomas Sargent,
+``\href{http://www.brandeis.edu/global/rosenberg/briefs/hall_brief.html}
+{How will we pay down the debt?}''
+They describe sources of changes in the US debt position
+from World War II to 2008.
+
+*** [Fine point in case you try this yourself:
+most debt numbers are inconsistent with reported deficits.
+Here we constructed deficits from changes in debt.
+The differences are generally small, but it's embarrassing
+that even semi-official numbers are not reported on a consistent basis.]
+
+
+If you're looking for international data on government debt over 200 years or more,
+you might want to look at the IMF's
+\href{http://www.imf.org/external/pubs/cat/longres.cfm?sk=24332.0}{historical database}.
+Search:  ``imf debt database.''
+
+\needspace{20\baselineskip}
+\section*{Symbols and data used in this chapter}
+
+\needspace{10\baselineskip}
+\begin{table}[H]
+\centering
+\caption{Symbol table.}
+\begin{tabular*}{0.9\textwidth}{l@{\extracolsep{\fill}}l}
+\toprule
+Symbol & Definition\\
+\midrule
+$G$    &Government purchases of goods and services\\
+$V$    &Transfers\\
+$i$    &Nominal interest rate\\
+$B$    &Stock of government debt\\
+$T$    &Tax revenues (not a tax {\it rate\/})\\
+$D$    &Primary deficit ($=G+V-T$)\\
+%$DS$    &Debt service $(i B/Y)$\\
+$g$    &Discretely-compounded growth rate of real GDP\\
+$\pi$     &Inflation rate \\
+$g+\pi$ &Discretely-compounded growth rate of nominal GDP\\
+$Y$    &Nominal GDP\\
+\bottomrule
+\addlinespace
+\end{tabular*}
+\begin{minipage}{0.9\textwidth}
+\footnotesize{Note:  In this chapter we have dealt only with \textit{nominal} variables.}
+\end{minipage}
+\end{table}
+
+\needspace{8\baselineskip}
+\begin{table}[htb]
+\centering
+\caption{Data table.}
+\begin{tabular*}{0.9\textwidth}{l@{\extracolsep{\fill}}l}
+\toprule
+Variable & Source\\
+\midrule
+Federal government debt        &GFDEBTN\\
+Federal government debt  held by the public    &FYGFDPUN\\
+Federal government net surplus    &FGDEF\\
+Federal interest outlays    &FYOINT\\
+Nominal GDP    &GDP\\
+Real GDP    &GDPC1\\
+GDP deflator    &GDPDEF\\
+\bottomrule
+\addlinespace
+\end{tabular*}
+\begin{minipage}{0.9\textwidth}
+\footnotesize{To retrieve the data online, add the identifier from the source column to \url{http://research.stlouisfed.org/fred2/series/}.  For example, to retrieve real GDP, point your browser to \url{http://research.stlouisfed.org/fred2/series/GDPC1}}
+\end{minipage}
+\end{table}
+
+
+
+

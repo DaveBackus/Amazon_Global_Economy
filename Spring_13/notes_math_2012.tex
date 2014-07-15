@@ -1,0 +1,826 @@
+\chapter{Mathematics Review}\label{chp:math}
+\hypertarget{math}{}
+
+\textbf{Tools:} Exponents and logarithms; growth rates and compounding;
+derivatives; spreadsheets; the FRED database.
+
+\textbf{Key Words:} Production function; demand function; marginal product/cost.
+
+\textbf{Big Ideas:}
+\vspace{-0.1in}
+\begin{itemize}
+\item  Macroeconomics is a quantitative discipline; ditto business.
+\item  Mathematics and data analysis are essential tools.
+\end{itemize}
+\rule{\textwidth}{1pt}
+
+Mathematics is a precise and efficient language for expressing quantitative ideas,
+including many that come up in business.
+%You can live without it, but you'll make some aspects of your life easier if you bite the bullet
+%and teach yourself the most important aspects of mathematics.
+What follows is an executive summary of everything you'll need in this course:
+functions, exponents and logarithms, derivatives, and spreadsheets,
+each illustrated with examples.
+
+
+\section{Functions}
+
+In economics and business, we often talk about relations between
+variables: Demand depends on price; cost depends on quantity
+produced; price depends on yield; output depends on input; and so
+on. We call these relations {\it functions\/}. More formally, a
+function $f$ assigns a (single) value $y$ to each possible value
+of a variable $x$.
+%For now, you should think of $x$ as a single variable, but later on
+%we'll consider situations in which $x$ may stand for several
+%different variables.
+We write it this way: $y = f(x)$. Perhaps the
+easiest way to think about a function is to draw it: Put $x$ on
+the horizontal axis and plot the values of $y$ associated with
+each $x$ on the vertical axis. In a spreadsheet program, you might
+imagine setting up a table with a grid of values for $x$. The
+function would then be a formula that computes a value $y$ for
+each value of $x$.
+
+%We will generally be interested in functions that are ``continuous'' (they don't have jumps)
+%and ``smooth'' (they don't have kinks, either).
+
+
+\textbf{Example:} Demand functions.
+We may be interested in the sensitivity of demand for our product to its price.
+If the quantity demanded is $q$ and the price $p$,
+an example of a  demand function relating the two is
+\[
+    q \;=\; a + b p ,
+\]
+where $a$ and $b$ are ``parameters''
+(think of them as fixed numbers whose values we haven't bothered to write down).
+Sensitivity of demand to price is summarized by $b$,
+which we'd expect to be negative (demand falls as price rises).
+
+
+\textbf{Example:} Production functions.
+In this class, we'll relate output $Y$ to inputs of capital $K$ and labor $L$.
+(In macroeconomics, capital refers to plant and equipment.)
+It'll look a little strange the first time you see it,
+but a convenient example of such a function is
+\[
+    Y \;=\; K^\alpha L^{1-\alpha} ,
+\]
+where $\alpha$ is a number between zero and one (typically, we set $\alpha = 1/3$).
+This is a modest extension of our definition of a function---$Y$ depends on two variables, not one---but the idea is the same.
+
+\textbf{Example:} Bond yields.
+The price $p$ and yield $y$ for a one-year zero-coupon bond
+might be related by
+\[
+    p \;=\; 100/(1+y),
+\]
+where 100 is the face value of the bond.
+Note the characteristic inverse relation:  high yield, low price.
+
+
+\section{Exponents and logarithms}
+
+Exponents and logarithms are useful in many situations:
+elasticities, compound interest, growth rates, and so on.
+Here's a quick summary.
+
+\textbf{Exponents.} Exponents are an extension of multiplication.
+If we multiply $x$ by itself, we can write either $ x \times x $ or $x^2$,
+where $2$ is an exponent (or power).
+In general, we can write $x^a$ to mean (roughly) ``$x$ multiplied by itself $a$ times,''
+although this language may seem a little strange
+if $a$ isn't a positive whole number such as 2 or 3.
+We can, nevertheless, compute such quantities for any value of $a$ we like
+as long as $x$ is positive.
+(Think about how you'd do this in a spreadsheet.)
+
+
+The most useful properties of exponents are
+\begin{eqnarray*}
+    x^a x^b &=& x^{a+b} \\
+    x^a y^a &=& (xy)^a \\
+    (x^a)^b &=& x^{ab} \\
+    x^{-a} &=& {1}/{x^a}.
+\end{eqnarray*}
+You can work these out for yourself using our multiplication analogy.
+
+
+\textbf{Logarithms.}
+By logarithm, we mean the function ``LN'' in
+Microsoft Excel, OpenOffice Calc, or Google spreadsheets,
+sometimes called the natural logarithm.
+%We write ``logarithm'' in these notes to represent the natural logarithm because that is how you will find it in most 5publications.
+
+
+The natural logarithm of a number $x$ comes from the power of a number $e$,
+a mathematical constant that is approximately 2.718.
+If $x = e^y$, then $y$ is the logarithm of $x$,
+expressed $y = \ln x $.
+There are other logarithms based on powers of other numbers,
+but we'll stick with $e$.
+Some people use $\log$ to mean $\ln$, but that's a story for another time.
+%The calculator or Excel function to obtain a natural logarithm is ``LN'' rather than ``LOG'' (which calculates a logarithm for base 10 rather than base $e$).
+In this class, including assignments and exams, we \emph{always} use $\ln$ and LN,
+not $\log$ or LOG.
+
+
+Suppose that you know that $y$ is the logarithm of $x$.
+How do you find $x$?  From the definition, apparently $x = e^y$.
+In Excel, this is written ``$\exp(y)$.''
+As a check, you might verify that $ \ln 6 = 1.792$ and $\exp(1.792) = 6.00$.
+
+
+The most useful properties of logarithms are:
+\begin{eqnarray*}
+    \ln (xy) &=& \ln x + \ln y  \\
+    \ln (x/y) &=& \ln x - \ln y    \\
+    \ln (x^a) &=& a \ln x  \\
+    \ln (\exp(x)) &=& x \\
+    \exp(\ln x) &=& x \\
+    \ln (1 + x) &\approx& x, \ \ \mbox{when \ $x$ \ is small}.
+\end{eqnarray*}
+The wiggly equals sign means ``approximately equal to.''
+That's true for the last equation when $x$ is close enough to zero:
+a number like 0.1 rather than 0.9 or 1.2 or 10.
+In short, logarithms convert multiplication into addition, division into subtraction,
+and ``exponentiation'' into multiplication. In each case, an operation is converted into a simpler one:
+Addition, for example, is simpler than multiplication.
+
+
+\textbf{Example:} Demand functions.
+A more useful demand function is $ q = a p^b $,
+which is linear in logarithms:
+\[
+    \ln q \;=\; \ln a + b \ln p .
+\]
+This follows from the first and third properties of logarithms.
+Here, $b$ is the price elasticity you may have learned about in Firms and Markets.
+
+\textbf{Example:} Production functions.
+Understanding differences  in output per worker (across production units, firms, countries) is a central question in macroeconomics and this course. Using the production function discussed above, we can use properties of exponents to arrive at an expression suitable for this analysis. Using the production function
+\begin{eqnarray*}
+    Y = K^{\alpha} L^{1-\alpha},
+\end{eqnarray*}
+use the first and last property of exponents to obtain
+\begin{eqnarray*}
+    Y &=& K^{\alpha} L L^{-\alpha} \\
+      &=& K^{\alpha} L ({1}/{L^{\alpha}}).
+\end{eqnarray*}
+Combining the terms with the $\alpha$ exponent and then using the second property of exponents, we have
+\begin{eqnarray*}
+     Y &=& \left( {K}/{L} \right)^{\alpha} L.
+\end{eqnarray*}
+Finally, dividing both sides by $L$ leaves us with the expression
+\begin{eqnarray*}
+     {Y}/{L} &=& \left( {K}/{L} \right)^{\alpha}.
+\end{eqnarray*}
+In words, output per worker equals capital per worker to the exponent $\alpha$.
+%\begin{eqnarray*}
+%    \ln Y = \alpha \ln K L^{1-\alpha}.
+%\end{eqnarray*}
+
+\section{Growth rates}
+\label{sec:growth_math}
+
+Growth rates are frequently used in this class, in the business world, and in life in general.
+%We explain how to calculate and interpret them,
+%focusing on two types.
+We use two types in this class (sorry, it can't be avoided).
+The first is a \emph{discretely-compounded growth rate}.
+For a time interval of one year, this is analogous to an annually-compounded interest rate.
+The second is a {\it continuously-compounded growth rate\/}.
+This is analogous to a continuously-compounded interest rate,
+in which interest is compounded over a very short time interval.
+The former is more natural is some respects,
+but the latter leads to simpler expressions when compounding is important.
+%We'll use both.
+
+\subsection*{Discretely-compounded growth rates}
+
+The simplest growth rates are those that are compounded each period $t$ at discrete time intervals. If the time period is a year (which will frequently be the case), then this corresponds with annual compounding. The annually compounded growth rate relates variable $x$ across time periods as
+\begin{eqnarray*}
+x_{t+1} = (1 + g)x_{t},
+\end{eqnarray*}
+where lower case $g$ will denote the discretely-compounded growth rate.
+
+\textbf{Notation note:} We will always denote the discretely-compounded growth rate as $g$.
+
+%the Greek letter $\gamma$ will always denote the continuously compounded growth rate (see below).
+
+To compute this growth rate from data on $x$, one can use the formula
+\begin{eqnarray*}
+    g &=& ({x_{t+1}}/{x_t}) - 1 \;\;=\;\; ({x_{t+1}-x_t)}/{x_t}.
+\end{eqnarray*}
+If we want to express this growth rate as a percent, we multiply it by 100.
+
+\textbf{Example:} The \href{http://research.stlouisfed.org/fred2/series/GDPC1/downloaddata?cid=106}{FRED database} reports that annual US real Gross Domestic Product (GDP) (measured in 2005 dollars) in 2010 was 13088.0 billion. For 2011, annual US real GDP was 13315.1 billion. The annual (discrete compounded) growth rate of US real GDP between 2010 and 2011 was
+\begin{eqnarray*}
+    g &=& \frac{13315.1}{13088.0} - 1 \;\;=\;\; 0.0174.
+\end{eqnarray*}
+To express this growth rate as a percent, multiply 0.0174 by 100 to obtain 1.74 percent.
+
+Multi-period growth. The formula above is for the growth rate from period $t$ to $t+1$. The formula over many periods has a natural extension:
+\begin{eqnarray*}
+    x_{t+n} &=& (1 + g)^n x_{t},
+\end{eqnarray*}
+which follows from repeatedly multiplying $x$ by $(1+g)$ and the first property of exponents discussed above. To calculate the growth rate based upon data on $x$, one can use the formula
+\begin{eqnarray*}
+    g &=& \left(\frac{x_{t+n}}{x_t}\right)^{{1}/{n}} - 1.
+\end{eqnarray*}
+If we want to express this growth rate as a percent, we multiply it by 100.
+
+\textbf{Example:}  The \href{http://research.stlouisfed.org/fred2/series/GDPC1/downloaddata?cid=106}{FRED database} reports that annual US real GDP (measured in 2005 dollars) in 2011 was 13315.1 billion. Annual US real GDP in 1947 was 1774.6 billion.  The average annual growth rate of US real GDP between 1947 and 2011 was
+\begin{eqnarray*}
+    g &=& \left(\frac{13315.1}{1774.6}\right)^{{1}/{(2011-1947)}} - 1  \;\;=\;\; 0.0320.
+\end{eqnarray*}
+To express this growth rate as a percent, multiply 0.0320 by 100 to obtain 3.20 percent.
+
+Note the difference in the average growth rate of 3.20 percent for the US over the post-WWII time period  versus the most recent annual growth rate of 1.74 percent in the previous example.
+
+
+\subsection*{Continuously-compounded growth rates}
+\phantomsection
+\label{sec:growth_math_cc}
+
+For many purposes in this course, it will be easier to use continuously compounded growth rates. Mathematically, this device is simply an extension of the discrete growth rate discussed above when the time interval becomes infinitesimal. While this growth rate is difficult to conceptualize, it has very useful features, which we discuss below.
+
+The continuously compounded growth rate relates variable $x$ across time periods as
+\begin{eqnarray*}
+    x_{t+1} &=& \exp(\gamma)x_{t}.
+\end{eqnarray*}
+
+\textbf{Notation note:} We will always denote the continuously compounded growth rate as $\gamma$.
+
+To compute this growth rate from data on $x$, one can use the formula
+\[
+    \gamma \;\;=\;\; \ln x_{t+1} - \ln x_{t},
+\]
+which follows from the properties of logarithms listed above. If we wish to express this growth rate as a percent, we multiply it by 100.
+
+\textbf{Example:}  We can compute the continuously-compounded growth rate using the same data described above. Recall that the \href{http://research.stlouisfed.org/fred2/series/GDPC1/downloaddata?cid=106}{FRED database} reports that annual US real GDP (measured in 2005 dollars) in 2010 was 13088 billion.
+For 2011, annual US real GDP was 13315.1 billion. The continuously-compounded growth rate is
+\begin{eqnarray*}
+    \gamma &=& \ln 13315.1 - \ln 13088.0  \;\;=\;\; 0.0172 .
+\end{eqnarray*}
+To express this growth rate as a percent, multiply 0.0172 by 100 to obtain 1.72 percent. Note the similarity of the continuously compounded growth rate and the annually compounded growth rate (1.74  percent). This similarity is not a coincidence, as we discuss below.
+
+Continuous compounding has three useful features for measuring growth rates:
+\begin{enumerate}
+\item \textbf{Continuously-compounded growth rates approximate discretely-compounded growth rates.} In the example above, the continuously-compounded growth rate and the annually-compounded growth rate are very similar. The similarity reflects the final property of logarithms listed above. Specifically,
+\begin{eqnarray*}
+    \ln (1 + a) &\approx& a \ \ \mbox{when $a$ is small},
+\end{eqnarray*}
+where $\approx$ means ``approximately equal to'' and the value of $a$ is small (less than 0.10 is a good rule of thumb). In words, the logarithm of one plus $a$ is approximately equal to $a$, when $a$ is small.
+
+In the context of growth rates, take logarithms of both sides of the discrete compounded growth formula
+[$x_{t+1} = (1+g)x_{t}$] giving us
+\begin{eqnarray*}
+    \ln x_{t+1} &=& \ln (1 + g) +  \ln x_t,
+\end{eqnarray*}
+which follows from the first property of logarithms. Rearranging and applying the approximation discussed above yields
+\begin{eqnarray*}
+\ln x_{t+1} - \ln x_t &=& \ln (1 + g) \;\;\approx\;\; g \ \ \mbox{when $g$ is small}.
+\end{eqnarray*}
+Notice that $ \ln x_{t+1} - \ln x_t $ \emph{is} the continuously compounded growth rate, $\gamma$.  Putting this information together shows that when the growth rate is small, the discrete compounded growth rate $g$ will be approximately the same as the continuously compounded growth rate $\gamma$.
+
+\item \textbf{Continuously compounded growth rates are additive.} Suppose that you're interested in the growth rate of a product $xy$. For example, $x$ might be the price deflator and $y$ real output, so that $xy$ is nominal output.
+Using our definition:
+\[
+    \gamma_{xy} \;\;=\;\; \ln \left( \frac{x_{t+1} y_{t+1}}{x_t y_t } \right)
+                \;\;=\;\; \ln \left( \frac{x_{t+1}}{x_t} \right) + \ln \left( \frac{y_{t+1}}{y_t} \right)
+                \;\;=\;\; \gamma_x + \gamma_y.
+\]
+They add up! Thus, the growth rate of a product is the sum of the
+growth rates. Mathematically, this result follows from the first two properties of logarithms discussed above. In the same way, the growth rate of $x/y$ equals the growth rate of $x$ minus the growth rate of $y$.
+
+This additive feature of continuously compounded growth rates is the primary reason we use continuous compounding.
+
+\item \textbf{Averages of continuously compounded growth rates are easy to compute}.  Suppose that we want to know the \emph{average} growth rate of $x$ over $n$ periods:
+\[
+    \gamma \;\;=\;\; \frac{ (\ln x_{t}-\ln x_{t-1}) + (\ln x_{t-1}-\ln x_{t-2})
+                    + \cdots + (\ln x_{t-n+1} - \ln x_{t-n}) }
+                {n} .
+\]
+This expression is the average of the one-period growth rates $(\ln x_{t}-\ln x_{t-1})$. Now, if you look at this expression for a minute, you might notice that most of the terms cancel each other out.
+The term $\ln x_{t-1}$, for example, shows up twice, once with a positive sign, once with a negative sign. If we eliminate the redundant terms, we find that the average growth rate is
+\[
+    \gamma \;\;=\;\; \frac{ \ln x_{t}-\ln x_{t-n} }  {n}  .
+\]
+In other words, the average growth rate over the full period is simply the
+$n$-period growth rate divided by the number of time periods $n$.
+
+\textbf{Example:} We can compute the average continuously compounded growth rate for post-WWII GDP data. The average annual growth rate of US real GDP between 1947 and 2011 was
+\begin{eqnarray*}
+    \gamma &=& \frac{\ln 13315.1 - \ln 1774.6 }{2011-1947} \;\;=\;\; 0.0315.
+\end{eqnarray*}
+In percent terms, the average annual growth rate for the US is 3.15 percent.
+Note, again, that because the growth rate is small,
+its value is similar to the discretely-compounded growth rate $g = 0.0320$
+calculated in the previous example.
+
+
+%\item Growth rates to levels. While growth rates are great, sometimes we want to know about the level. To to go from growth rates back to levels, there is a simple method when using continuous compounding:
+%$ x_{t+1} = \exp(\gamma) x_t $.
+%Note that this formula follows from our growth rate formula above and the identity between natural logarithms and the $exp$ function discussed above as well.
+%
+%\textbf{Example:} An interesting question to ask is what would 2011 US real GDP have been if between 2010 and 2011 the US grew at the average growth rate over the post WWII level? To answer this question simply take the $\gamma = .0315$ (which was computed) above and multiply by US real GDP in 2010:
+%\begin{eqnarray*}
+%13507 = \exp(0.0315)\times 13088.
+%\end{eqnarray*}
+%IF the US had growth at 3.15 percent growth rate between 2010 and 2011, US real GDP would be 13507  billion 2005 dollars. Contrast this with the actual US real GDP in 2011 of 13315, a 200 billion difference.
+\end{enumerate}
+
+
+
+
+\section{Slopes and derivatives}
+
+The slope of a function is a measure of how steep it is: the ratio
+of the change in $y$ to the change in $x$. For a straight line, we
+can find the slope by choosing two points and computing the ratio
+of the change in $y$ to the change in $x$. For some functions,
+though, the slope (meaning the slope of a straight line tangent to
+the function) is different at every point.
+
+
+The {\it derivative\/} of a function $f(x)$
+is a second function  $f'(x)$ that gives us its slope at each point $x$
+if the function is continuous (no jumps) and smooth (no kinks).
+Formally, we say that the derivative is
+\[
+  \frac{\Delta y}{\Delta x} \;\;=\;\; \frac{f(x+\Delta x) - f(x)}{\Delta x}
+\]
+for  a ``really small'' $\Delta x$. (You can imagine doing this on
+a calculator or computer using a particular small number, and if
+the number is small enough your answer will be pretty close.) We
+express the derivative as $f'(x)$ or $dy/dx$ and refer to it as
+``the derivative of $y$ with respect to $x$.'' The $d$'s are
+intended to be suggestive of small changes, analogous to $\Delta$
+but with the understanding that we are talking about infinitesimal
+changes.
+
+
+So the derivative is a function $f'(x)$ that gives us the slope of a function $f(x)$ at every possible value of $x$.
+What makes this useful is that there are some
+relatively simple mechanical rules for finding the derivative $f'$
+of common functions $f$ (see Table \ref{tb:exibit1_mr}).
+
+\begin{table}[!t]
+\centering
+\caption{Rules for computing derivatives.}
+\begin{tabular*}{0.9\textwidth}[t]{@{\extracolsep{\fill}}lll}
+\toprule
+%\raisebox{0pt}[20pt][10pt]{}Function $f(x)$ \hspace{0.2in}  &  Derivative $f'(x)$  &   Comments  \\
+Function $f(x)$   &  Derivative $f'(x)$  &   Comments  \\
+\midrule
+\multicolumn{3}{c}{\it Rules for Specific Functions} \\
+$a$  &  0  &  $a$ is a number \\
+$ax + b$ & $a$  &  $a, b$ are numbers  \\
+$a x^b$ &  $b a x^{b-1}$ &  $a, b$ are numbers \\
+$ae^{bx}$  &  $ba e^{bx}$  & $a, b$ are numbers \\
+$a \ln x$  & $a/x$   &  $a$ is a number  \\
+%    log means ``natural log''  \\
+& \\
+\multicolumn{3}{c}{\it Rules for Combinations of Functions} \\
+$g(x) + h(x)$  & $g'(x) +  h'(x)$  \\
+$ag(x) + bh(x)$ &   $ag'(x) +  bh'(x)$ &  $a, b$ are numbers \\
+$g(x)h(x)$  &  $ g(x)h'(x) + g'(x)h(x)$  & \\
+$g(x)/h(x)$  & $[g'(x)h(x) - g(x)h'(x)]/[h(x)]^2$ &   $h(x) \neq 0$  \\
+$ g[h(x)] $  &  $g'[h(x)]h'(x)$  &    ``chain rule''  \\
+\bottomrule
+\end{tabular*}
+\label{tb:exibit1_mr}
+\end{table}
+
+\textbf{Example:}  Marginal cost.
+Suppose that total cost $c$ is related to the quantity produced $q$ by
+\[
+    c \;\;=\;\; 100 + 10 q + 2 q^2 .
+\]
+Marginal cost is the derivative of $c$ with respect to $q$.
+How does it vary with $q$?
+The derivative of $c$ with respect to $q$ is
+\[
+    dc/dq \;\;=\;\; 10 + 4 q ,
+\]
+so marginal cost increases with $q$.
+
+
+\textbf{Example:}  Bond duration.
+Fixed-income analysts know that prices of bonds with long maturities
+are more sensitive than those with short maturities to changes in their yields.
+They quantify sensitivity with duration $D$, defined as
+\[
+    D \;\;=\;\; - \frac{d \ln p}{dy} .
+\]
+In words, duration is the ratio of the percent decline in price (the change in the log)
+over the increase in yield for a small increase.
+Two versions follow from different compounding conventions.
+With annual compounding, the price of an $m$-year zero-coupon bond
+is related to the yield by $ p = 100/(1+y)^m$.
+Therefore,
+\[
+    \ln p \;\;=\;\; \ln 100 - m \ln (1+y),
+\]
+and duration is $ D = m/(1+y)$.
+With continuous compounding, $ p = 100 \exp(-my)$,
+$ \ln p = \ln 100 - m y$,
+and $D = m$.
+In both cases, it's clear that duration is higher for long-maturity bonds
+(those with large $m$).
+
+
+\textbf{Example:}  Marginal product of capital.
+Suppose that output $Y$ is related to inputs of capital $K$ and labor $L$ by
+\[
+    Y \;\;=\;\; K^\alpha L^{1-\alpha}
+\]
+for $\alpha$ between zero and one.
+If we increase $K$ holding $L$ fixed, what happens to output?
+We call the changes in output resulting from small increases in $K$
+the marginal product of capital.
+We compute it as the derivative of $Y$ with respect to $K$ holding $L$ constant.
+Since we're holding $L$ constant, we call this a {\it partial derivative\/} and write it:
+\[
+    \frac{\partial Y}{\partial K} \;\;=\;\;
+    \alpha K^{\alpha-1} L^{1-\alpha} \;\;=\;\; \alpha \left(\frac{K}{L}\right)^{\alpha-1}.
+\]
+Despite the change in notation, we find the derivative in the usual way,
+treating $L$ like any other constant.
+
+
+\section{Finding the maximum of a function}
+
+An important use of derivatives is to find the maximum (or minimum) of a function.
+Suppose that we'd like to know the value of $x$
+that leads to the highest value of a function $f(x)$,
+for values of $x$ between two numbers $a$ and $b$.
+We can find the answer by setting the derivative $f'(x)$ equal to zero and solving for $x$.
+Why does this work?
+Because a function is ``flat'' (has zero slope) at a maximum.
+(That's true, anyway, as long as the function has no jumps or kinks in it.)
+We simply put this insight to work.
+
+
+Fine points.  Does this always work?
+If we set the derivative equal to zero, do we always get a maximum?  The answer is no.
+Here are some of the things that could go wrong:
+%\begin{enumerate}
+(i)~The point could be a minimum, rather than a maximum.
+%For example, in Example (a) of Exhibit 1 the function has both a maximum and a minimum.  Both have derivatives/slopes of zero.
+(ii)~The maximum could be at one of the endpoints, $a$ or $b$.
+There's no way to tell without comparing your answer to $f(a)$ and
+$f(b)$. (iii)~There may be more than one ``local maximum'' (picture
+a wavy line). (iv)~The slope might be zero without being either a
+maximum or a minimum: for example, the function might increase for
+a while, flatten out (with slope of zero), then start increasing
+again. An example is the function $f(x) = x^3$ at the point $x=0$.
+[You might draw functions for each of these problems to illustrate
+how they work.]
+%[Draw it for yourself to make sure you understand the point.]
+If you want to be extra careful, there are ways to check for each of these problems.
+One is the co-called second-order condition:  A point is a maximum if the second derivative
+(the derivative of $f'(x)$) is negative.
+While all of these things can happen, in principle,
+we will make sure they do not happen in this class.
+
+
+\textbf{Example:}  Maximizing profit.
+Here's an example from Firms \& Markets.
+Suppose that a firm faces a demand for its product of $q = 10 - 2p$
+($q$ and $p$ being quantity and price, respectively).
+The cost of production is 2 per unit.
+What is the firm's profit function?
+What level of output produces the greatest profit?
+
+Answer.  Profit is revenue ($pq$) minus cost ($2q$). The trick
+(and this isn't calculus) is to express it in terms of quantity.
+We need to use the demand curve to eliminate price from
+the expression for revenue: $p = (10-q)/2$ so $pq = [(10-q)/2]q$.
+Profit (expressed as a function of $q$) is, therefore,
+\[
+    \mbox{Profit}(q) \;=\; [(10-q)/2]q - 2q \;\;=\;\; 5q - q^2/2 - 2q.
+\]
+To find the quantity associated with maximum profit, we set the derivative equal to zero:
+\[
+    \frac{d\mbox{Profit}}{dq} \;\;=\;\; 3 - q \;\;=\;\; 0,
+\]
+so $q = 3$.  What's the price?
+Look at the demand curve:  If $q = 3$, then $p$ satisfies $3 = 10-2p$ and $p = 7/2$.
+
+\textbf{Example:}  Demand for labor.
+A firm produces output $Y$ with labor $L$ and a fixed amount of capital $K$,
+determined by past investment decisions,
+subject to the production function $ Y = K^\alpha L^{1-\alpha} $.
+If each unit of output is worth $p$ dollars and each unit of labor costs $w$ dollars,
+then profit is
+\[
+    \mbox{Profit} \;\;=\;\; p K^\alpha L^{1-\alpha} - w L .
+\]
+The optimal choice of $L$ is the value that sets the derivative equal to zero:
+\[
+    \frac{\partial \mbox{Profit}}{\partial L} \;\;=\;\;  p (1-\alpha) (K/L)^\alpha - w \;\;=\;\; 0 .
+\]
+(We use a partial derivative here, denoted by $\partial$, to remind ourselves that $K$ is being held constant.)
+The condition implies that
+\[
+    L \;\;=\;\; K \left[ \frac{p (1-\alpha)}{w} \right]^{1/\alpha} .
+\]
+You can think of this as the demand for labor:
+Given values of $K$, $p$, and $w$, it tells us how much labor the firm would like to hire.
+%In words, the firm keeps adding labor until the value of the marginal product equals the wage.
+As you might expect, at higher wages $w$, labor demand $L$ is lower.
+
+
+\section{Spreadsheets}
+
+Spreadsheets are the software of choice in many environments.
+If you're not familiar with the basics, here's a short overview.
+The structure is similar in
+Microsoft Excel, OpenOffice Calc, and Google documents.
+
+The first step is to make sure that you have access to one of these programs.
+If you have one of them on your computer, you're all set.
+If not, you can download OpenOffice at
+\url{www.openoffice.org} or open a Google spreadsheet
+at \url{docs.google.com}.
+Both are free.
+
+In each of these programs,
+data (numbers and words) are stored in tables
+with the rows labeled with numbers
+and the columns labeled with letters.
+Here's an example:
+%
+\begin{center}
+\begin{tabular}{c|cccc}
+    &  A  &  B   &  C  \\
+\midrule
+1   &  x1 &  x2        \\
+2   &  3  &  25        \\
+3   &  8  &  13        \\
+4   &  5  &  21        \\
+5    %\\
+\end{tabular}
+\end{center}
+%
+The idea is that we have two (short) columns of data,
+with variable x1 in column A and variable x2 in column B.
+
+
+Here are some things we might want to do with these data,
+and how to do it:
+\begin{itemize}
+\item Basic operations.  Suppose that you want to compute the natural
+logarithm of element B2 and store it in C2.
+Then, in C2 you would type:  {\tt =LN(B2)}.
+(Don't type the period, it's part of the punctuation of the sentence.)
+The answer should appear almost immediately.
+%If you want to compute the square of B2, you type:  {A2^2}.
+If you want to add the second observation (row 3) of x1 and x2
+and put in in C3, then in C3 you type:
+{\tt =A3+B3}.
+We have expressed functions ({\tt LN}) and addresses ({\tt A3}) with upper-case
+letters, but lower-case letters would do the same thing.
+
+\item Statistics.
+Suppose that you want to compute the sample mean and standard deviation of
+x1 and place them at the bottom of column A.
+Then, in A5 type: {\tt =AVERAGE(A2:A4)}.
+That takes the numbers in column A from A2 to A4 and computes the sample
+mean or average.
+The standard deviation is similar:  in A6 you type {\tt =STDEV(A2:A4)}.
+Finally, to compute the correlation between x1 and x2,
+you type (in any cell you like):
+{\tt =CORREL(A2:A4,B2:B4)}.
+
+\end{itemize}
+If you're not sure what these functions refer to,
+see the links to the Kahn Academy videos at the end of this chapter.
+
+
+\section{Getting data from FRED}
+
+We will use data extensively in this course.
+One extraordinarily useful source --- for this course and beyond ---
+is \href{http://research.stlouisfed.org/fred2}{FRED},
+
+\vspace*{\parskip}
+\centerline{\url{http://research.stlouisfed.org/fred2/},}
+
+an online economic database supported by the Federal Reserve Bank of St. Louis.
+It's one of the best free tools you'll ever run across.
+
+FRED allows you to graph data, transform it (compute growth rates, for example),
+ and download it into a spreadsheet.
+They also have an \href{http://research.stlouisfed.org/fred-addin/}{Excel ``add-in''}
+that allows you to download data directly into an Excel spreadsheet.
+\href{http://research.stlouisfed.org/fred-addin/}{FRED mobile apps} allow
+you to graph data on your phone or tablet.
+
+To get started using FRED, go the main \href{http://research.stlouisfed.org/fred2}{FRED} page.
+Graph ``US chain-weighted gross domestic product'' (GDP) measured in 2005 dollars.
+(You'll know what that is shortly.)
+Click on \href{http://research.stlouisfed.org/fred2/categories}{``Categories,''} then \href{http://research.stlouisfed.org/fred2/categories/32992}{``National Accounts,''} then \href{http://research.stlouisfed.org/fred2/categories/18}{``National Income and Product Accounts,''} then \href{http://research.stlouisfed.org/fred2/categories/106}{``GDP/GNP,''} and finally \href{http://research.stlouisfed.org/fred2/series/GDPC1?cid=106}{``Real Gross Domestic Product, 1 Decimal''} (also known as GDPC1). The graph of GDPC1 will then appear with quarterly data beginning in 1947:Q1. Notice that recessions are shaded on the graph.
+
+If you return to the \href{http://research.stlouisfed.org/fred2/categories}{Categories} page,
+you'll see the wide variety of data that FRED makes available.
+Try exploring some of these categories to familiarize yourself with popular data series.
+Each data series has a name (e.g., GDPC1 for US chain-weighted GDP). As an exercise, find and graph the consumer price index (CPIAUCSL), total nonfarm payroll employees (PAYEMS), and the monthly US/Euro foreign exchange rate (EXUSEU).
+If you find the categories confusing, simply type what you're looking for into the search box
+on the upper right:  ``real GDP,'' ``consumer price index,'' and so on.
+
+A series of \href{http://research.stlouisfed.org/tutorials/fredgraph/}{tutorials} shows you how to make and alter graphs using FRED's online interface. You can change the graph type, add data series, change the observation period or frequency, and transform the data (e.g., percent change, percent change from a year ago, percent change at an annual rate). You can also alter the graph characteristics (e.g., size, background, color, font, and line style).
+
+%Get used to FRED  before the course begins. Your homework assignments (including the first one) will require that you %find and use data through FRED. Below, we've linked to a few popular series to get you started.
+%\begin{itemize}
+%\item \href{http://research.stlouisfed.org/fred2/series/CPIAUCSL?cid=9}{Consumer price index (CPI)}
+%\item \href{http://research.stlouisfed.org/fred2/series/PAYEMS?cid=32305}{Total nonfarm payroll employees}
+%\item \href{http://research.stlouisfed.org/fred2/series/EXUSEU?cid=95}{US/Euro foreign exchange rate}
+%\end{itemize}
+
+
+
+\section*{Review questions}
+
+If you're not sure you followed all this, give these a try:
+%
+\setlength{\leftmargini}{.5\oldleftmargini}
+\begin{enumerate}
+
+\item Growth rates.
+Per capita income in China was 439 in 1950, 874 in 1975, and 3425 in 2000,
+measured in 1990 US dollars.
+What were the annual growth rates in the two subperiods?
+
+Answer.
+The average continuously compounded growth rates were 2.75 percent and
+5.46 percent.
+The discrete (annually compounded) growth rates (these are harder) are
+2.79 percent and 5.62 percent, so there's not much difference between them.
+
+%\item If the price of a 2-year zero-coupon bond is 90,
+%what is its yield?
+
+%Answer.  The annually-compounded yield is 5.41\%, the
+%continuously compounded yield is 5.27\%.
+
+\item Derivatives. Find the derivative of each of these functions:
+%
+\begin{enumerate}
+\item $2x + 27$  [2]
+\item $2x^2 + 3x  +27$  [$4x+3$]
+\item $2x^2 + 3x - 14$  [$4x+3$]
+\item $(x-2)(2x+7)$  [$4x+3$]
+\item $\ln(2x^2 + 3x - 14)$  [$(4x+3))/(2x^2+3x-14)$]
+\item $3x^8 + 13$  [$24x^7$]
+\item $3x^{2/3}$ [$2 x^{-1/3} = 2 / x^{1/3}$]
+\item $2 e^{5x}$ [$10 e^{5x}$]
+\end{enumerate}
+
+Answers in brackets [ ].
+
+\item Capital and output.  Suppose output $Y$ is related to the amount of capital $K$ used by
+\[
+    Y \;=\; 27 K^{1/3} .
+\]
+Compute the marginal product of capital (the derivative of $Y$ with respect to $K$)
+and describe how it varies with $K$.
+
+Answer.  The marginal product of capital is $ \mbox{MPK} = 9 K^{-2/3} = 9
+/ K^{2/3} $, is positive, and falls as we increase $K$. We call this
+\emph{diminishing returns}:  The more capital we add, the less it
+increases output.
+
+\item Find the maximum.  Find the value of $x$ that maximizes each of these functions:
+\begin{enumerate}
+\item $2x-x^2$  [$f'(x) = 2-2x = 0$, $x = 1$]
+\item $2 \ln x - x$ [$f'(x) = 2/x-1 = 0$, $x = 2$]
+\item $-5x^2  +2x + 11$  [$f'(x) = -10x+2 = 0$, $x = 1/5$] 
+\end{enumerate}
+Answers in brackets [ ].
+
+\item Spreadsheet practice. You have the following data:
+4, 6, 3, 4, 5, 8, 5, 3, 6.
+What is the mean?  The standard deviation?
+(Use a spreadsheet program to do the calculations.)
+
+Answer.  4.889, 1.616.
+
+
+\item FRED practice. Use the FRED website to construct the following graphs:
+\begin{enumerate}
+\item Civilian unemployment rate (UNRATE) from January 1971 through July 2012.
+\item Percent change from a year ago of personal consumption expenditures price index (PCEPI) from January 1960 to June 2012.
+\item US Gross Private Domestic Investment (GPDI) as a share of GDP (GDP) from 1960Q1 to 2012Q2.
+\item Based on the graphs, how are recessions reflected in these three series?
+\end{enumerate}
+Helpful hints: Usually, you will be asked to find the data yourself, so you should familiarize yourself with the various Categories of data on FRED. For this exercise, you can find the data by typing the series name (e.g., PCEPI) into the search box on the FRED website. Doing so will produce a simple graph of the entire series. To alter the graph settings, click ``Edit Graph.'' The new page provides options to change the graph scale, line style, line width, mark type/width, color, date range, frequency, and units. Set the date range as instructed. For example, to graph the percentage change from a year ago, change the ``Units.'' To graph the ratio of two series, graph the first series and click ``Edit Graph.'' Near the bottom of the page, click ``Add Data Series.'' Then click ``Line 1'' and search for the second series. In the ``Formula'' box, type ``a/b''. Use the ``Redraw Graph'' command at the bottom of the page to show the new graph.
+
+
+\begin{comment}
+\item (optional) A two-period consumption problem illustrates both
+how to maximize a function and how consumers might decide how much to consume now
+and how much to save for future spending.
+Let us say that a consumer must choose how much to consume in period 1
+(say, $c_1$)
+and how much to consume in period 2 ($c_2$).
+Preferences are represented by a utility function such as
+\[
+    u(c_1,c_2) \;=\; \ln c_1 + \beta \ln c_2 ,
+\]
+where log is a convenient function (note that it has diminishing marginal utility)
+and $\beta< 1$ discounts period-2 utility relative to period-1.
+The consumer maximizes this function subject to the budget constraint,
+\[
+    c_1 + c_2/(1+r) \;=\;  y_1 + y_2/(1+r) \;=\; V,
+\]
+where $r$ is the interest rate.
+In words:  the present value of consumption equals the present value of income.
+We denote the latter by $V$ to save ourselves some typing later on.
+How much does the agent consume in period 1?
+
+Answer.  Use the budget constraint to substitute for $c_2$ in the utility
+function: $c_2 = (1+r) (V - c_1)$ and $ u(c_1,c_2) = \ln c_1 +
+\beta \ln [(1+r)(V-c_1)] $. If we differentiate utility with
+respect to $c_1$, we find
+\[
+    1/c_1 \;=\; \beta/(V-c_1)
+\]
+or $ c_1 = (1+\beta)^{-1} V$.]
+\end{comment}
+\end{enumerate}
+\setlength{\leftmargini}{\oldleftmargini}
+
+
+\section*{If you're looking for more}
+
+If these notes seem mysterious to you,
+we recommend the Kahn Academy.
+Kahn has wonderful short videos on similar topics,
+including
+\href{http://www.khanacademy.org/#algebra}{logarithms} (look for ``Proof:  $\ln a$ ...''),
+\href{http://www.khanacademy.org/#calculus}{calculus} (look for ``Calculus:  Derivatives ...''),
+and
+\href{http://www.khanacademy.org/#statistics}{statistics} (start at the top).
+For spreadsheets, the
+\href{https://docs.google.com/support/bin/answer.py?hl=en&answer=140784&topic=20322&rd=1}
+{Google doc tutorial}
+is quite good.
+
+\section*{Symbols and data used in this chapter}
+
+\begin{table}[H]
+\centering
+\caption{Symbol table.}
+\begin{tabular*}{0.85\textwidth}{l@{\extracolsep{\fill}}l}
+\toprule
+Symbol & Definition\\
+\midrule
+$Y$                 & Output\\
+$K$                 & Stock of physical capital\\
+$L$                 &    Quantity of labor\\
+$g$                 &    Discrete compounded growth rate\\
+$\gamma$            &     Continuously compounded growth rate\\
+$\ln$               &    Natural logarithm (inverse operation of $\exp$)\\
+$\exp$              &    Exponential function (inverse operation of $\ln$)\\
+$f(x)$                &   Function of $x$\\
+$\Delta  x$         &    Infinitesimal change of $x$\\
+$f'(x)$             &   Derivative of $f(x)$\\
+$dy/dx$             &    Derivative of $f(x)$\\
+$\partial F(x,y)/\partial x $             &    Partial derivative of $F(x,y)$ with respect to $x$\\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+
+%\section*{Data used in this chapter}
+\begin{table}[H]
+\centering
+\caption{Data table.}
+\begin{tabular*}{0.85\textwidth}{l@{\extracolsep{\fill}}l}
+\toprule
+Variable & Source\\
+\midrule
+Real GDP                &GDPC1\\
+Consumer Price Index    &CPIAUCSL\\
+Nonfarm employment        &PAYEMS\\
+US\$/Euro exchange rate    &EXUSEU\\
+Unemployment rate        &UNRATE\\
+Personal consumption expenditures price index    &PCEPI\\
+Gross private domestic investment    &GPDI\\
+Nominal GDP                &GDP\\
+\bottomrule
+\addlinespace
+\end{tabular*}
+\begin{minipage}{0.85\textwidth}
+\footnotesize{To retrieve the data online, add the identifier from the source column to \url{http://research.stlouisfed.org/fred2/series/}.  For example, to retrieve real GDP, point your browser to \url{http://research.stlouisfed.org/fred2/series/GDPC1}}
+\end{minipage}
+\end{table}
+
+
+
+
+

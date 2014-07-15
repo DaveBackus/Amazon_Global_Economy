@@ -1,0 +1,691 @@
+\chapter{The Production Function}\label{chp:agpf}
+% killed "aggregate" to fit title
+\hypertarget{production}{}
+
+\textbf{Tools:} Cobb-Douglas production function.
+
+\textbf{Key Words:} Productivity (TFP); constant returns to scale, diminishing marginal product, capital, labor.
+
+\textbf{Big Ideas:}
+\vspace{-0.1in}
+\begin{itemize}
+\item A production function relates output (real GDP) to inputs (capital and labor).
+Ours have three essential properties: (i) more inputs lead to more output;
+(ii) diminishing returns to capital and labor; (iii) constant returns to scale.
+
+\item The Cobb-Douglas production function is a specific form that we'll use throughout.
+\item Total factor productivity (TFP) is the overall efficiency with which inputs are transformed into outputs.
+\end{itemize}
+
+\rule{\textwidth}{1pt}
+
+We want to understand why some countries are richer than others,
+in the sense of having higher GDP per capita.
+Since rich means they produce more output,
+the question becomes where the output comes from.
+Here, we describe a tool for answering that question:
+a {\it production function\/} that relates the quantity of output produced to
+(i)~the quantities of inputs and (ii)~the efficiency or productivity
+with which they're used.
+Doing this for an entire economy takes a leap of faith,
+but the reward is a quantitative summary of the sources of
+aggregate economic performance.
+
+
+\section{The production function}
+\label{sec:production_function}
+
+Economic organizations transform inputs (factories, office
+buildings, machines, labor with a variety of skills, intermediate
+inputs, and so on) into outputs.  Boeing, for example,
+owns factories, hires workers, buys electricity and avionics, and
+uses them to produce aircraft. American Express's credit card
+business uses computers, buildings, labor, and small amounts of
+plastic to produce payment services. Pfizer hires scientists,
+MBAs, and others to develop, produce, and market drugs. McKinsey
+takes labor and information technology to produce consulting
+services.
+
+
+For an economy as a whole, we might think of all the labor and capital
+used in the economy as producing real GDP,
+the total quantity of goods and services.
+A production function is a mathematical relation between inputs and output
+that makes this idea concrete:
+\begin{eqnarray*}
+    Y &=& A F(K,L) ,
+    \label{eq:pf-general}
+\end{eqnarray*}
+where $Y$ is output (real GDP), $K$ is the quantity of physical capital
+(plant and equipment) used in production,
+$L$ is the quantity of labor,
+and $A$ is a measure of the productivity of the economy. We call $A$ \emph{total factor productivity}.
+More on each of these shortly.
+
+
+The production function tells us how different amounts of capital and labor
+may be combined to produce output.
+The critical ingredient here is the function $F$.
+Among its properties are
+%
+\begin{enumerate}
+\item \textbf{More input leads to more output.} In economic terms, the
+marginal products of capital and labor are positive. In
+mathematical terms, output increases in both $K$ and
+$L$:
+\[
+    \frac{\partial Y}{\partial K}> 0, \;\; \frac{\partial Y}{\partial L}> 0.%
+\]
+
+\item \textbf{Diminishing marginal products of capital and labor.}
+Increases in capital and labor lead to increases in output, but
+they do so at a decreasing rate: The more labor we add, the less
+additional output we get. You can see this in
+Figure~\ref{fig:production}. For a given capital stock $\bar{K}$,
+increasing labor by an amount $\Delta$ starting from $L_{1}$ has a larger
+effect on output than increasing labor by the same amount starting
+from $L_{2} > L_1$. That is:
+$AF(\bar{K},L_{1}+\Delta)-AF(\bar{K},L_{1})>AF(\bar{K},L_{2}+\Delta)-AF(\bar{K},L_{2})$.
+This condition translates into properties of the second
+derivatives:
+%
+\begin{equation}
+\frac{\partial^{2} Y}{\partial K^{2}}< 0,  \;\; \frac{\partial^{2} Y}{\partial L^{2}}< 0.%
+\label{eq:dmp}
+\end{equation}
+%
+
+%
+%%%% FIGURE: PRODUCTION FUNCTION
+\begin{figure}[h]
+\caption{The production function.}\label{fig:production}
+%\begin{center}
+\centering
+\begin{picture}(300,200)(-30,-20)
+\footnotesize
+\thicklines
+
+% Axis
+\put(-30,0){\vector(1,0){300}}%
+\put(0,-20){\vector(0,1){200}}%
+
+\put(265,-14){$L$}%
+\put(-15,170){$Y$}%
+
+% Drawing the production function
+\bezier{2000}(0,0)(1,130)(190,165)%
+
+% Vertical Lines at L_1
+\bezier{40}(30,0)(30,45)(30,89)%
+\bezier{60}(50,0)(50,53)(50,108)%
+
+% Horizontal Lines at L_1
+\bezier{15}(0,89)(15,89)(30,89)%
+\bezier{25}(0,108)(25,108)(50,108)%
+
+\put(26,-14){$L_{1}$}%
+\put(46,-14){$L_{1}+\Delta$}%
+
+% Vertical Lines at L_2
+\bezier{80}(140,0)(140,75)(140,152)%
+\bezier{90}(160,0)(160,75)(160,158)%
+
+% Horizontal Lines at L_2
+\bezier{65}(0,152)(70,152)(140,152)%
+\bezier{85}(0,158)(80,158)(160,158)%
+
+\put(136,-14){$L_{2}$}%
+\put(156,-14){$L_{2}+\Delta$}%
+
+\put(200,160){$Y=AF(\bar{K},L)$}
+\end{picture}
+
+%\end{center}
+\end{figure}
+
+
+\item \textbf{Constant returns to scale.}
+This property says that if we (say) double all the inputs,
+the output doubles, too.
+More formally, if we multiply both inputs by the same number $ \lambda > 0$,
+then we multiply output by the same amount:
+\begin{equation}
+    A F(\lambda K,\lambda L) \;=\; \lambda A F(K,L) .
+    \label{eq:crs}
+\end{equation}
+Thus, there is no inherent advantage or disadvantage of size.
+\end{enumerate}
+These properties are more than we need for most purposes,
+but we mention them because they play a (sometimes hidden)
+role in the applications that follow.
+
+Our favorite example of a production function is $F(K,L) = K^\alpha L^{1-\alpha}$, which leads to
+\begin{equation}
+    Y \;=\; A K^{\alpha} L^{1-\alpha}
+    \label{eq:pf-cd}
+\end{equation}
+for a number (``parameter'') $\alpha$ between zero and one. Circle
+this equation so that you remember it!  It's referred to as the {\it
+Cobb-Douglas\/} version of the production function to commemorate
+two of the earliest people to use it.  (Charles Cobb was a
+mathematician.  Paul Douglas was an economist and later a US
+senator.) Let's verify that it satisfies the properties we
+suggested. First, the marginal products of capital and labor are
+\begin{eqnarray*}
+    \partial Y /\partial K &=& \alpha A K^{\alpha-1}L^{1-\alpha} \;=\; \alpha {Y}/{K}\\
+    \partial Y /\partial L &=& (1-\alpha) A K^{\alpha}L^{-\alpha} \;=\; (1-\alpha) {Y}/{L} .%
+\end{eqnarray*}
+Note that both are positive.
+Second, the marginal products are both decreasing.
+We show this by differentiating the first derivatives to get second derivatives:
+\begin{eqnarray*}
+    \partial^{2} Y / \partial K^{2} &=&  \alpha (\alpha-1) A K^{\alpha-2} L^{1-\alpha} \\
+    \partial^{2} Y / \partial L^{2} &=& - \alpha(1-\alpha) A K^{\alpha}L^{-\alpha-1} .
+\end{eqnarray*}
+Note that both are negative.
+%
+Finally, the function exhibits constant returns to scale.
+If we multiply both inputs by $\lambda > 0$, the result is
+\[
+    A (\lambda K)^{\alpha}(\lambda L)^{1-\alpha} \;=\; A\lambda^{\alpha} K^{\alpha} \lambda^{1-\alpha} L^{1-\alpha} \;=\; \lambda AK^{\alpha}L^{1-\alpha} ,%
+\]
+as needed.
+We will typically use $\alpha = 1/3$.
+If you'd like to know why, see the ``Review questions'' at the end of the chapter.
+
+
+\section{Capital input}
+
+The capital input (or capital stock) $K$
+is the total quantity of plant and equipment used in production.
+We value different kinds of capital (machines, office buildings, computers)
+at their base-year prices, just as we do with real GDP in the National Income and Product Accounts.
+It's somewhat heroic to combine so many different kinds of capital into one
+number, but that's the kind of people we are.
+
+Fine points:
+\begin{itemize}
+\item \textbf{How does capital change over time?}
+Typically, capital increases with investment (purchases of new plant and equipment)
+and decreases with depreciation.
+Mathematically, we might write
+\begin{equation}
+    K_{t+1} \;=\; K_{t} - \delta_t K_{t} + I_{t} ,
+    \label{eq:lom-k}
+\end{equation}
+where $\delta_t$ is the rate of depreciation between $t$ and $t+1$.
+On average, the capital stock depreciates about 6 percent a year,
+but this is an average of depreciation rates for structures
+(which depreciate more slowly) and equipment
+(for example, computers, which depreciate more quickly).
+In practice, we use (\ref{eq:lom-k}) to construct
+estimates of the capital stock from investment data.
+
+Digression.
+{\footnotesize
+ Note that we've used a different timing convention
+than financial accountants.
+Capital at time $t$ is the amount available for production
+during the period.
+We use the amount available at the start of the period,
+which in financial statements would be the end of the previous
+period.
+Why do we do this?  Because, otherwise,
+current production would depend on last period's
+capital stock, which seems a little strange.
+Note, too, that for a period like a year, this is a moving target:
+The amount of capital available in December is likely to
+be different from the amount available in March.
+That's not a big deal, because the capital stock is slow to change,
+so any changes within a period are likely to be small relative to the total.}
+
+\item \textbf{Quality.}
+In principle, we want to take into account changes over time
+in the quality of capital.
+Computers, for example, are more productive than they were
+ten years ago, so a computer today should count as more capital
+than a computer ten years did.
+Ideally, this happens when we construct our real investment series:
+the national income and product accountants consider changes
+in quality when they divide investment into price and quantity components.
+In recent times, the effect of this has been a sharp decrease
+in the price of investment goods,
+particularly equipment,
+so that a given dollar expenditure
+results in greater additions to capital than in the past.
+
+
+\item \textbf{Wars and natural disasters.}
+Wars can have an impact on the capital stock---natural disasters, too,
+although their impact is rarely as big.
+Experts estimate that the German and Japanese capital stocks declined
+by about 50 percent  between the start and end of World War II.
+In modern times, the impact is almost always negligible.
+September 11 and Hurricane Katrina, for example, had
+enormous effects on New York City and New Orleans, respectively,
+but the impact on the US capital stock was tiny in both cases.
+
+\item \textbf{Does land count?}  The short answer:  No.
+In principle, maybe it should, but in modern economies, land is far less important
+than plant and equipment.
+For very poor agricultural economies, land and livestock are important
+inputs to production, but they're not typically included in our
+measures of the capital stock.
+%To the extent it matters, its impact shows up in $A$.
+
+\item \textbf{Intangibles.}
+Capital here consists solely of physical capital.
+We do not include ``investments'' in such things
+as research and development, patents, brands, and databases.
+These aren't part of traditional measures of capital yet,
+but there's been some progress towards including them.
+
+\end{itemize}
+
+
+
+\section{Labor input}
+
+The next component of our production function is labor.
+The first-order approximation is simply the number of people employed ($L$),
+which is a number we can find for most countries.
+(It's not as easy as you might think to measure employment,
+especially in countries with a large informal sector.)
+In some cases, we also include measures of the quality of labor
+(``human capital'' $H$) and hours worked ($h$).
+If we include both, our measure of labor input becomes
+$hHL$.
+
+
+The starting point for the labor input is, of course, the population.
+Populations of countries differ not only in quantity,
+but also in their age distribution and its evolution.
+Right now, for example, China has a relatively young population,
+but with a low birth rate, it is aging rapidly.
+The US has a younger population than Europe or Japan,
+the result of a higher birth rate (more young people!)
+and a higher immigration rate (immigrants tend to be young, too).
+These demographic issues are interesting in their own right.
+They play an important role in government policy---many countries have state-supported pension and health-care systems,
+for example, so changes in the age distribution can have
+a significant impact on government budgets.
+They're also a critical input in product decisions,
+telling you, for example, whether you should be selling
+diapers or walkers.
+
+
+Our focus, however, is on the quantity and quality of labor.
+There's no question that individuals differ in skill.
+Derek Jeter's skills earn him
+\$15m a year as a shortstop for the New York Yankees baseball team,
+but most of us would be worth far less in the same job.
+American workers earn more than Mexican and Chinese workers,
+in part because their skills are better.
+There are many skills we might want to measure.
+One that's relatively easy to measure is the level of education of the
+workforce.
+In 2000, the average Korean worker had 10.46 years of
+schooling, and the average Mexican worker had 6.73 years. We know
+that individuals with more education have higher salaries, on
+average, so we might guess that Koreans have higher average skills
+than Mexicans. We call this school-based difference in skill
+human capital and take it into account by putting
+it into our production function:
+\[
+    Y \;=\; A F(K,HL),
+\]
+where $H$ is a measure of human capital.
+
+
+There are two common measures we could use,
+both tied to the number of years of school $S$ of the workforce.
+The first is to set human capital equal to average years of school:
+\[
+    H \;=\; S .
+\]
+This seems to be a relatively good approximation for most purposes,
+but it leads to unreasonably large percentage increases in $H$
+at low levels of schooling.
+For example, workers in India had an average level of schooling
+of 1.7 years in 1960,
+so one additional year of school increases $H$ by 59 percent.
+Another approach, based on a huge body of evidence,
+is to credit each year of school with (say) a given percentage
+increase in skill.
+Mathematically, we might say
+\[
+    H \;=\; \exp( \sigma S ) ,
+\]
+where $\sigma$ is the extra value of a year of school.
+A good starting point is $\sigma = 0.07$,
+which means that every year of school increases
+human capital by 7 percent.
+
+
+A second refinement of our measure of labor input focuses on quantity:
+the number of hours worked.
+Curiously enough, there are substantial differences
+in average hours worked across countries.
+If we use $h$ to represent hours worked, our state-of-the-art
+modified production function is
+\begin{equation}
+    Y \;=\; \;=\; A F(K,hHL)
+      \;=\;  A K^{\alpha} (hHL)^{1-\alpha}.
+      \label{eq:pf-mod}
+\end{equation}
+
+
+
+\section{Productivity}
+
+The letter $A$ in the production function plays a central role
+in this course. We refer to it as total factor productivity or TFP,
+but what is it?  Where does it come from?
+
+
+The word productivity is commonly used to mean several different
+things. The most common measure of productivity is the ratio of
+output to labor input, which we'll call the {\it average product
+of labor\/}. This is typically what government agencies mean when
+they report productivity data.  It differs from the {\it marginal
+product of labor\/} for the same reason that average cost differs
+from marginal cost. {\it Total factor productivity\/},
+the letter $A$ in the production function, measures the overall
+efficiency of the economy in transforming inputs into outputs.
+
+Mathematically, the three definitions are:
+\begin{eqnarray*}
+    \mbox{Average Product of Labor} &=& {Y}/{ L} \\
+    \mbox{Marginal Product of Labor} &=& {\partial Y}/{\partial L}\\
+    \mbox{Total Factor Productivity} &=& {Y}/{ F(K,L)} .
+\end{eqnarray*}
+%They differ primarily in their treatment of capital.
+For the Cobb-Douglas production function they are:
+\begin{eqnarray*}
+    \mbox{Average Product of Labor} &=& A \left({K}/{L}\right)^\alpha  \\
+    \mbox{Marginal Product of Labor} &=& (1-\alpha) A \left({K}/{L}\right)^\alpha \\
+    \mbox{Total Factor Productivity} &=& A  .
+\end{eqnarray*}
+Holding $A$ constant,
+the first two increase when we increase the ratio of capital to labor.
+Why?
+You can be more productive if you have
+(say) more equipment to work with.
+TFP is an attempt to measure productivity independently
+of the amount of capital each worker has.
+That allows us to tell whether the US is more productive
+than India because it has more and better capital (higher $K$)
+or uses the labor and capital it has more effectively (higher TFP $A$).
+In practice, both play a role,
+and this allows us to tell which effect is larger.
+
+
+In practice, we measure total factor productivity as a residual:
+We measure $A$ by taking a measure of output (real GDP $Y$)
+and comparing it to measures of capital and labor inputs.
+In the simplest case (without corrections to labor), we solve
+\[
+    A \;=\; {Y}/{(K^\alpha L^{1-\alpha})}.
+\]
+As a result, anything that leads the same inputs to produce more
+output results in higher TFP.
+What kinds of things might do this?
+One example is innovation. If we invent the computer chip or a drug
+that cures cancer, they will clearly increase measured productivity
+(or one would hope they would).
+But there are many other examples.
+Another example is security. If we establish personal safety and security,
+then individuals can spend more time working productively,
+and less time worrying about being robbed or murdered.
+Another is competition.  If the economic system
+reallocates resources from less-productive to more-productive
+firms, that will lead to an increase in country-wide productivity.
+Capital and labor-market laws and regulations play a clear role here.
+In short, anything that affects the allocation of resources can
+have an impact on total factor productivity.
+
+
+\section{Marginal products}
+
+In competitive markets, labor and capital are paid their marginal products.
+We could show that, but for now would prefer to simply take it on faith.
+That, in turn, tells us where payments to labor and capital come from.
+
+Consider payments to labor.
+Firms hire workers until the marginal product of an additional unit of labor
+equals its cost, the wage $w$.
+We'll go into this in more detail when we study labor markets,
+but for now note that this bit of logic can be represented mathematically by
+\[
+    w \;=\; \mbox{MPL} \;\equiv\; {\partial Y}/{\partial L} ,
+\]
+where MPL means the marginal product of labor.
+With our basic Cobb-Douglas production function (\ref{eq:pf-cd}), this becomes
+\[
+    w \;=\; (1-\alpha) A K^\alpha L^{-\alpha} \;=\; (1-\alpha) A \left({K}/{L}\right)^{\alpha}
+    \;=\; \ (1-\alpha) {Y}/{L}.
+\]
+We can now ask ourselves:  What do we need to generate high wage rates?
+The answer:  High total factor productivity and/or high capital-labor ratios.
+In words, workers are more productive, at the margin, if TFP is high and
+if they have more capital to work with.
+
+
+Note that high wages are a good thing for an economy:
+they reflect (for example) high productivity.
+Often, countries with high TFP also have high capital per worker, so the two
+terms drive wages in the same direction.
+It doesn't seem fair, but it happens because the same productivity that makes workers
+valuable also raises the return on capital, as we see next.
+
+
+The market return on capital ($r$, say) equals the marginal product of capital.
+In this case, there's an additional adjustment for depreciation, so we have
+\[
+    r \;=\; \mbox{MPK} \;=\; \alpha A \left({K}/{L}\right)^{\alpha-1} - \delta \;=\; \ \alpha {Y}/{K} - \delta.
+\]
+The right-hand side here is the net marginal product of capital---net because
+we have netted out depreciation.
+Without that term, we have the gross marginal product of capital,
+because our measure of output is gross of depreciation (the G in GDP).
+
+In short, the productive value of labor and capital
+(ie, their marginal products)
+depends in large part on total factor productivity.
+To understand this, it's important that you be able to distinguish between
+total factor productivity (the letter $A$ in the production function)
+and the marginal products of labor and capital.
+
+
+\section*{Executive summary}
+
+\setlength{\leftmargini}{.5\oldleftmargini}
+\begin{enumerate}
+\item A production function links output to inputs.
+
+\item Inputs include physical capital (plant and equipment)
+and labor (possibly adjusted for skill and hours worked).
+
+%\item Labor varies in quantity (number of people working, numbers of hours)
+%and quality (skill, education).
+
+\item Total Factor Productivity (TFP) is a measure of overall productive efficiency.
+\end{enumerate}
+\setlength{\leftmargini}{\oldleftmargini}
+
+
+\section*{Review questions}
+
+\setlength{\leftmargini}{.5\oldleftmargini}
+\begin{enumerate}
+
+\item Components of the production function.  A small country invests a large fraction of GDP in a major
+infrastructure project, which later turns into a ``white elephant''
+(that is, it's not used).
+How does this affect the components of the
+production function?
+
+Answer.
+The investment will raise the stock of capital $K$,
+but since it's not used, we would expect no increase in output $Y$.
+We would, therefore, expect measured productivity to fall.
+
+\item Computing TFP.  Suppose an economy has the production function
+\[
+    Y \;=\; A K^{1/4} L^{3/4} .
+\]
+If $ Y= 10$, $K=15$, and $L = 5$,
+what is total factor productivity $A$?
+
+Answer.  $ A = Y / (K^{1/4} L^{3/4}) = 1.520$.
+
+
+\item Diminishing returns.  Suppose the production function is
+\[
+    Y \;=\; 2 K^{1/4} L^{3/4}
+\]
+and $K=L = 1$. How much output is produced? If we reduced $L$ by
+10 percent, how much would $K$ need to be increased to produce the same
+output?
+
+Answer.  With $K=L=1$, $Y = 2$.
+If $L$ falls to $0.9$, $K = 1/0.9^3 = 1.372$
+(a 37 percent increase in $K$).
+The reason for the difference between the magnitudes in the changes in
+$K$ and $L$ is the difference in their exponents in the production function.
+
+
+\item Human capital 1. Worker 1 has ten years of education, worker 2 has 15.  How much
+more would you expect worker 2 to earn?  Why?
+
+Answer.  If $H = $ years of education, then one hour of worker 2's
+time is equivalent to 1.5 ($=15/10$) hours of worker 1's time, so
+we'd expect her to be paid 50 percent more. A more complex answer is
+that skill may increase in a more complicated way with years of
+education, and that types of education may differ in their impact
+on earning power (an MBA may be worth more in this sense than a
+PhD in cultural anthropology, however interesting the latter may
+be).
+
+\item Human capital 2. Consider the augmented production function
+\[
+    Y \;=\;  K^{1/3} (HL)^{2/3} .
+\]
+If $K=10$, $H=10$, and $L=5$, what is the average product of labor?
+How much does the average product increase if $H$ rises to 12?
+
+Answer.  Output is $Y = 29.24$ so $Y/L = 5.85$.  If $H$ rises to 12,
+$Y/L = 6.60 $.
+
+\item Production function conditions.
+Conditions 2 and 3 [equations (\ref{eq:dmp}) and (\ref{eq:crs})]
+seem to contradict each other.
+One says increases in inputs have a declining impact on output, while
+the other says that proportional increases in capital and labor
+lead to the same proportional increase in output.  What's going on here?
+
+Answer.  This is a subtle issue, but the answer is that
+the conditions are different.
+Condition 2 concerns increases in one input,
+{\it holding constant the other input\/}.
+Condition 3 concerns increases in both inputs at the same time.
+Different concepts, different properties.
+
+\item One-third.  Why does $\alpha=1/3$?
+
+Answer.  If we look at the income side of the National Income
+and Product Accounts, about two-thirds is paid to labor
+and one-third to capital.
+We'll see later that firms will hire labor until its
+marginal product equals the wage.
+For our Cobb-Douglas production function,
+\[
+    w \;=\; \mbox{MPL} \;=\; (1-\alpha) A K^\alpha L^{-\alpha} .
+\]
+Total payments to labor are the product of the wage and labor:
+\[
+    w L  \;=\; (1-\alpha) A K^\alpha L^{1-\alpha} \;=\; (1-\alpha) Y.
+\]
+So we set $1-\alpha = 2/3$, as stated.
+\end{enumerate}
+\setlength{\leftmargini}{\oldleftmargini}
+
+
+\section*{Symbols used in this chapter}
+
+\begin{table}[H]
+\centering
+\caption{Symbol table.}
+\begin{tabular*}{0.98\textwidth}{l@{\extracolsep{\fill}}l}
+\toprule
+Symbol & Definition\\
+\midrule
+$Y$                            &Output (real GDP)\\
+$A$                            &Total factor productivity (TFP)\\
+$K$                            &Stock of physical capital (plant and equipment)\\
+$L$                            &Quantity of labor (number of people employed)\\
+$F(K,L)$                    &Production function of K and L\\
+$\partial F(K,L)/\partial K $             &    Partial derivative of $F(K,L)$ with respect to $K$\\
+$\partial F(K,L)/\partial L $             &    Partial derivative of $F(K,L)$ with respect to $L$\\
+$\Delta$                     &Infinitesimal number\\
+$\overline{K}$                &Given capital stock\\
+$\lambda$                     &Constant\\
+$\alpha$                     &Exponent of $K$ in Cobb-Douglas production function \\
+                            &(= capital share of income)\\
+$\delta$                     &Rate of depreciation of physical capital\\
+$I$                            &Investment (purchases of new plant and equipment)\\
+$H$                            &Human capital\\
+$h$                            &Hours worked\\
+$hHL$                        &Volume of labor input\\
+$S$                            &Years of school of workforce\\
+$\sigma$                     &Extra value of a year    of school\\
+$w$                            &Wage\\
+$r$                            &Market return on capital (or rental cost of capital)\\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\section*{If you're looking for more}
+
+The methodology described in this chapter has been applied,
+with lots of variations,
+to countries, industries, and even firms.
+The biggest challenge in most studies is coming up with capital stocks.
+We use the Penn World Table and construct country-level capital stocks ourselves,
+which we can then use to compute productivity.
+If you're interested, and can't find it online, send us an email.
+
+Lots of other organizations do their own calculations.
+Two of the most useful public sources are
+\begin{itemize}
+\item The Bureau of Labor Statistics.
+They  report what they call
+``multifactor productivity,'' both levels and growth rates,
+for the US private business sector and a number of industries:
+
+\vspace*{\parskip}
+\centerline{\url{http://www.bls.gov/bls/productivity.htm}.}
+
+\item The Conference Board.  Their Total Economy Database includes
+growth rates of aggregate TFP for a number of countries:
+
+\vspace*{\parskip}
+\centerline{\phantom{xxxxx}\url{http://www.conference-board.org/data/economydatabase/}.}
+\end{itemize}
+
+\begin{comment}
+MBA 11 alum Matthew Cedergren
+supplies these
+links to interactive graphs of Cobb-Douglas production functions:
+%
+\begin{itemize}
+\item  Manfred Gartner's
+\href{http://www.fgn.unisg.ch/eurmacro/tutor/cobb-douglas.html}
+{eurmacro site}.
+
+\item
+\href{http://demonstrations.wolfram.com/CobbDouglasProductionFunctions/}
+{Wolfram demonstrations}.
+
+\end{itemize}
+\end{comment}

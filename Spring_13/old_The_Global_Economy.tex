@@ -1,0 +1,76 @@
+\input{a_notes_preamble}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%To create a single chapter with the correct page numbering and references:                        %
+%This isn't elegant, if you know a better way to do this, tell me.                                 %
+%                                                                                                  %
+% 1.  Go into preamble and set bookmarks=false.                                                    %
+% 2.  Compile the entire book                                                                      %
+% 3.  Uncomment the appropriate "includeonly" statement.                                           %
+% 4.  The pdf will still be called "The_Global_Economy," so save it with the right filename.       %
+% 5.  Some chapters may have a blank page at the beginning.  Use Acrobat to delete it.             %
+%                                                                                                  %
+%\includeonly{notes_math_2012}                                                                     %
+%\includeonly{notes_data_2012}                                                                     %
+%\includeonly{notes_review_long}                                                                   %
+%\includeonly{notes_production_2012}                                                               %
+%\includeonly{notes_solow_2012}                                                                    %
+%\includeonly{notes_growth_2012}                                                                   %
+%\includeonly{notes_institutions_2012}                                                             %
+%\includeonly{notes_finance_2012}                                                                  %
+%\includeonly{notes_trade_2012}                                                                    %
+%\includeonly{notes_labor_2012}                                                                    %
+%\includeonly{notes_review_short}                                                                  %
+%\includeonly{notes_cycles_2012}                                                                   %
+%\includeonly{notes_indicators_2012}                                                               %
+%\includeonly{notes_inflation_2012}                                                                %
+%\includeonly{notes_asad_2012}                                                                     %
+%\includeonly{notes_asadpolicy_2012}                                                               %
+%\includeonly{notes_monpol_2012}                                                                   %
+%\includeonly{notes_taxes_2012}                                                                    %
+%\includeonly{notes_deficits_2012}                                                                 %
+%\includeonly{notes_bop_2012}                                                                      %
+%\includeonly{notes_fx_2012}                                                                       %
+%\includeonly{notes_fxregimes_2012}                                                                %
+%\includeonly{notes_crises_2012}                                                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%Title page, tables of contents, figures, etc.
+\include{a_notes_front_matter}
+
+%Preliminary matters
+\include{notes_part_prelim}
+\include{notes_math_2012}
+\include{notes_data_2012}
+
+%Long run performance
+\include{notes_review_long}
+\include{notes_production_2012}
+\include{notes_solow_2012}
+\include{notes_growth_2012}
+\include{notes_institutions_2012}
+\include{notes_finance_2012}
+\include{notes_trade_2012}
+\include{notes_labor_2012}
+
+%Short run performance
+\include{notes_review_short}
+\include{notes_cycles_2012}
+\include{notes_indicators_2012}
+\include{notes_inflation_2012}
+\include{notes_asad_2012}
+\include{notes_asadpolicy_2012}
+\include{notes_monpol_2012}
+
+%Other topics
+\include{notes_part_other}
+\include{notes_taxes_2012}
+\include{notes_deficits_2012}
+\include{notes_bop_2012}
+\include{notes_fx_2012}
+\include{notes_fxregimes_2012}
+\include{notes_crises_2012}
+
+\end{document}

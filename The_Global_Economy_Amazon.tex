@@ -1,0 +1,191 @@
+% Complete Global Economy notes
+% Set up for pdflatex
+
+% sets formatting parameters etc
+\input{a_notes_preamble_amazon}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%To create a single chapter with the correct page numbering and references:                        %
+%This isn't elegant, if you know a better way to do this, tell me.                                 %
+%                                                                                                  %
+% 1.  Go into preamble and set bookmarks=false.                                                    %
+% 2.  Compile the entire book                                                                      %
+% 3.  Uncomment the appropriate "includeonly" statement.                                           %
+% 4.  The pdf will still be called "The_Global_Economy," so save it with the right filename.       %
+% 5.  Some chapters may have a blank page at the beginning.  Use Acrobat to delete it.             %
+%                                                                                                  %
+%\includeonly{a_notes_front_matter}                                                                %
+%\includeonly{notes_math}                                                                          %
+%\includeonly{notes_data}                                                                          %
+%\includeonly{notes_review_long}                                                                   %
+%\includeonly{notes_production}                                                                    %
+%\includeonly{notes_solow}                                                                         %
+%\includeonly{notes_growth}                                                                        %
+%\includeonly{notes_institutions}                                                                  %
+%\includeonly{notes_finance}                                                                       %
+%\includeonly{notes_trade}                                                                         %
+%\includeonly{notes_labor}                                                                         %
+%\includeonly{notes_review_short}                                                                  %
+%\includeonly{notes_cycles}                                                                        %
+%\includeonly{notes_indicators}                                                                    %
+%\includeonly{notes_inflation}                                                                     %
+%\includeonly{notes_asad}                                                                          %
+%\includeonly{notes_asadpolicy}                                                                    %
+%\includeonly{notes_monpol}                                                                        %
+%\includeonly{notes_taxes}                                                                         %
+%\includeonly{notes_deficits}                                                                      %
+%\includeonly{notes_bop}                                                                           %
+%\includeonly{notes_fx}                                                                            %
+%\includeonly{notes_fxregimes}                                                                     %
+%\includeonly{notes_crises}                                                                        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%Title page, tables of contents, figures, etc.
+\frontmatter
+\include{a_notes_front_matter}
+
+% I think if we added \mainmatter [??] here, roman numerals would be auto
+\mainmatter
+% Preliminaries
+\include{notes_review_prelim}
+\include{notes_math}
+\include{notes_data}
+
+% Long run performance
+\include{notes_review_long}
+\include{notes_production}
+\include{notes_solow}
+\include{notes_growth}
+\include{notes_institutions}
+\include{notes_labor}
+\include{notes_finance}
+\include{notes_trade}
+
+% Short run performance
+\include{notes_review_short}
+\include{notes_cycles}
+\include{notes_indicators}
+\include{notes_inflation}
+\include{notes_asad}
+\include{notes_asadpolicy}
+\include{notes_monpol}
+
+% Other topics
+\include{notes_review_other}
+\include{notes_taxes}
+\include{notes_deficits}
+\include{notes_bop}
+\include{notes_fx}
+\include{notes_fxregimes}
+\include{notes_crises}
+
+%%%%%%%%%%%%%%%%%%%%%Index Stuff%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Add the index to the TOC
+\clearpage
+\addcontentsline{toc}{chapter}{\indexname}
+
+%%This command is a cludge to get a line break in the index.  The negative hspace is the twice the "indentunit," set in the preamble.
+\newcommand*\idxbreak{\\ \hspace{4em}}
+
+%These only get added once to make entries in the index.
+\index{credit easing|see{monetary policy}}
+\index{sovereign debt|see {government debt}}
+\index{term structure of interest rates|see{\idxbreak interest rate}}
+\index{GDP|see{gross domestic product}}
+\index{investment|see{gross\idxbreak domestic product (GDP)}}
+\index{government purchases|see{gross domestic product (GDP)}}
+\index{net exports|see{\idxbreak gross domestic product (GDP)}}
+\index{real GDP|see{gross domestic product (GDP)}}
+\index{fixed-basket approach|see{\idxbreak price index}}
+\index{fixed-weight approach|see{\idxbreak price index}}
+\index{Cobb-Douglas|see{\idxbreak production function}}
+\index{average product of labor|see{labor}}
+\index{off-balance-sheet liabilities|see{\idxbreak hidden liabilities}}
+\index{convertibility|see{\idxbreak exchange rate regime}}
+\index{covered interest parity|see{\idxbreak interest rate parity}}
+\index{depreciation|see {exchange rate}}
+\index{default risk|see{credit risk}}
+\index{total factor productivity|see{\idxbreak productivity}}
+\index{countercyclical|see{business cycle}}
+\index{coincident indicator|see{\idxbreak cyclical indicators}}
+\index{GDP deflator|see{price index}}
+\index{money supply|see{monetary policy}}
+\index{unemployment rate|see{labor}}
+\index{labor market equilibrium|see{labor}}
+\index{labor market|see{labor}}
+\index{convergence|see{Solow model}}
+\index{nominal interest rate|see{\idxbreak interest rate}}
+\index{zero lower bound|see{\idxbreak monetary policy}}
+\index{consumer price index (CPI)|see{\idxbreak price index}}
+\index{debt|see{government debt}}
+\index{excess burden|see{tax}}
+\index{expected inflation|see{inflation}}
+\index{expenditure identity of GDP|see{\idxbreak identities}}
+\index{fixed exchange rate|see{\idxbreak exchange rate regime}}
+\index{flexible exchange rate|see{\idxbreak exchange rate regime}}
+\index{floating exchange rate|see{\idxbreak exchange rate regime}}
+\index{government saving|see{saving}}
+\index{government deficit|see{\idxbreak government budget}}
+\index{income identity of GDP|see{\idxbreak identities}}
+\index{inflation target|see{monetary policy}}
+\index{inflation targeting|see{\idxbreak monetary policy}}
+\index{interest-rate rules|see{\idxbreak monetary policy}}
+\index{job creation rate|see{labor}}
+\index{job destruction rate|see{labor}}
+\index{job reallocation rate|see{labor}}
+\index{job turnover rate|see{labor}}
+\index{lagging indicator|see{\idxbreak cyclical indicators}}
+\index{leading indicator|see{\idxbreak cyclical indicators}}
+\index{long-run aggregate supply|see{\idxbreak aggregate supply}}
+\index{long-term interest rate|see{\idxbreak interest rate}}
+\index{managed float|see{\idxbreak exchange rate regime}}
+\index{Taylor rule|see{monetary policy}}
+\index{nominal GDP|see{\idxbreak gross domestic product}}
+\index{open-market operation|see{\idxbreak monetary policy}}
+\index{partial derivative|see{derivative}}
+\index{participation rate|see{labor}}
+\index{partial derivative|see{derivative}}
+\index{pegged exchange rate|see{\idxbreak exchange rate regime}}
+\index{per capita GDP|see{\idxbreak gross domestic product}}
+\index{physical capital|see{capital}}
+\index{policy discretion|see{monetary policy}}
+\index{policy duration commitment|see{\idxbreak monetary policy}}
+\index{PPP|see{purchasing power parity}}
+\index{primary deficit|see{\idxbreak government budget}}
+\index{private saving|see{saving}}
+\index{procyclical|see{business cycle}}
+\index{public debt|see{government debt}}
+\index{quantitative easing|see{\idxbreak monetary policy}}
+\index{real interest rate|see{interest rate}}
+\index{rules vs discretion|see{\idxbreak monetary policy}}
+\index{short-run aggregate supply|see{aggregate supply}}
+\index{short-term interest rate|see{\idxbreak interest rate}}
+\index{speculative attack|see{\idxbreak exchange rate regime}}
+\index{steady-state unemployment rate|see{\idxbreak labor}}
+\index{supply of labor|see{labor}}
+\index{sustainability|see{government debt}}
+\index{Taylor rule|see{monetary policy}}
+\index{Treasury bill|see{Treasury}}
+\index{trilemma of open-economy monetary policy|see{exchange-rate regime}}
+\index{uncovered interest parity|see{\idxbreak interest rate parity}}
+\index{unemployment dynamics|see{labor}}
+\index{unsustainable|see{government debt}}
+\index{value-added tax (VAT)|see{tax}}
+\index{welfare loss|see{tax}}
+\index{worker reallocation rate|see{labor}}
+\index{yield|see{bond}}
+\index{capital controls|see{\idxbreak exchange rate regimes}}
+\index{deflator|see{price index}}
+\index{budget deficit|see{\idxbreak government budget}}
+
+%Print the index here.
+\small
+\setlength{\columnsep}{6mm}
+\printindex
+
+
+\end{document}

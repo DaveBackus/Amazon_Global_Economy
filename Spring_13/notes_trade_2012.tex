@@ -1,0 +1,784 @@
+\chapter{International Trade}\label{chp:intr}
+\hypertarget{trade}{}
+
+\textbf{Tools:} Ricardo's model of trade; consumption and production possibility frontiers.
+
+\textbf{Key Words:} Absolute advantage; comparative advantage; autarky.
+
+\textbf{Big Ideas:}
+\vspace{-0.1in}
+\begin{itemize}
+\item Trade is a positive-sum game:  both countries benefit.
+\item Gains from trade are similar to increases in TFP:  trade increases aggregate consumption opportunities.
+\item Trade creates winners and losers, but the winners win more than the losers lose.
+ Trade affects the kind of jobs that are available, not the number of jobs.
+%\item Opposition to trade is often thinly disguised self-interest.
+\end{itemize}
+\rule{\textwidth}{1pt}
+
+Virtually all economists, liberal or conservative, believe that
+free (or ``free-er'') trade is a good thing:
+good for consumers, good for workers,
+good for all countries involved.
+Why?  Because consumers are able to buy products
+from the cheapest vendor,
+which forces production to the highest productivity firms,
+which, in turn, supports the highest wages for workers.
+
+No one else seems to believe that.
+Most are convinced that one side of trade is unfair, that one country
+is gaining at the other's expense.
+The purpose of this chapter is to outline the logic for trade.
+The logic is mathematical, by which we mean it's clear and precise,
+if a little abstract.
+You can decide for yourself whether you find it persuasive.
+
+
+\section{Ricardo's theory of trade}
+
+David Ricardo was one of the most influential economists of the early
+nineteenth century,
+but he came to economics by accident.  Born to a
+Jewish family in Amsterdam, he left the Netherlands and broke off
+relations with his family (and they with him) to avoid an arranged
+marriage, and married a Quaker instead.  He set himself up in
+London as a government securities dealer and became, in his words,
+``sufficiently rich to satisfy all my desires and the reasonable
+desires of all those about me."  Looking for something to occupy
+his time, he developed the modern theory of international trade.
+
+Many people in Ricardo's day (and ours) regarded trade as a
+zero-sum activity:  If {you} gain from trade, then I must lose.  His
+insight was that both sides typically benefit, even if it appears
+that one has an \textit{absolute productivity advantage} over the
+other. In his words, each country has a \textit{comparative
+advantage}.
+
+We develop Ricardo's theory in a particularly simple setting:
+Two countries produce and consume two products, and both products
+are produced with labor alone.  In many respects, this version of
+the theory is unrealistic, but the lack of realism is exactly what
+makes the analysis simple and understandable.
+None of the simplifications are essential to the argument.
+
+To be specific, let us call the countries the US (country 1) and
+Mexico (country 2) and the products apples and bananas.  (Yes, we
+know neither the US nor Mexico produces many bananas, but we like
+the letters $a$ and $b$.)  We start by specifying the productivity
+levels: the quantities of product (either $a$ or $b$) in country
+$i$ (either 1 or 2) produced with one unit of labor.
+We'll use specific numbers, which we report in Table~\ref{tab:prod}.
+Let us say, also in the interest of simplicity,
+that the labor force is the same in the two countries: $L_{1}=L_{2}=100$.
+
+%*****************************************************************************************************
+\begin{table}[h]
+\centering
+\caption{Productivities for trade example.}
+\begin{tabular}{lcc}
+\toprule
+                    &        Apples       &      Bananas    \\%
+
+\midrule
+US (country 1)      &   $\alpha_{1}=20$   & $\beta_{1}=10$  \\%
+Mexico (country 2)  &   $\alpha_{2}=5$    & $\beta_{2}=5$   \\%
+\bottomrule
+\end{tabular}
+\label{tab:prod}
+\end{table}
+%*****************************************************************************************************
+
+
+The productivities mirror the discussion you hear about trade
+between a rich country (the US here) and a poor one (Mexico).
+For example, one unit of labor produces more in the US
+whether it's used to produce apples or bananas.
+We would say the US has an {absolute advantage} in producing both goods.
+A number of factors might play a role here. Perhaps the weather is
+better, labor is better educated, the distribution system is
+more efficient, or the institutions are better.
+
+
+The question is: Would Mexico and the US both benefit from
+completely free trade, relative to a position of \textit{autarky}
+(no trade at all)? The answer is yes, but let's run through
+the argument. Suppose Mexico had high enough tariffs or other
+barriers to kill off trade altogether. Then Mexico would likely
+produce both products. How much of each? It could produce apples
+in quantity $a=L_{2}\alpha_{2} = 100\times 5 = 500$ or bananas in
+quantity $b=L_{2}\beta_{2} = 100\times 5 = 500$. It could also
+produce any combination in between, as shown in
+Figure~\ref{fig:gains} (the solid line). We call the solid line
+the production possibility frontier for Mexico, since every point on the line
+represents a possible production/consumption combination. In this example,
+the line has a one-for-one tradeoff between apples and bananas,
+implying a relative price of $ q=p_{b}/p_{a} =
+\alpha_{2}/\beta_{2} = 1$.
+
+What happens if Mexico and the US allow trade? It depends on the
+relative price $q$. Suppose that Mexico can export bananas at a
+relative price of $q> 1$ apples for each banana. Then Mexico will
+produce only bananas.  Why? Because it can produce each at the
+same cost ($1/5=0.2$ units of labor), but bananas sell for more on
+the world market. As a country, it faces strictly better
+possibilities if it trades rather than producing both goods
+itself. If it produces only bananas ($b = 500$) and then
+trades some for apples at a rate of $q$ apples for every banana,
+it does better than the one-for-one tradeoff it got from
+producing apples itself.  (See the dashed line in Figure \ref{fig:gains},
+which is above the solid line.)  [As a check on your
+understanding: How would this work if $q < 1$? What would Mexico
+produce?  What would its possibility frontier look like? Would
+Mexico still benefit from trade?]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[h]
+\caption{Gains from trade in Mexico.} \label{fig:gains}
+%\begin{center}
+\centering
+\setlength{\unitlength}{0.095em}
+\begin{picture}(300,200)(-30,-20)%
+\thicklines
+
+\put(-30,0){\vector(1,0){300}}%
+\put (0,-20){\vector(0,1){200}}%
+\put(265,-14){$a$}%
+\put(-15,175){$b$}%
+
+\put (110,80){Possibilities with trade}%
+\put(5,10){Possibilities without trade}%
+
+\put(0,150){\line(1,-1){150}}%
+\qbezier[100](0,150)(100,75)(200,0)%
+
+\put(-23,148){$500$}%
+\put(150,-18){$500$}%
+
+
+\end{picture}
+%\end{center}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+In short, trade benefits Mexico, even though it is less productive
+than the US for both products.  Similar reasoning shows that the
+US would benefit from trade, too.  [Another check:  What is the
+possibility frontier for the US if there's no trade?
+Trade with $q>1$?  Trade with $q<1$?]
+
+Ricardo had a rationale for these gains from trade:  Even though
+Mexico is less productive absolutely ($\alpha_{1}>\alpha_{2}$ and
+$\beta_{1}>\beta_{2}$), it is comparatively more productive in
+bananas than the US
+$(\beta_{2}/\alpha_{2} > \beta_{1}/\alpha_{1})$.
+Conversely, the US is comparatively more productive in apples
+$ ( \alpha_{1}/\beta_{1} > \alpha_{2} /\beta_{2} )$.
+If each country produces the good for which it is comparatively
+more productive, then world productivity rises and both countries
+benefit.
+For this reason, Ricardo referred to this as the theory of comparative
+advantage.
+
+
+\section{Digging a little deeper}
+
+Moving to free trade is similar to an
+increase in productivity because when you shift production to high
+productivity products, aggregate productivity rises.  The impact
+is similar to our discussion of labor and financial markets.
+Countries with good labor and financial markets allocate inputs
+more effectively and increase aggregate productivity as a
+result.  This is a natural feature of trade models, but it takes
+some effort to work out the details, even in a setting as simple
+as our example.  If you're averse to math, you might
+skip to the next section the first time through.
+
+Our goal is to compare production and consumption in two cases:
+one with no trade, and one with completely free trade (no tariffs
+or transportation costs).  The comparison is somewhat extreme, but
+the hope is that it will give us the flavor of less-extreme moves
+toward freer trade.  In each case, we need to find the competitive
+equilibrium.  Competitive means that consumers and producers
+take prices as given.  (No monopolies allowed here!)
+Formally, a competitive equilibrium is a set of prices and
+quantities that satisfies three conditions:
+%
+\begin{enumerate}
+\item Consumers are on their demand curves;  they buy what they
+want at the given prices.
+
+\item Producers make zero profits (the effect of competition).
+
+\item Total production equals total consumption for each product.
+\end{enumerate}
+
+Finding an equilibrium can be difficult, particularly if you have
+a low threshold for algebra, but we can readily verify a
+proposed equilibrium by checking the three conditions.
+
+\textbf{Consumers}. The citizens of each country consume apples
+and bananas.
+They also work for the firms, getting a wage $w$ for each
+unit of labor. Each consumer (we can index them by $i$) earns an
+income $y_{i} = wl_{i}$ (for simplicity, we assume that $l_{i}$ is
+given). Obviously, $L=\sum_{i}l_{i}$. How do consumers spend their
+income? Like any of us, they receive satisfaction (or {\it utility\/})
+from consuming both apples and bananas.  Let us say that
+their utility from consumption is given by the following function:
+\[
+    U(a,b) \;=\; a^{s}b^{1-s}.
+\]
+Given her income and prices for apples and bananas, each consumer
+will make spending decisions that maximize her utility.
+Simple calculations show that a consumer will spend a fraction $s$
+of her income on apples and the complementary fraction $1-s$ on
+bananas. Summing across all consumers, we find that a
+fraction $s$ of national income $Y$
+($Y=\sum_{i}y_{i}=w\sum_{i}l_{i}=wL$) is spent on apples,
+and the remainder is spent on bananas:
+\begin{eqnarray*}
+    p_{a}a &=& s Y  \\
+    p_{b}b &=& (1-s)Y.
+\end{eqnarray*}
+These are (effectively) the demand functions for the two products.
+We'll assume below that $s = 0.75$ in both countries.
+
+\textbf{Producers.}  Consider producers in a specific country.
+Let's say that labor sells for $w$ per unit,
+with $w$ potentially differing across countries.
+%Consider producers in an arbitrary country $i$.
+A producer of apples (say) will hire labor at cost $w$ per unit and sell
+apples, getting a profit of
+\[
+    \mbox{Profit} \;=\;  a (p_{a} - w/\alpha) ,
+\]
+where $\alpha$ is apple productivity in the country we're examining.
+If $p_{a} < w/\alpha$, the price is too low and no apples will be
+produced. If $p_{a} > w/\alpha$, competition among apple producers
+will drive the price down until $p_{a} = w/\alpha$.  In short, if
+apples are produced, their price will be $p_{a} = w/\alpha$.
+Similarly, if bananas are produced, their price will be $p_{b} =
+w/\beta$. If both apples and bananas are produced (and they need
+not be), their relative price will be $q = p_{b}/p_{a} = \alpha
+/\beta $.
+
+\textbf{Equilibrium without trade.} If there's no trade, then each
+country will produce both products.  Let us say that the wage rate
+is $w = 1$ in both countries (but not comparable, because they may
+be measured in different units).  Since the total labor input
+is 100 in either country, national income is $Y = wL = 1\times 100
+= 100$ in both Mexico and the US (again, the units are not comparable).
+In the US, prices will be
+\begin{eqnarray*}
+    p_{a} &=& w/\alpha \;=\; {1}/{20} \;=\; 0.05\\
+    p_{b} &=& {w}/{\beta} \;=\; {1}/{10} \;=\; 0.10\\
+    q &=& {p_{b}}/{p_{a}} \;=\; 2.
+\end{eqnarray*}
+At these prices, the demands for apples and bananas are, respectively,
+\begin{eqnarray*}
+    a &=& {sY}/{p_{a}} \;=\; {0.75\times 100}/{0.05} \;=\; 1500\\
+    b &=& {(1-s)Y}/{p_{b}} \;=\; {0.25\times 100}/{0.1} \;=\; 250 .
+\end{eqnarray*}
+Total utility is, therefore, $U = a^{0.75}b^{0.25} = 958$.
+
+What about Mexico? Using similar methods, we find that prices are
+%
+\begin{eqnarray*}
+    p_{a} &=&  {w}/{\alpha} \;=\; {1}/{5} \;=\; 0.20 \\
+    p_{b} &=&  {w}/{\beta} \;=\; {1}/{5} \;=\; 0.20 \\
+    q &=& {p_{b}}/{p_{a}} = 1.
+\end{eqnarray*}
+Demands are $a = 375$, $b = 125$. Utility is $U = 285$.  The
+numbers are summarized in Table \ref{tab:price_quant} for future
+reference.
+
+
+\textbf{Equilibrium with trade}.
+The complete solution is reported in Table \ref{tab:price_quant},
+but let's see where it comes from.
+It's moderately complicated,
+so skip directly to the next section unless you're
+incredibly curious.
+The objective is to find prices and wages that equate
+supply and demand for apples, bananas, and labor in both countries.
+We'll focus on bananas; if the banana market clears,
+so do the others.
+
+
+%*****************************************************************************************************
+
+\begin{table}[h]
+\caption{Prices and quantities with and without trade.}
+\label{tab:price_quant}
+\centering
+\begin{tabular*}{0.8\textwidth}{l@{\extracolsep{\fill}}cc}
+\toprule
+                                  &      Free Trade     &    No Trade    \\%
+\midrule
+                                  & \multicolumn{2}{c}{US} \\
+\midrule%
+Price of apples $p_{a}$           &         0.05        &      0.05      \\%
+%
+Price of bananas $p_{b}$          &         0.0667      &      0.10      \\%
+%
+Wage $w$                          &          1          &      1 (dollar)      \\%
+%
+Consumption of apples $a$         &          1,500      &      1,500      \\%
+%
+Consumption of bananas $b$        &          375        &     250      \\%
+%
+Utility                           &          1,061      &      958      \\%
+\midrule
+                                  & \multicolumn{2}{c}{Mexico} \\
+\midrule%
+Price of apples $p_{a}$           &         0.05        &      0.2      \\%
+%
+Price of bananas $p_{b}$          &          0.0667     &      0.2      \\%
+%
+Wage $w$                          &          0.3333     &      1 (peso)      \\%
+%
+Consumption of apples $a$         &          500        &      375      \\%
+%
+Consumption of bananas $b$        &          125       &       125      \\%
+Utility                           &          354       &       285      \\%
+\bottomrule
+\addlinespace
+\end{tabular*}
+\begin{minipage}{0.8\textwidth}
+\footnotesize{In the no-trade case, the wages are normalizations;
+they're in different units and are not comparable across countries.}
+\end{minipage}
+\end{table}
+
+
+%*****************************************************************************************************
+
+
+Let's guess (we made up the example, so our guesses are pretty good)
+that the US produces only apples and  Mexico produces only bananas.
+In this way, the two countries specialize in the
+production of the good in which they have a comparative advantage.
+We'll verify this guess later.
+Let's think about how the banana market works.
+Supply is whatever Mexico produces given its
+available labor $L_2$ and productivity $\beta_2$:
+\[
+    \mbox{Supply of Bananas}  \;=\;  L_2 \beta_2  .
+                %\;=\; 100 \times 5 \;=\; 500.
+\]
+What about demand?  This is more complicated.
+Since each country spends a fraction $1-s$ on bananas,
+total demand is
+\[
+    \mbox{Demand for Bananas}  \;=\;  (1-s) Y_1/p_b + (1-s) Y_2/p_b ,
+\]
+where $Y_1$ and $Y_2$ are incomes in the US and Mexico,
+respectively.
+Competition in labor and output markets will equate
+income paid to workers to the value of output they produce:
+\begin{eqnarray*}
+    Y_1 &=&  L_1 \alpha_1 p_a \\
+    Y_2 &=& L_2 \beta_2 p_b .
+\end{eqnarray*}
+Why?  Because competition drives profits to zero.
+That gives us
+\[
+    \mbox{Demand for Bananas}  \;=\;  (1-s) L_1 \alpha_1 p_a/p_b
+                + (1-s) L_2 \beta_2  .
+\]
+Equating supply and demand and doing some algebra gives us
+\begin{equation}
+    p_b/p_a  \;=\;  \frac{ (1-s) L_1 \alpha_1 }{ s L_2 \beta_2 } .
+    \label{eq:equilprice}
+\end{equation}
+Plugging in numbers, we find $ p_b/p_a = 4/3 $.
+If you're unusually curious,
+you can show (using the same approach)
+that supply and demand are equal for apples at the same price.
+
+
+We can now get a sense where the relative price
+of bananas comes from:  supply and demand!
+On the supply side,  higher productivity for bananas (higher $\beta_2$)
+drives the price down.
+This is the usual shift out of the supply curve.
+Similarly, higher apple productivity (higher $\alpha_1$)
+makes apples relatively less expensive.
+On the demand side,  lower  $s$ indicates a lower desire for apples and a higher
+desire for bananas and, thus,  drives the price of bananas up.
+This is essentially a rightward shift of the demand curve.
+
+
+
+
+\begin{comment}
+If we're wrong, we'll find out shortly. We'll guess the following
+prices and show that they work: set $w = 1$ for the US and
+\begin{eqnarray*}
+    p_{a} &=& 0.05 \\
+    p_{b} &=& ({4}/{3}) p_{a} \;=\; 0.0667 \\
+    q &=& {4}/{3}
+\end{eqnarray*}
+for both countries (since there's trade, any other prices in
+Mexico would lead to an arbitrage opportunity).  At these prices,
+the US will produce $L_{1} \alpha = 100\times 20 = 2,000$ apples
+and consume $a = {sY}/{p_{a}} = 1,500$ and $b =
+{(1-s)Y}/{p_{b}} = 375$. The total level of utility is 1,061.
+
+What about Mexico?  At these prices, Mexico produces only bananas,
+as we guessed.  Total production is $L_{2}\beta = 500$ bananas.
+The Mexican wage rate solves $p_{b}\beta = w$ or $w = 0.067\times
+5 = 0.33$. (Why is the wage lower than in the US?  Because productivity
+is lower.) Mexican income is therefore $Y = wN = 33.3$.
+Consumption is $a = 500$ and $b = 125$. Utility is 353.6.
+
+
+
+{\it The remainder of this section works through the
+solution in greater detail.
+It's only for people who want to see where all the pieces come from.
+Strangely enough, there generally are some people like this,
+but if you're not one of them go immediately to the next section.\/}
+
+We can find the equilibrium by looking at the supply and demand
+for apples.
+We'll assume for now that the US produces only apples,
+Mexico only bananas.
+We'll verify this later.
+If that's the case, then output of apples is the amount of labor in
+the US times apple productivity:
+\[
+    \mbox{Supply of Apples}  \;=\;  L_1 \alpha_1
+                \;=\; 100 \times 20 \;=\; 2000.
+\]
+What about demand?  We need demand by both countries.
+Since each country spends a fraction $s$ on apples,
+demand is
+\[
+    \mbox{Demand for Apples}  \;=\;  s Y_1/p_a + s Y_2/p_a .
+\]
+Note that US income is $ Y_1 = w_1 L_1 $.
+\end{comment}
+
+
+
+Finally, we verify that the US produces only apples, Mexico only
+bananas.
+How do we show this?
+At these prices and wages,
+US banana producers lose money --- so they don't produce any.
+Ditto Mexican apple producers --- the wage rate supported by banana
+production is too high for apple producers to break even,
+so they won't produce either.
+This is really a good thing for Mexican workers, as
+producing bananas supports a higher standard of living.
+
+\section{Wages and productivity}
+
+In the US you sometimes hear:  ``US workers can't compete
+with Mexican workers, because their wages are so low.''
+In Mexico, you sometimes hear:
+``Mexican workers can't compete with US workers,
+because their productivity is so much higher.''
+Who is right?
+The answer, of course, is neither.
+In our model, wages reflect productivity.
+Mexican wages are lower because Mexican workers are less productive.
+Their wage is low enough to (just) make up for their lower productivity.
+Ditto American workers:  Firms hire them despite their higher wage
+because their productivity is higher.
+The value of labor to a firm is a balance between the two forces:
+price and productivity.
+
+We can be more specific about the connection between productivity
+and wages.
+As a rule, the wage ratio will be somewhere between
+the productivity ratios for the two products.
+In this case,
+the ratio of the US to the Mexican wage will be between
+2 ($=10/5$, the ratio of banana productivities)
+and 4 ($=20/5$, the ratio of apple productivities):
+\[
+  2 = \beta_1/\beta_2   < w_1/w_2  < \alpha_1/\alpha_2 = 4.
+\]
+If we were to (somehow) force up the Mexican wage
+above the upper bound, we would simply make Mexican bananas
+more expensive to Americans than producing them locally would.
+Demand for Mexican labor would dry up.
+Similarly, if we were to force down the Mexican wage below
+the lower bound, Mexico would find it profitable to produce
+both goods.
+However, demand for Mexican labor would exceed supply,
+which you'd expect to increase its price.
+
+Overall, wages are connected to productivities.
+Between the two bounds, demand plays a role, as we've seen.
+If people have a stronger desire for bananas, that tends
+to benefit the Mexican workers who produce them
+by increasing the price of bananas,
+as we see in equation  (\ref{eq:equilprice}).
+
+
+\section{Bottom line}
+
+Let's think about the calculations summarized in
+Table \ref{tab:price_quant} from a nontechnical perspective.
+The numbers make several points that
+extend to more-general settings:
+
+\begin{itemize}
+
+\item \textbf{Trade makes consumers (=workers) better off.}
+In the US, consumption of apples stays the same and consumption of
+bananas increases. As a result, utility rises from 958 to 1061. In
+Mexico, consumption of bananas does not change, but consumption of
+apples is larger. Therefore, utility rises from 285 to 354. In
+more-realistic models, the impact of trade is typically small,
+but both countries gain, as they do here.
+It's a byproduct of Adam Smith's invisible hand (aka the first
+theorem of welfare economics), which you might recall from Firms
+and Markets.
+
+\item \textbf{Trade changes production.}  In this
+case, Mexico shifted out of apples into bananas, and the US did the reverse.
+In other models, the change in production may not be
+so extreme, but it's generally true that they predict that every
+country will stop producing some products and import them
+instead.  The result is a more efficient system of production,
+as each country produces those goods for which its relative
+productivity is the highest.
+
+\item Both effects show up in macroeconomic data as increases in
+productivity.  If we were NIPA people, we might compute GDP this way:  sum production of apples and bananas, valued at a
+consistent set of prices.  In this case, we'll use the free-trade
+prices, which is similar to PPP adjustment (apply the
+same prices in every country).  GDP at world prices is
+%
+%*****************************************************************************************************
+%
+%\begin{table}[h]
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+                    &      Free Trade     &    No Trade    \\%
+
+\midrule%
+US                  &         100.0       &      91.7      \\%
+%
+Mexico              &          33.3       &      27.1      \\%
+\bottomrule
+\end{tabular}
+\end{center}
+%\end{table}
+%
+%*****************************************************************************************************
+%
+Once trade shows up in GDP, it shows up in aggregate
+productivity, too.  We don't have capital in this model, so the
+production function is $Y = AL$.  Since $L$ is unchanged across
+trade regimes, the change in $Y$ reflects an increase in TFP.
+
+\item \textbf{No jobs were lost --- or found.}
+In our example, every unit of labor was used whether trade was possible or not.
+This is only a little extreme:  No trade models suggest that trade will have much
+impact on employment.  Any effect there might be comes from the
+impact on labor supply of an increase in the wage.
+So when you read the newspaper, especially in an election year,
+remember that trade has an impact on what the jobs are, not on how
+many there are.
+\end{itemize}
+
+\section{Winners and losers}
+
+From what we've seen, trade is a wonderful thing.  Who could
+be against it?  In fact, lots of people seem to have a
+passionately held view that trade and globalization are a
+plague on the world.  What could they be thinking? What follows is
+a short list of their arguments.
+In practice, our experience is that most arguments against trade
+are simply self-interest in disguise.
+
+
+\textbf{Externalities}.  This is a classic ``failure" of markets,
+the (unpriced) impact of one person's decision on another's
+utility. For example, a polluting producer may inflict bad air on
+you and reduce your welfare. When talking about trade, people
+often refer to positive external effects on productivity.  Are
+there advantages to having a local industry beyond the profit and
+loss? Could it help others to increase their efficiency? This is a
+legitimate argument, but probably not a good one in most cases.
+Moreover, it's typically used by firms and industries looking for
+special deals from their governments. For example,
+European car makers used this argument when seeking government protection from
+Japanese and Korean imports. Their argument was that the domestic
+producers generated technology spillovers that benefited
+related industries.
+
+\textbf{Differences among residents of a country.} We rushed over
+it, but built into our example was that all citizens of a
+country have the same tastes and the same productivity in the
+workplace. In practice, this is not true, and trade will affect
+each person differently. In the example summarized in
+Figure~\ref{fig:gains}, all Mexican consumers are better off. Now
+suppose that Mexicans differ in how much they like apples and bananas
+(i.e., the parameter $s$ is not the same across
+individuals). In this case, the ones who like apples less and
+bananas more may be worse off since the relative price of bananas
+has gone up with free trade. In short, there can be losers. What
+the theory says, however, is that the winners win a lot more than
+the losers lose --- Mexicans gain, on average.
+In principle, you might want to take some of the winners' gains and give them to the
+losers, but in practice this isn't that easy to do.
+
+Another example shows up regularly in the press: people who lose their
+jobs when production adjusts to trade.  In this case, suppose that you
+worked for an apple producer and lost your job. The long-term
+answer is:  Get a job working for a banana producer, since their
+productivity is higher. But in the short run, there's no question
+that you suffer a loss from losing your job. Also, if working for a
+banana producer requires skills that you do not have, you might
+have to retrain yourself. Again, the winners should be able to
+compensate the losers and still be better off, but in practice it
+rarely happens. More importantly, people lose jobs all the time for lots of
+reasons, and trade is unlikely to be a major factor in most cases.
+
+
+\section*{Executive summary}
+
+\setlength{\leftmargini}{0.5\oldleftmargini}
+\begin{enumerate}
+\item International trade allows consumers to buy products more cheaply
+and workers to take jobs where their productivity is highest.
+
+\item There can be both winners and losers from trade,
+but, in theory, the gains outweigh the losses in every country.
+\end{enumerate}
+\setlength{\leftmargini}{\oldleftmargini}
+
+\section*{Review questions}
+
+\setlength{\leftmargini}{0.5\oldleftmargini}
+\begin{enumerate}
+\item Gains from trade. In Mexico, how does consumption
+of apples and bananas change when we move from No Trade to Free Trade?
+Are Mexican worker better off?
+Who in Mexico loses?
+
+Answer.  We read from Table \ref{tab:price_quant}.
+Consumption of apples rises from 375 to 500,
+and consumption of bananas stays the same at 125.
+So Mexicans (who are both workers and consumers) are better off.
+No Mexicans lose here, but you might imagine in a different world
+that the former Mexican producers of apples suffer.
+What we know in general is that the gains outweigh any such losses.
+
+\item Trade politics.
+Although the logic for trade is clear,
+politicians all over the world complain about ``unfair'' competition
+from abroad.
+Why?
+
+Answer.
+It's hard to see this as anything but protection of their supporters.
+In addition, people don't vote in other countries' elections.
+In our example, you can imagine Mexican apple producers asking their
+government to protect them from US competition.
+What they should do here is switch to bananas, but the
+the political process often favors the well-connected over the
+average worker or consumer.
+
+
+\item Changing demand.
+In the example, show that an increase in $s$ to 0.78
+is good for US workers and bad for Mexican workers.
+Why might that be?
+
+Answer.  This increases the price of the product produced by US workers,
+which improves their situation.  The opposite is true for Mexican workers.
+We say that the ``terms of trade'' (relative price of their export good) have moved against them.
+Think of an oil-exporting country:  An increase in the price of oil
+is good for them, bad for importers.  [Duh!]
+
+\item Could there be losers?
+If trade eliminates apple-producing jobs in Mexico,
+could apple producers and workers be worse off?
+
+Answer.  Yes!  But the gains for others are typically
+larger than these losses,
+so we should be able to compensate the losers and leave
+everyone better off.
+This is trickier than it sounds, though.
+
+\item Food prices and trade.
+When food prices rose sharply in 2008, India restricted
+food exports to keep prices down.
+Who would you expect to benefit from this policy?  Lose?
+Is the overall impact on the Indian economy likely to be
+positive or negative?
+
+Answer.  You might expect this to keep prices down in the short run
+because we've reduced the demand for locally produced food.
+(You could also express this as an increase in supply to the domestic market, but it's cleaner this way.)
+Who gains?  Domestic food buyers and foreign producers.
+Who loses?  Domestic sellers/producers and foreign buyers.
+Generally, any market intervention like this is a net loss.
+You could show this formally using a supply and demand diagram.
+
+%A related issue is that high prices might be expected to encourage
+%an increase in production.
+%We missed out on that by keeping prices low.
+%In fact, we would expect supply to fall, which makes things worse.
+%Not part of the question:
+%We would expect poor people to be among the producers,
+%so it's not clear why this policy was so popular.
+\end{enumerate}
+\setlength{\leftmargini}{\oldleftmargini}
+
+\section*{If you're looking for more}
+
+The personal information about Ricardo comes from
+the profile on the New School's
+History of Economic Thought
+\href{http://homepage.newschool.edu/~het/profiles/ricardo.htm}{web
+site}.
+Doug Irwin's
+``\href{http://www.econlib.org/library/Columns/Irwintrade.html}
+{History of trade policy}'' is a nice overview of two centuries of thought on trade issues.
+
+% ?? Symbol table
+
+
+%\newpage
+%\section*{Appendix (optional)}
+%
+%The demand functions used in our example come from the following utility maximization problem.
+%To understand it, you'll have to polish off your calculus.
+%The consumer chooses quantities $(a,b)$ of apples and bananas to maximize the utility function
+%\begin{eqnarray}
+%    u(a,b) &=&  a^{s} b^{1-s}
+%    \label{objective}
+%\end{eqnarray}
+%subject to the budget constraint
+%\begin{eqnarray}
+%     p_{a}a + p_{b}b &=& Y .
+%     \label{constraint}
+%\end{eqnarray}
+%One way to approach this problem is to solve (\ref{constraint}) for $b$ and
+%substitute in (\ref{objective}),
+%this leaving us with the single variable $a$.
+%Doing this leads to
+%%
+%\[
+%    u(a,b) \;=\; \left( \frac{s Y}{p_{a}}\right)^{s} \left(\frac{(1-s) Y}{p_{b}}\right)^{1-s}
+%        \;=\; Y \left( \frac{s}{p_{a}}\right)^{s}\left(\frac{1-s}{p_{b}}\right)^{1-s}.
+%\]
+%
+%Therefore the sum of utility across all consumers is
+%
+%\[
+%w\left[\frac{s}{p_{a}}\right]^{s}\left[\frac{1-s}{p_{b}}\right]^{1-s}\sum_{i}l_{i}=w\left[\frac{s}{p_{a}}\right]^{s}\left[\frac{1-s}{p_{b}}\right]^{1-s}L=\left[\frac{swL}{p_{a}}\right]^{s}\left[\frac{(1-s)wL}{p_{b}}\right]^{1-s}.
+%\]
+
+

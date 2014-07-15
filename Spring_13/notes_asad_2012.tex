@@ -1,0 +1,727 @@
+\chapter{Aggregate Supply and Demand}\label{chp:asad}
+\hypertarget{asad}{}
+
+\textbf{Tools:} Aggregate supply and demand (AS/AD) graph.
+
+\textbf{Key Words:} Short- and long-run aggregate supply; sticky wages;
+supply and demand shocks; Keynesian.
+
+\textbf{Big Ideas:}
+\vspace{-0.1in}
+\begin{itemize}
+\item The AS/AD model relates output and prices in the short and long runs.
+The model is composed of (i) an upward-sloping short-run aggregate supply curve,
+which inherits its shape from sticky wages;
+(ii) a vertical long-run aggregate supply curve;
+and (iii) a downward-sloping aggregate demand curve.
+\item Shocks to the aggregate supply and demand curves
+have different effects on inflation and output.
+\end{itemize}
+\rule{\textwidth}{1pt}
+
+We've seen that economic fluctuations follow regular patterns
+and that these patterns can be used to forecast the future.
+For some purposes, that's enough.
+But if we want to make sense of analysts' discussions of business conditions,
+of monetary policy,
+or of situations that don't fit historical patterns,
+we need a theoretical framework.
+The aggregate supply and demand model is the analyst's standard,
+the implicit model behind most popular macroeconomic analysis.
+It's not the answer to all questions,
+but it's a useful tool for organizing our thoughts.
+Think of these notes as the executive summary;
+textbooks devote hundreds of pages to the same topic.
+If you'd like to go deeper, see the references at the end of this chapter.
+
+We take one common shortcut.
+In our theory, the variables are real output and the price level.
+In practice, we refer to output growth and inflation.
+There's a modest disconnect here between theory and practice,
+but it's something that can be worked out.
+You can thank us later for saving you the trouble of
+doing it explicitly.
+
+
+\section{Aggregate supply}
+
+The standard business-cycle model used by analysts
+is an adaptation of the supply and demand diagram.
+We refer to the curves as aggregate supply and aggregate
+demand to emphasize that we're talking about the whole economy
+rather than a single market --- and to remind ourselves that the analogy with supply and demand
+in a single market is imperfect.
+Figure \ref{fig:asad} is an example.
+The aggregate supply curve (AS) represents combinations of
+output (real GDP, which we denote by $Y$) and the price level
+(an index $P$ such as the GDP deflator)
+consistent with the decisions of producers and sellers (``supply'').
+The aggregate demand curve (AD)
+represents combinations of output and the price
+level consistent with the decisions of buyers (``demand'').
+
+Here's how aggregate supply works.
+%How do workers and firms decide how much to work and produce?
+We start with the production function,
+\begin{eqnarray}
+    Y_t &=& A_t K_t^\alpha L_t^{1-\alpha} ,
+    \label{eq:pf}
+\end{eqnarray}
+where (as usual) $Y$ is output, $A$ is total factor productivity,
+$K$ is the stock of physical capital (plant and equipment),
+$L$ is labor, and $ \alpha = 1/3$.
+%Everything but $\alpha$ can in principle change with time $t$.
+
+In the simplest ``classical'' theory, $Y$ is fixed
+because nothing on the right-hand side of (\ref{eq:pf}) changes in the short run.
+Although current productivity $A$ and capital $K$ can change over time,
+we often assume that their current values are set --- that is
+they can't be changed by current decisions.
+Capital, for example, takes time to produce:
+We can increase next year's capital stock by investing today,
+but today's capital stock is whatever we happen to have.
+Labor $L$ is determined by supply and demand in the labor market,
+which gives us a level of work that reconciles firms'
+demand with individuals' supply.
+The result is a vertical aggregate supply curve,
+such as AS$^*$ in the figure,
+in which output does not depend on the price level $P$.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Supply and demand diagram
+\begin{figure}[h]
+\caption{Aggregate supply and demand.}
+\label{fig:asad}
+%
+\centering
+\setlength{\unitlength}{0.075em}
+\begin{picture}(250,200)(0,0)
+%\footnotesize
+\thicklines
+
+% horizontal axis
+\put(-30,0){\vector(1,0){300}}
+\put(255,-16){$Y$}
+\put(142,-16){$Y^*$}
+
+% vertical axis
+\put(0,-20){\vector(0,1){200}}
+\put(-15,155){$P$}
+
+% demand
+\put(25,165){\line(4,-3){200}}\put(230,10){AD}
+
+% supply
+\put(25,13){\line(4,3){200}} \put(230,160){AS}
+\put(146.4,0){\line(0,1){170}} \put(138,175){AS$^*$}
+
+% equilibrium labels
+\put(105,85){\footnotesize A}
+\put(135,60){\footnotesize B}
+%\put(138,64){\footnotesize C}
+% dotted lines
+%\qbezier[31]{(133,0)(133,46)(133,92)}
+%\qbezier[45]{(0,92)(67,92)(133,92)}
+%\qbezier[45]{(0,72)(67,72)(133,72)}
+\end{picture}
+\begin{minipage}{0.6\textwidth}
+\vspace{0.45in}
+\footnotesize{The horizontal axis is real GDP;
+the vertical axis is the price level.
+The lines represent aggregate supply (two versions, AS and AS$^*$)
+and demand (AD).}
+\end{minipage}
+
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+A vertical aggregate supply curve was the state of the art until the 1930s,
+when John Maynard Keynes (pronounced ``canes'')
+decided that the Depression demanded a new theory.
+He and his followers (the ``Keynesians'')
+argued that the aggregate supply curve should be upward-sloping.
+Why?  The most popular argument is that wages or prices are ``sticky'':
+They do not adjust quickly enough
+to equate supply and demand for labor or goods. One version of this story is that
+wages are sticky downward (that is, wages generally don't fall when
+demand for labor declines).
+The sticky wage analysis goes something like this:
+If the nominal wage $W$ is fixed (i.e., very sticky),
+then an increase in the price level reduces the real wage $W/P$,
+making labor more attractive to firms, who hire more workers,
+which raises output.
+(That is, we continue to use the labor demand curve.)
+
+The Keynesian sticky wage/price story leads to
+an aggregate supply curve that is upward-sloping,
+since an increase in the price level leads to a lower
+real wage and, therefore, more people hired by firms.
+We refer to it as the short-run aggregate supply curve,
+because wages and prices are not thought to be sticky forever.
+Eventually they adjust, putting us on the vertical aggregate
+supply curve AS$^*$,
+which we refer to as long-run aggregate supply.
+
+
+That's what aggregate supply looks like,
+but what kinds of things make it shift over time?
+Here's a list:
+%
+\begin{itemize}
+\item Productivity:  An increase in $A$ shifts AS to the right.
+You can see why from the production function (\ref{eq:pf}) --- an increase in productivity $A$ raises output $Y$.
+
+
+\item Capital:  ditto an increase in $K$.
+\item Price of imported oil:  This is a more subtle one, but
+an increase in the price of oil works like a negative productivity shock
+in an oil-importing country like the US and shifts AS to the left.
+Why?  Because production involves energy, as well as capital and labor, as an input.
+In our measurement system, GDP consists only of value added by capital
+and labor.
+If the price of oil rises, then a larger fraction of total production
+is paid to oil producers, leaving less for capital and labor and, therefore, reducing GDP.
+There's very little question that this is what happens in practice: An increase in the price of oil leads to larger payments to oil producers
+and smaller payments to capital and labor.
+Oil producers benefit; oil consumers do not.
+\end{itemize}
+%
+To simplify matters, we'll assume that these factors shift both AS and AS$^*$
+by the same amount.
+%We could consider alternatives, but we won't.
+%Trust me, it's not worth the effort.
+% ?? think about this
+
+
+\section{Aggregate demand}
+
+% QT first?
+
+The primary role of the Keynesian aggregate supply curve is to
+allow demand to influence output;
+if supply is vertical, then changes in demand affect the price level,
+but not output.
+That's what we assumed when we discussed the quantity theory --- that changes in the money supply affect prices, but not output.
+But if aggregate supply is flatter,
+shifts in demand affect both prices and output.
+
+But what is the aggregate demand curve and where does it come from?
+Recall that aggregate demand refers to the purchase of goods and services.
+The aggregate demand curve tells us how much demand for output
+there is at each price level.
+
+The simplest version follows from the quantity theory,
+\begin{eqnarray}
+    M_t V_t &=& P_t Y_t ,
+    \label{eq:qt}
+\end{eqnarray}
+which you might recall from Chapter \ref{chp:mpin}.
+The aggregate demand curve is the relation between $P$ and $Y$ for a
+given supply of money $M$,
+determined presumably by the monetary authority.
+For simplicity, we will assume that velocity $V$, is constant.
+That gives us an inverse relation between $P$ and $Y$,
+as shown in Figure \ref{fig:asad}.
+Changes in $M$ lead to shifts in AD.
+If we increase $M$, then we need either an increase in output $Y$
+or an increase in the price level $P$ to satisfy (\ref{eq:qt}),
+so AD shifts up or to the right.
+
+There's a more complex version in which monetary policy operates
+through the interest rate.
+The idea is that an increase in the money supply reduces
+the interest rate,
+which stimulates interest-sensitive components of demand,
+such as business investment and housing.
+
+Other movements in aggregate demand come from the expenditure components:
+demand by consumers ($C$); firms ($I$); government ($G$);
+and the rest of the world ($\NX$).
+You often read, for example, that high demand by consumers
+leads to higher output --- more on this shortly.
+Ditto increases in government purchases
+(wars are the biggest examples historically)
+and investment by firms (remember, investment is the most volatile
+expenditure component).
+Keynes thought investment fluctuations stemmed,
+in part, from the ``animal spirits'' of business people,
+which you might think of as shifts in investment demand
+driven by psychological factors.
+
+
+%Our guess is that this leaves you breathless.
+%That's ok, our goal was to skim over the details.
+%Just take our word for it that aggregate demand involves an
+%inverse relation between the price level and output,
+%and that a variety of obvious things increase demand:
+%increasing the supply of money, government purchases,
+%and so on.
+
+Let's summarize.
+The aggregate demand curve is downward-sloping, reflecting
+the decline in the real money supply as the price level increases.
+The following factors (``shocks'')
+shift the aggregate demand curve to the right:
+%
+\begin{itemize}
+\item An increase in the supply of money.
+\item An increase in government purchases.
+\item An increase in consumer demand:  For given levels of income,
+consumers decide to spend more.
+\item An increase in investment demand:
+For given levels of interest rates and output,
+firms decide to invest more (animal spirits).
+\end{itemize}
+
+\section{Aggregate supply and demand together}
+
+Now let's put supply and demand together.
+Equilibrium is where supply and demand cross.
+The only difference in this respect from
+the traditional supply and demand analysis is that we have two
+supply curves.
+The short-run equilibrium is where AD and AS cross.
+The long-run equilibrium is where AD and AS$^*$ cross.
+
+Here's how that works.
+The short-run equilibrium is where aggregate supply AS and aggregate
+demand AD cross:  the point labeled A in Figure \ref{fig:asad}.
+In this example, the economy's output is below its long-run
+value $Y^*$, indicated by AS$^*$.
+The reason is that the real wage is too high, leading firms to demand
+less work than individuals would like to offer at the going real wage.
+
+The long-run equilibrium is where aggregate demand AD crosses
+long-run aggregate supply AS$^*$:  point B in the figure.
+How do we get there?
+Eventually, the real wage adjusts (either $W$ falls or $P$ rises),
+shifting the AS curve down, until
+we get to the point where AD crosses the long-run aggregate supply
+curve AS$^*$.
+The dynamics are governed by the speed of adjustment of wages.
+%[Suggestion: show in the figure how AS shifts until we reach B.]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Supply and demand diagram
+\begin{figure}[h!]
+\caption{The impact of an increase in the money supply.}
+%
+\centering
+\setlength{\unitlength}{0.075em}
+\begin{picture}(250,200)(0,0)
+%\footnotesize
+\thicklines
+
+% horizontal axis
+\put(-30,0){\vector(1,0){300}}
+\put(255,-16){$Y$}
+\put(142,-16){$Y^*$}
+
+% vertical axis
+\put(0,-20){\vector(0,1){200}}
+\put(-15,155){$P$}
+
+% demand
+\put(25,165){\line(4,-3){200}}\put(230,10){AD}
+\put(65,165){\line(4,-3){200}}\put(270,10){AD$'$}
+
+% supply
+\put(25,13){\line(4,3){200}} \put(230,160){AS}
+%\put(65,13){\line(4,3){200}} \put(270,160){AS$'$}
+\put(146.4,0){\line(0,1){170}} \put(138,175){AS$^*$}
+
+% equilibrium labels
+\put(105,85){\footnotesize A}
+\put(150,115){\footnotesize B}
+%\put(138,64){\footnotesize C}
+% dotted lines
+%\qbezier[31]{(133,0)(133,46)(133,92)}
+%\qbezier[45]{(0,92)(67,92)(133,92)}
+%\qbezier[45]{(0,72)(67,72)(133,72)}
+
+\end{picture}
+\begin{minipage}{0.6\textwidth}
+\vspace{0.45in}
+{\footnotesize Aggregate demand AD shifts right to AD$'$,
+moving the short-run equilibrium from A to B.}
+\end{minipage}
+\label{fig:asad_m}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Let's put our theory to work:
+
+\textbf{What is the impact of an increase in the supply of money?}
+Consider a short-run equilibrium at a point like A in Figure \ref{fig:asad_m}.
+Could the monetary authority do something to raise output to its long-run
+level?
+An increase in the money supply will shift AD to the right,
+as in the new aggregate demand curve AD$'$.
+If we increase the money supply by the right amount,
+we can establish a new
+equilibrium at B, where output is exactly its long-run value.
+[We recommend that you work through all these shifts of curves on your own
+to make sure you follow the argument.]
+How was this accomplished?
+The increase in the supply of money increased the price level.
+Since the nominal wage is fixed, the real wage falls,
+making labor more attractive to firms
+and thereby increasing employment and output.
+
+Alternatively, suppose that we're at the long-run equilibrium.
+What are the short- and long-run effects of increasing the
+money supply?
+The short-run impact is to raise prices and output, as
+we move up the aggregate supply curve.
+[You should work this out yourself in a diagram.]
+But the long-run effect is to increase prices,
+with no impact on output.
+Why?  Because monetary policy doesn't affect
+the economy's long-term ability to produce.
+That's what we saw with the quantity theory.
+
+\textbf{What is the impact of an increase in government purchases?}
+You might recognize this as an example of a stimulus program.
+Suppose that we start, as we did above, with output below
+its long-term value,
+such as point A in Figure \ref{fig:asad_m}.
+Then, an increase in government purchases shifts aggregate demand
+to the right, as illustrated in the same figure.
+
+% ?? extensions: timing and g, tax cuts
+
+\textbf{What is the impact of an increase in the price of oil?}
+Consider an initial short-run and long-run
+equilibrium, such as point A in Figure \ref{fig:asad_oil}.
+An increase in the price of oil
+shifts the aggregate supply curve to the left.
+Remember:  we shift both supply curves horizontally
+by the same amount.
+The new short-run equilibrium is at point B,
+where AD and AS$^{'}$ cross.
+Eventually the short-run aggregate supply curve shifts until
+it crosses AD at AS$^{*'}$, giving us long-run equilibrium at C.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Supply and demand diagram
+\begin{figure}[h]
+\caption{The impact of an increase in the price of oil.}
+\label{fig:asad_oil}
+%
+\centering
+\setlength{\unitlength}{0.075em}
+\begin{picture}(250,200)(0,0)
+%\footnotesize
+\thicklines
+
+% horizontal axis
+\put(-30,0){\vector(1,0){300}}
+\put(255,-16){$Y$}
+\put(142,-16){$Y^*$}
+\put(102,-16){$Y^{*\prime}$}
+
+% vertical axis
+\put(0,-20){\vector(0,1){200}}
+\put(-15,155){$P$}
+
+% demand
+\put(25,165){\line(4,-3){200}}\put(230,10){AD}
+%\put(65,165){\line(4,-3){200}}\put(270,10){AD$'$}
+
+% supply
+\put(65,13){\line(4,3){200}} \put(270,160){AS}
+\put(25,13){\line(4,3){200}} \put(230,160){AS$'$}
+\put(146.4,0){\line(0,1){170}} \put(138,175){AS$^*$}
+\put(106.4,0){\line(0,1){170}} \put(98,175){AS$^{*\prime}$}
+
+% equilibrium labels
+\put(150,55){\footnotesize A}
+\put(122,75){\footnotesize B}
+\put(95,94){\footnotesize C}
+\put(95,76){\footnotesize D}
+%\put(95,54){\footnotesize D}
+% dotted lines
+%\qbezier[31]{(133,0)(133,46)(133,92)}
+%\qbezier[45]{(0,92)(67,92)(133,92)}
+%\qbezier[45]{(0,72)(67,72)(133,72)}
+
+\end{picture}
+\begin{minipage}{0.6\textwidth}
+\vspace{0.45in}
+{\footnotesize Aggregate supply curves shift left from AS/AS$^*$ to AS$'$/AS$^{*\prime}$,
+moving the short-run equilibrium from A to B.}
+\end{minipage}
+
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Note that this adverse supply shock reduces output but raises the price level.
+People sometimes refer to this combination as ``stagflation,''
+a term coined to describe what seemed to be a surprising or implausible outcome.  In fact, it's a natural result of leftward
+shifts in the aggregate supply curve.
+Note that ``supply shocks'' are inflationary,
+in the sense that they raise the price
+level unless something is done to aggregate demand to offset them.
+
+\textbf{Where do business cycles come from?}
+It's obvious that we can generate economic fluctuations by shifting
+the aggregate supply and demand curves around.
+Less obvious is what kinds of shifts are most common,
+or how they lead to the patterns we see in the data.
+As a rule, shifts in AD move price and output in the same direction, while shifts in AS move price and output in opposite directions.
+By looking at the statistical relation between prices and output,
+we can get a sense of whether supply or demand shifts are more
+prevalent.
+
+
+
+\section{Beyond supply and demand}
+
+This is a nice model, relatively easy to use,
+and applicable to lots of things.
+But it's theory, not the real world.
+Eliza Doolittle notwithstanding,
+it's often a mistake to fall in love with your own creation.
+Economists have learned to be humble; some might say that we have a lot to be humble about.
+
+The aggregate supply and demand framework can be developed
+further, but it has two weaknesses that are hard to overcome.
+The first is what we might term general equilibrium:
+Many things affect both supply and demand, so it seems
+artificial to separate them as we have.
+The second is dynamics:  The impact of many shocks depends
+not only on what happens now, but also on what we expect to happen
+in the future.
+That's a hard thing to model explicitly, more so in a single diagram.
+
+Consider the interaction of supply and demand.
+If productivity rises, is that a shift of supply or demand?
+Obviously it shifts supply:  The production function shifts,
+which directly affects producers.
+But consumers are also producers.
+An increase in productivity  raises wages,
+which gives them more income, perhaps
+leading them to consume more.
+It also raises the demand for capital goods,
+since capital is now more productive.
+Are these shifts in demand?
+In the sense that they change consumption and investment
+decisions, the answer is yes.
+The closer you look, the harder it is to separate
+supply from demand.
+
+Another example is the financial crisis.
+Did it shift supply or demand?
+Think about it and let us know what you come up with.
+
+Or consider dynamics.
+One issue is causality.
+Think about popular comments to the effect that
+consumer demand is driving the economy.
+A journalist might say:  ``High consumer demand led to an economic boom.''
+The logic is perfectly consistent with our AS/AD analysis,
+but is that really what's going on?
+If we think about consumption,
+one of our first thoughts should be to think about our future income.
+If we expect to have much higher income in the future
+(that MBA is really paying off!),
+we might consume more now.
+But think about what that does to causality. For the economy as a whole, has output gone up because we consumed
+more, or did we consume more because we expected output to go up?
+It's not easy to tell the difference between the two mechanisms.
+
+Investment is similar.  Firms make investment decisions
+based on their assessment (i.e., guess)
+of market conditions years down the road.
+That's why ``institutions'' are so important. Good institutions give firms some assurance that the rules won't change
+in ways that make the investment less attractive.
+With respect to business cycles, we could ask the same question
+we asked of consumption: Did high investment lead to a booming economy,
+or did expectations of a booming economy lead to high investment?
+If we're forecasting, we may not care, as long as the two go
+together.
+But if we want to understand what's going on, we need to address
+this issue one way or the other.
+Fed minutes and analysts' reports
+are filled with conjectures over exactly this kind of issue.
+
+A related issue is what we might call context:
+the set of assumptions people use to think about
+the connection between current and future events.
+Monetary policy is a good example.
+In most developed countries,
+central banks have worked hard to convince people
+that if they increase the money supply now,
+it does not signal future increases in the money supply.
+If it did, people might immediately demand higher wages,
+which would lead to higher prices and inflation.
+But if they regard a current increase in the money supply as temporary,
+they might very well be content with wages and prices
+where they are.
+That's one of the reasons that monetary policy is different
+in the US and Argentina:
+The contexts for understanding current events are different.
+It's also an important practical issue for monetary policy: Central banks must signal not only their current policies,
+but their likely future policies.
+That's exactly what the Fed is struggling with right now --- how to do that effectively.
+
+
+
+
+\section*{Executive summary}
+
+\setlength{\leftmargini}{.5\oldleftmargini}
+\begin{enumerate}
+\item In the long run, output is determined by the production function:
+the productivity of the economy and the behavior and institutions
+that determine investment and employment.
+
+\item In the short run, output may respond to changes in
+aggregate demand (e.g., the money supply) because of sticky wages or prices
+or possibly other market frictions.
+
+\item This is theory, not reality.
+There's no substitute for adding some common sense.
+\end{enumerate}
+\setlength{\leftmargini}{\oldleftmargini}
+
+%\begin{comment}
+\section*{Review questions}
+
+\setlength{\leftmargini}{.5\oldleftmargini}
+\begin{enumerate}
+\item AS/AD review.  Get out a piece of paper and do the following
+without looking at the text:
+\begin{enumerate}
+\item Draw the aggregate demand curve on a piece of paper.
+Why does it slope downward?
+\item Draw the short-run aggregate supply curve on a piece of paper.
+Why does it slope upward?
+\item Draw the long-run aggregate supply curve where the two cross.
+Why is it vertical?
+\item What happens in the short run if we increase the money supply?
+In the long run?
+\end{enumerate}
+
+Answer. You may refer to Figure \ref{fig:asad_m}.
+\begin{enumerate}
+\item The AD curve slopes down because a given quantity of money
+can support
+a high price level $P$ or high real output $Y$, but not both.
+See the quantity theory equation (\ref{eq:qt}).
+\item The idea is that a higher price level leads, at a fixed wage rate,
+to lower real wages, leading firms to hire more workers and expand output.
+\item In the long run, wages adjust, and output and employment do not depend
+on the price level.
+\item If we increase the money supply, aggregate demand shifts to the right.
+The immediate impact is to raise output and prices as we move along
+the short-run aggregate supply curve.
+In the long run wages adjust, leading output to revert to its long-run equilibrium
+level and prices to rise.
+
+You might notice that the long-run impact duplicates our analysis of hyperinflation,
+where money affects prices but not output.
+What we've added is the possibility that monetary policy can affect
+output in the short run.
+\end{enumerate}
+
+\item Supply or demand?
+Suppose exports increase sharply.
+Is this a shift in supply or demand?
+
+Answer.  The question is whether this has to do with the production (supply)
+or purchase (demand) of goods and services.
+Exports are sales, so it's a purchase, hence demand.
+We would approach it the same way we approached the increase
+in the money supply in the previous question.
+
+%\item How does our analysis of the movement from short-run to long-run
+% equilibrium change if wages are very sticky?
+%
+%Answer.  In some countries, institutions can make the wage very slow to adjust.
+%In that case, we might expect slower adjustment to the long-run
+%level of output.
+
+\item France.
+We've seen that the employment ratio is lower in France than in the US.
+Should France increase its money supply in an attempt to increase
+employment and output?
+
+Answer.  Good question, but the answer is no:
+One suspects that the level of employment
+associated with the long-run aggregate supply curve is lower than
+markets would produce on their own.
+%Why?
+%Because this has been true for decades.
+%You might consider using monetary policy to drive output beyond the
+%long-run supply curve, but eventually you'll end up back there anyway.
+%Put another way:  This is a micro issue and macro policy can't solve it.
+
+\item Causality.
+Do increases in consumption cause increases in output,
+or the other way around?
+That is, could the correlation between consumption and output be because
+high output leads consumers to spend more, rather than the reverse?
+
+Answer.  We observe data, not causality,
+and we may not be able to distinguish between
+alternative causal interpretations of the same events.
+That's what makes economic analysis so much fun.
+In some cases, we might be able to tell the difference,
+and these cases might lead to more general insights.
+For example, winning the lottery generates an increase in consumption,
+and we can say confidently that the causality runs from
+higher income to higher consumption.
+Why?  Because the reverse argument is absurd: High consumption didn't cause the person to win the lottery.
+In most cases, however,
+we can have multiple plausible causal interpretations of events,
+and there's not much we can do about it.
+\end{enumerate}
+\setlength{\leftmargini}{\oldleftmargini}
+
+
+\section*{If you're looking for more}
+
+Similar material is covered in greater depth
+in most macroeconomics textbooks.
+
+\section*{Symbols used in this chapter}
+
+\begin{table}[H]
+\centering
+\caption{Symbol table.}
+\begin{tabular*}{0.95\textwidth}{l@{\extracolsep{\fill}}l}
+\toprule
+Symbol & Definition\\
+\midrule
+$Y$    &Real output (=real GDP)\\
+$A$    &Total factor productivity (TFP)\\
+$K$    &stock of physical capital (plant and equipment)\\
+$L$    &quantity of labor (number of people employed)\\
+$\alpha$     &Exponent of K in Cobb-Douglas production function \\
+        &(= capital share of income)\\
+$P$    &Price level\\
+$Y^*$    &Equilibrium (or potential) output\\
+AS    &Short-run aggregate supply\\
+AS$^*$    &Long-run aggregate supply\\
+AD    &Aggregate demand\\
+AD$'$    &Aggregate demand after a shock\\
+AS$'$    &Aggregate supply after a shock\\
+$M$    &Money stock\\
+$V$    &Velocity of money\\
+$C$    &Private consumption\\
+$I$    &Private investment (residential and business investment)\\
+$G$    &Government purchases of goods and services (not transfers)\\
+$X$    &Exports\\
+$M$    &Imports\\
+$\NX$    &Net exports ($=X-M$)\\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+
