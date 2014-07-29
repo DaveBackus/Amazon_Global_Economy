@@ -15,7 +15,7 @@
 % 4.  The pdf will still be called "The_Global_Economy," so save it with the right filename.       %
 % 5.  Some chapters may have a blank page at the beginning.  Use Acrobat to delete it.             %
 %                                                                                                  %
-\includeonly{a_notes_front_matter}                                                                %
+%\includeonly{a_notes_front_matter}                                                                %
 %\includeonly{notes_math}                                                                          %
 %\includeonly{notes_data}                                                                          %
 %\includeonly{notes_review_long}                                                                   %

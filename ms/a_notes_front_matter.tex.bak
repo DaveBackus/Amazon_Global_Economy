@@ -16,16 +16,14 @@
 \begin{center}
 \textsc{}\\[1.5in]
 {\Huge\bf The Global Economy} \\ [0.25in]
-{\huge\bf Version 3.0}
+{\huge\bf Version 2.0}
 
 \vspace*{1.00in}
 {\huge\bf NYU Stern Economics}
 
 \vfill
-%{\includegraphics[width=0.65\textwidth]{../Figures/stern_logo3.pdf}\\
-{\includegraphics[width=0.65\textwidth]{../Figures/stern_black1.png}\\
-%\textsc{\large Department of Economics}\\
-[1.5in]
+{\includegraphics[width=0.65\textwidth]{Figures/stern_logo3.pdf}\\
+\textsc{\large Department of Economics}\\[1.5in]
 }
 \end{center}
 
@@ -55,10 +53,9 @@ Copyright \copyright \ \number\year \ by New York University's Center for Global
 
 \begin{minipage}{0.9in}
 \begin{flushleft}
-\vspace{0.12in} 
-\includegraphics[width=0.9in]{../Figures/by_sa.pdf} \\
+\includegraphics[width=0.9in]{Figures/by_sa.pdf} \\
 \vfill
-\vspace{0.27in}
+\vspace{0.37in}
 \phantom{m}
 \end{flushleft}
 \end{minipage}
@@ -67,7 +64,7 @@ Copyright \copyright \ \number\year \ by New York University's Center for Global
 \begin{minipage}{0.80\textwidth}
 \begin{flushleft}
  This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License.\\
- \vspace{0.05in}
+ \vspace{0.15in}
  To view a copy of this license, visit \\ \url{http://creativecommons.org/licenses/by-sa/3.0/}.\\
  \end{flushleft}
 \end{minipage}
