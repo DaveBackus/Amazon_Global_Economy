@@ -576,6 +576,32 @@ We've seen this repeatedly:  Mexico in 1994, Korea in 1997, Argentina in 2001,
 and Iceland in 2008.\index{credit risk!default risk}\index{government budget|)}\index{government budget!budget deficit@budget (or government) deficit|)}\index{government budget!primary deficit|)} \index{government debt|)}
 \end{itemize}
 
+\begin{comment}
+If you’ve lost track of the plot, here’s a summary – or enter “Argentina” in the search box. The short version: Argentina issued bonds in New York in the distant past, and then defaulted on them. They came to an agreement with most of the bondholders to accept a massive haircut, exchanging their bonds for new ones worth roughly 30% of the originals. The investors who accepted this deal are referred to as the “exchange bondholders.” But some bondholders refused to settle, and the current owners of those bonds (the “holdouts”) are going after the Republic of Argentina and its assets in courts around the world. Their most effective ploy has been to go after the coupon payments made to the exchange bondholders, through a bank in New York, on the grounds that the bonds say they will be treated equally with other creditors.
+
+This is my understanding of what’s at stake. But note: I’m not a lawyer, although I sometimes play one in class.
+
+The judgement. The first episode aired yesterday, with a ruling from the Second Circuit of the US Court of Appeals. The judge’s decision is wonderfully clear (lightly edited):
+
+To enhance the marketability of [its] bonds, Argentina made a series of promises to the purchasers. Argentina promised periodic interest payments. Argentina promised that the bonds would be governed by New York law. Argentina promised that any disputes concerning the bonds could be adjudicated in the courts of New York. Argentina promised that each bond would be transferrable, whether to a university endowment, a so-called “vulture fund,” or a widow or an orphan. Finally, Argentina promised to treat the bonds at least equally with its other external indebtedness. By defaulting, enacting legislation specifically forbidding future payment on them, and continuing to pay interest on subsequently issued debt, Argentina breached its promise of equal treatment.
+
+In short, you asked for these terms, now you’re stuck with them. We call that the rule of law. Complete decision here. There was some earlier debate about what equal treatment means, but the decision evidently resolves that for now.
+
+The problem. The fundamental problem here is that there is no clean mechanism for dealing with sovereign bankruptcy. With corporate bankruptcy, the creditors get the assets. With sovereign default, that’s not the case. That’s why we call them sovereigns. With corporate bankruptcy, the judge generally has enough leverage to force agreement among creditors. With sovereign default, there’s no one to play that role. Bonds could be issued with collection action clauses, making agreement by (say) two-thirds of bondholders binding on the rest, but that’s unusual — and Argentina’s bonds had no such clause. So sovereign default is inherently a messier situation than corporate (or personal) bankruptcy.
+
+Policy experts have voiced two opinions about the decision. One is that it makes sovereign debt problems worse, because bondholders will be less willing to go along with restructuring. France argued that it “threatens international financial stability.” The other opinion is that this is the law Argentina asked for, we shouldn’t change it after the fact. Neither solves the fundamental problem with sovereign default.
+
+The consequences. The decision brings into question Argentina’s payments to exchange bondholders. If they’re paid in New York, they can be seized and given to the holdouts. They could in principle be paid somewhere else (Buenos Aires?), but that raises the possibility that anyone involved would be violating the law. If it’s done anyway, does that qualify as a credit event in the CDS market? And will the Supreme Court weigh in? There’s lots of material left on the table, so let’s hope the show will continue beyond this season.
+
+\url{http://nyusterneconomics.wordpress.com/2013/08/24/argentinas-hedge-fund-grudge-match-continues/}
+
+Also:  Greece as an example.  Note that jurisdiction matters...  
+
+Check out: http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2144932 
+
+
+\end{comment}
+
 
 
 \section*{Executive summary}

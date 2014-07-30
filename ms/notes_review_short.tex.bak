@@ -21,7 +21,7 @@ It is not exhaustive, but is meant to help you
     \input{\blurbpath Blurbs/blurbs_indicators}
 
 \hyperref[chp:mpin]{\textbf{\underline{Money and Inflation}}} \\ \\
-    \input{\blurbpath Blurbs/blurbs_inflation}
+    \input\blurbpath {Blurbs/blurbs_inflation}
 
 \hyperref[chp:asad]{\textbf{\underline{Aggregate supply and Demand}}} \\ \\
      \input{\blurbpath Blurbs/blurbs_asad}

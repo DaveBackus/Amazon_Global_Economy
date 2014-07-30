@@ -16,16 +16,16 @@ This outline covers key concepts from the first part of the course: long-term ec
     \input{\blurbpath Blurbs/blurbs_solow}
 
 \textbf{\hyperref[chp:grth]{\underline{Sources of Economic Growth}}}\\ \\
-    \input{\blurbpath Blurbs/blurbs_growth}
+    \input{Blurbs/blurbs_growth}
 
 \textbf{\hyperref[chp:insp]{\underline{Institutions and Policies}}}\\ \\
-    \input{\blurbpath Blurbs/blurbs_institutions}
+    \input{Blurbs/blurbs_institutions}
 
 \hyperref[chp:lbmk]{\textbf{\underline{Labor Markets}}}\\ \\
-    \input{\blurbpath Blurbs/blurbs_labor}
+    \input{Blurbs/blurbs_labor}
 
 \hyperref[chp:fnmk]{\textbf{\underline{Financial Markets}}}\\ \\
-    \input{\blurbpath Blurbs/blurbs_finance}
+    \input{Blurbs/blurbs_finance}
 
 \hyperref[chp:intr]{\textbf{\underline{International Trade}}}\\ \\
-    \input{\blurbpath Blurbs/blurbs_trade}
+    \input{Blurbs/blurbs_trade}

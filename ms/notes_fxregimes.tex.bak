@@ -1,7 +1,7 @@
 \chapter{Exchange-Rate Regimes}\label{chp:fxr}
 \hypertarget{fxregimes}{}
 
-\input{\blurbpath Blurbs/blurbs_fxregimes}
+\input{Blurbs/blurbs_fxregimes}
 \rule{\textwidth}{1pt}
 
 The term ``exchange-rate regimes'' refers to the various

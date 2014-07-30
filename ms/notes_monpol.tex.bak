@@ -1,7 +1,7 @@
 \chapter{Money and Interest Rates}\label{chp:mpir}
 \hypertarget{monpol}{}
 
-\input{\blurbpath Blurbs/blurbs_monpol}
+\input{Blurbs/blurbs_monpol}
 \rule{\textwidth}{1pt}
 
 Where do interest rates come from?\index{interest rate|(textbf}

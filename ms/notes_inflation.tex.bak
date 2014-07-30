@@ -146,7 +146,7 @@ much different now than it was in 1960.
     \caption{The quantity theory in the long run.}
     \label{fig:quantity_long}
     \centering
-    \includegraphics[width=0.8\textwidth]{\figpath Figures/long.pdf}
+    \includegraphics[width=0.8\textwidth]{Figures/long.pdf}
 \end{figure}
 %
 
@@ -167,7 +167,7 @@ in inflation\index{inflation} rates.\index{quantity theory of money|)}
     \caption{The quantity theory in the short run.}
     \label{fig:quantity_short}
     \centering
-    \includegraphics[width=0.8\textwidth]{\figpath Figures/short_1.pdf}
+    \includegraphics[width=0.8\textwidth]{Figures/short_1.pdf}
 \end{figure}
 
 % ?? change to year-on-year growth rates

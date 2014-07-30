@@ -1,7 +1,7 @@
 \chapter{Taxes}\label{chp:tax}
 \hypertarget{taxes}{}
 
-\input{\blurbpath Blurbs/blurbs_taxes}
+\input{Blurbs/blurbs_taxes}
 \rule{\textwidth}{1pt}
 
 Governments are a fact of life. They are the central player in building and enforcing

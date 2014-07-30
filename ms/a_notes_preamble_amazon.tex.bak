@@ -4,19 +4,6 @@
 % see esp indexing w/ package makeidx
 % more at:  http://en.wikibooks.org/wiki/LaTeX/Indexing
 
-% link colors etc:  black for Amazon, blue for the online version
-\usepackage[colorlinks=true,
-            allcolors=blue,
-%            linkcolor=black,
-%            citecolor=black,
-%            urlcolor=blue,
-            bookmarks=false,
-            pdfstartview={FitV},
-            pdftitle={The Global Economy},
-            pdfsubject={A course in macroeconomics for business students},
-            pdfauthor={The NYU Stern Economics Team}
-            ]{hyperref}
-
 \usepackage{amsmath, amssymb, amsthm}
 \usepackage{graphicx}
 \usepackage{color}
@@ -29,13 +16,6 @@
 \setitemize{leftmargin=*, topsep=-3pt, partopsep=0pt}
 \setenumerate{leftmargin=*, topsep=0pt}
 
-% set paths for graphics and tables 
-% http://kawahara.ca/latex-how-to-programmatically-change-the-path-of-your-figures/
-% http://stackoverflow.com/questions/1211888/is-there-any-way-i-can-define-a-variable-in-latex 
-\newcommand{\figpath}{../}
-\newcommand{\tabpath}{../}
-\newcommand{\blurbpath}{../}
-
 \usepackage{caption}
 \usepackage{setspace}
 \usepackage{float}
@@ -47,6 +27,19 @@
 %Turn off ligatures to make pdf searchable, turn on ligatures to make font pretty
 %\usepackage{microtype}
 %\DisableLigatures{encoding = *, family = * }
+
+% link colors etc:  black for Amazon, blue for the online version
+\usepackage[colorlinks=true,
+            allcolors=blue,
+%            linkcolor=black,
+%            citecolor=black,
+%            urlcolor=blue,
+            bookmarks=false,
+            pdfstartview={FitV},
+            pdftitle={The Global Economy},
+            pdfsubject={A course in macroeconomics for business students},
+            pdfauthor={The NYU Stern Economics Team}
+            ]{hyperref}
 
 % Adjust fonts for chapter and section headings
 % old version

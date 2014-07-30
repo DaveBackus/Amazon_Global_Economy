@@ -47,7 +47,7 @@ See Table~\ref{tab:usbop}.
 %\bottomrule
 %\addlinespace
 %\end{tabular*}
-\input{\tabpath Tables/tab_bop}
+\input{Tables/tab_bop}
 \begin{minipage}{0.80\textwidth}
 \footnotesize{The numbers are for 2012, billions of US dollars.
 ROW means ``rest of world.''

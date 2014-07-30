@@ -61,7 +61,7 @@ People used to refer to this as the ``great moderation,''
  \caption{Level and fluctuations of US \href{http://research.stlouisfed.org/fred2/series/GDPC1?cid=106}{real GDP}.}
     \label{fig:yandgy}
     \centering
-    \includegraphics[width=0.8\textwidth]{\figpath Figures/us_gdp.pdf}
+    \includegraphics[width=0.8\textwidth]{Figures/us_gdp.pdf}
 \end{figure}
 
 The \href{http://www.nber.org/cycles/main.html}{National Bureau of Economic Research},
@@ -140,7 +140,7 @@ S\&P 500 Index           &  14.98\phantom{1}  &  0.36   \\
     \caption{Fluctuations in consumption, investment, and GDP.}
     \label{fig:gcall}%
     \centering
-    \includegraphics[width=0.8\textwidth]{\figpath Figures/us_inv_cons_gdp.pdf}
+    \includegraphics[width=0.8\textwidth]{Figures/us_inv_cons_gdp.pdf}
 \end{figure}
 
 \href{http://research.stlouisfed.org/fred2/series/GPDIC96?cid=112}{Investment}
@@ -185,14 +185,14 @@ but the general pattern is not unusual.
 \caption{Fluctuations in employment and GDP.}
     \label{fig:labor}%
     \centering
-    \includegraphics[width=0.8\textwidth]{\figpath Figures/us_emp_gdp.pdf}
+    \includegraphics[width=0.8\textwidth]{Figures/us_emp_gdp.pdf}
 \end{figure}
 
 \begin{figure}[h!]
     \caption{Fluctuations in asset prices and GDP.}
     \label{fig:stock}%
     \centering
-    \includegraphics[width=0.8\textwidth]{\figpath Figures/us_gdp_sp500.pdf}
+    \includegraphics[width=0.8\textwidth]{Figures/us_gdp_sp500.pdf}
 \end{figure}
 
 Financial (capital) markets move with the business cycle, as well. Figure \ref{fig:stock} plots the growth rate of real GDP\index{gross domestic product (GDP)!real GDP} against versus the yearly growth rate of the \href{http://research.stlouisfed.org/fred2/series/SP500}{S\&P 500 index}. Notice that aggregate stock prices are extremely volatile, with a standard deviation about eight times larger than GDP. Moreover, aggregate stock prices and GDP are positively correlated (0.36). This suggests that good news about the economy is good news for stock prices.

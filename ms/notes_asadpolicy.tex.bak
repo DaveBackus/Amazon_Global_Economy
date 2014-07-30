@@ -2,7 +2,7 @@
 }\label{chp:pasad}
 \hypertarget{asadpolicy}{}
 
-\input{\blurbpath Blurbs/blurbs_asadpolicy}
+\input{Blurbs/blurbs_asadpolicy}
 \rule{\textwidth}{1pt}
 
 We've seen that aggregate demand

@@ -1,7 +1,7 @@
 \chapter{Institutions and Policies}\label{chp:insp}
 \hypertarget{institutions}{}
 
-\input{\blurbpath Blurbs/blurbs_institutions}
+\input{Blurbs/blurbs_institutions}
 \rule{\textwidth}{1pt}
 
 The enormous international differences in GDP per person

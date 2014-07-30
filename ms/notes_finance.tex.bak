@@ -1,7 +1,7 @@
 \chapter{Financial Markets}\label{chp:fnmk}
 \hypertarget{finance}{}
 
-\input{\blurbpath Blurbs/blurbs_finance}
+\input{Blurbs/blurbs_finance}
 \rule{\textwidth}{1pt}
 
 Some of the most important markets for aggregate economic performance

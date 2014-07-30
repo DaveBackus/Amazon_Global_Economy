@@ -144,7 +144,7 @@ More on this in the next chapter.
     \caption{The US dollar against other major currencies.}
     \label{fig:exch_rates}
     \centering
-    \includegraphics[width=0.8\textwidth]{\figpath Figures/exchange.pdf}
+    \includegraphics[width=0.8\textwidth]{Figures/exchange.pdf}
 \end{figure}
 %
 
@@ -310,7 +310,7 @@ very-high-inflation situations.
     \caption{Venezuelan depreciation and inflation differential.}
     \label{fig:venezuela}
     \centering
-    \includegraphics[width=0.8\textwidth]{\figpath Figures/venezuela.pdf}
+    \includegraphics[width=0.8\textwidth]{Figures/venezuela.pdf}
 \end{figure}
 
 By way of example, consider the exchange rate between the Venezuelan
@@ -337,7 +337,7 @@ Figure~\ref{fig:us_euro} shows this for the dollar-euro.
     \caption{Dollar versus euro and inflation differential.}
     \label{fig:us_euro}
     \centering
-    \includegraphics[width=0.8\textwidth]{\figpath Figures/us_euro.pdf}
+    \includegraphics[width=0.8\textwidth]{Figures/us_euro.pdf}
 \end{figure}
 %
 This picture is typical of developed countries: Inflation differentials are relatively small,
