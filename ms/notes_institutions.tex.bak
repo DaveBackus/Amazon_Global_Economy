@@ -1,7 +1,7 @@
 \chapter{Institutions and Policies}\label{chp:insp}
 \hypertarget{institutions}{}
 
-\input{Blurbs/blurbs_institutions}
+\input{\blurbpath Blurbs/blurbs_institutions}
 \rule{\textwidth}{1pt}
 
 The enormous international differences in GDP per person
@@ -195,7 +195,6 @@ property rights, and open competitive markets.
 \item Stable and predictable macroeconomic policies matter, too.
 \end{enumerate}
 
-\begin{comment}
 \section*{Review questions}
 
 %\setlength{\leftmargini}{.5\oldleftmargini}
@@ -203,7 +202,6 @@ property rights, and open competitive markets.
 \begin{enumerate}
 \item ...
 \end{enumerate}
-\end{comment}
 
 \section*{If you're looking for more}
 
