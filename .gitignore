@@ -9,6 +9,7 @@
 
 ## Intermediate documents:
 *.dvi
+*.bak 
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
 *.bbl
