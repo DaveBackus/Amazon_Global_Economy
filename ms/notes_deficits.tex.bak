@@ -1,7 +1,7 @@
 \chapter{Government Debt and Deficits}\label{chp:dbdf}
 \hypertarget{deficits}{}
 
-\input{Blurbs/blurbs_deficits}
+\input{\blurbpath Blurbs/blurbs_deficits}
 \rule{\textwidth}{1pt}
 
 The first principle of government finance is that
@@ -595,9 +595,9 @@ The consequences. The decision brings into question Argentina’s payments to ex
 
 \url{http://nyusterneconomics.wordpress.com/2013/08/24/argentinas-hedge-fund-grudge-match-continues/}
 
-Also:  Greece as an example.  Note that jurisdiction matters...  
+Also:  Greece as an example.  Note that jurisdiction matters...
 
-Check out: http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2144932 
+Check out: http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2144932
 
 
 \end{comment}
@@ -752,7 +752,7 @@ It's an embarrassment, to be sure, but true.
 %its income statement, which you might think shouldn't happen,
 %but for government data it does.
 In our examples, we construct (total) deficits from year-to-year changes in debt.
-If you ever need to know more about this, get in touch.
+%If you ever need to know more about this, get in touch.
 
 %If you're looking for international data on government debt over 200 years or more,
 %you might want to look at the IMF's

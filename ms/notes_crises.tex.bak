@@ -1,7 +1,7 @@
 \chapter{Macroeconomic Crises}\label{chp:cris}
 \hypertarget{crises}{}
 
-\input{Blurbs/blurbs_crises}
+\input{\blurbpath Blurbs/blurbs_crises}
 \rule{\textwidth}{1pt}
 
 Economies periodically experience {\it crises\/}:
@@ -381,6 +381,10 @@ and the promise of money from oil revenue.
 It's an odd fact but a true one that revenue
 from natural resources is more likely to cause problems than solve them.
 \end{itemize}
+Update:  In August 2014, Ghana asked the IMF for help. 
+The chance of default remains low, since foreign debt is backed by  oil revenue, 
+but the promise of oil has turned into a curse, 
+as it often does.  
 \end{enumerate}
 
 \end{enumerate}

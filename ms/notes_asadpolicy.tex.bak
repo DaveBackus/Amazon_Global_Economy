@@ -2,7 +2,7 @@
 }\label{chp:pasad}
 \hypertarget{asadpolicy}{}
 
-\input{Blurbs/blurbs_asadpolicy}
+\input{\blurbpath Blurbs/blurbs_asadpolicy}
 \rule{\textwidth}{1pt}
 
 We've seen that aggregate demand
@@ -453,7 +453,7 @@ which it might do by targeting a higher interest rate.
 %    See Figure \ref{fig:ez}.
 %
 %\item In the aggregate supply (AS) \index{aggregate supply (AS)}
- and demand framework,
+% and demand framework,
 %    do you think the movements in prices and output
 %    you mentioned above suggest a shift in supply or demand?  Why?
 %    In principle,
