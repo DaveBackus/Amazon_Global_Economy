@@ -391,8 +391,7 @@ Mathematically, the three definitions are:
 %They differ primarily in their treatment of capital.
 For the Cobb-Douglas   production function they are:
 \begin{eqnarray*}
-    \mbox{average product of labor
-} &=& A \left({K}/{L}\right)^\alpha  \\
+    \mbox{average product of labor} &=& A \left({K}/{L}\right)^\alpha  \\
     \mbox{marginal product \index{capital!marginal product of|(textbf} of Labor} &=& (1-\alpha) A \left({K}/{L}\right)^\alpha \\
     \mbox{total factor productivity} &=& A  .
 \end{eqnarray*}

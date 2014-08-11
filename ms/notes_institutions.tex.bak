@@ -197,11 +197,219 @@ property rights, and open competitive markets.
 
 \section*{Review questions}
 
-%\setlength{\leftmargini}{.5\oldleftmargini}
-%\setlength{\leftmargini}{\oldleftmargini}
+\setlength{\leftmargini}{.5\oldleftmargini}
 \begin{enumerate}
-\item ...
+\item Foxconn's next frontier.
+Hon Hai Precision Industry Co. Ltd. (``Foxconn'') is a Taiwan-based manufacturer that makes
+products for Apple, Intel, Sony, and others.
+Known for its plants in China, including one in Shenzhen that makes iPads,
+it also has operations in Brazil, Malaysia, Mexico, and other locations.
+
+
+\begin{table}[h]
+\centering
+\tabcolsep = 0.05in
+\begin{tabular}{lrrr}
+\toprule
+Indicator & China & Thailand & Vietnam \\
+\midrule
+\multicolumn{2}{l}{\it General} \\
+GDP per capita  (2005 USD) &  8400 & 9200 & 3500  \\
+Doing Business overall (percentile) & 50.8  &90.3 & 46.5 \\
+World Economic Forum overall (percentile) & 80.0 & 73.6 & 47.9\\
+\midrule
+\multicolumn{2}{l}{\it Governance} \\
+Political stability (percentile)  &  25.0 & 16.5 & 52.8 \\
+Govt effectiveness (percentile)   &  60.7 & 59.7 & 45.0 \\
+Regulatory quality                & 45.5  & 56.4 & 29.4\\
+Rule of law                       & 41.8 & 48.8 & 39.9 \\
+Control of corruption (percentile) & 30.3 & 43.6 & 33.6  \\
+\midrule
+\multicolumn{2}{l}{\it Labor} \\
+Minimum wage (USD per month) &  204 & 118 & 65 \\
+Severance after 10 years (weeks of pay) & 43 & 50 & 43 \\
+Labor market efficiency (percentile) & 71.5 & 47.2 & 64.6 \\
+Literacy (percent of adults)        & 94 & 94 & 93 \\
+Years of school (adults)        & 8.2 & 7.5 & 6.4 \\
+\midrule
+\multicolumn{2}{l}{\it Infrastructure and trade} \\
+Infrastructure quality (percentile)  & 66.7 & 68.1 & 34.0 \\
+%\midrule
+%\multicolumn{2}{l}{\it International trade} \\
+Export documents required (number) & 8 & 5 & 6\\
+Export delay (days) &  21 & 14 & 21  \\
+Export cost (USD per container) &  580 & 585 & 610 \\
+\bottomrule
+\end{tabular}
+\caption{Institutional indicators for China, Thailand, and Vietnam.
+Percentiles range from 0 (worst) to 100 (best).
+Sources:  Penn World Table, World Economic Forum, World Bank, Governance Indicators, Doing Business.}
+\label{tab:ctv}
+\end{table}
+
+With wages rising rapidly in China, Foxconn is exploring other locations.
+As a private consultant, you have been asked to write a short report
+outlining the advantages and disadvantages of locating in Thailand and Vietnam
+and to compare both to China.
+You collect the information in Table \ref{tab:ctv} and begin your report.
+
+\begin{enumerate}
+\item Which of these indicators are most important to your venture?
+How do the two countries compare on them?
+\item Which country or countries would you recommend to your clients?
+What are the primary challenges they would face?
 \end{enumerate}
+
+Answer.
+This is a qualitative question, but here's an outline
+of what an answer might look like.
+A good answer should put some structure on the analysis,
+not simply list what's in the table.
+
+\begin{enumerate}
+\item If you build a plant in another country, you'll be concerned
+with overall institutional quality,
+property rights (whether the government might steal the plant),
+labor cost and quality,
+labor market institutions,
+and the challenges of exporting your product.
+There's no clean link to the indicators, but you might guess that
+property rights would be related to the governance indicators,
+esp political stability and the rule of law.
+The labor indicators obviously address concerns with labor.
+And infrastructure and trade address the challenges of exporting.
+
+As a rough guide:
+\begin{itemize}
+\item Overall:  It's interesting that Doing Business rates
+Thailand highest, but the World Economic Forum rates China highest.
+And the differences are large.  In the real world,
+this would call for a closer look.
+Ditto the source of political instability in Thailand.
+\item Property rights and overall:  Thailand looks a bit better than the
+others on Control of Corruption and Rule of Law, Vietnam looks better
+on Political Stability.
+\item Labor cost and quality:  Vietnam is considerably cheaper than the other two,
+if we use GDP per capita or the minimum wage as rough guides to wages.
+Literacy is similar in the three countries, China is highest, and Vietnam lowest,
+on education.
+\item Labor institutions:  The World Economic Forum ranks China highest,
+and Thailand lowest, on overall labor market efficiency.
+Another thing that's worth a closer look.
+Severance looks similar.
+
+\item Exporting:  cost and delay look similar, but Vietnam
+has the worst infrastructure.
+You'll want to look into this, see what aspects of the infrastructure
+are likely to affect you.
+\end{itemize}
+
+\item
+To me, they both look like reasonable candidates.
+For Thailand, I'd want to look closer at political stability,
+see what that represents and think about how it would affect me.
+(And that's an understatement!)
+For Vietnam, I'd want to look closer at infrastructure.
+\end{enumerate}
+
+
+\item Investing in China and India.
+You work at a British asset management company and have been asked to
+assess the potential of starting a country fund:
+a mutual fund for UK investors
+that would invest in China or India.
+You realize that both countries are growing rapidly,
+China more so to date than India,
+but you wonder whether there are important
+differences in the institutional environment
+that might also be relevant.
+
+\begin{table}[h!]
+%    \tabcolsep = 0.2in
+    \centering
+    \begin{tabular}{lccc}
+    \toprule
+    Indicator    &  China   &  India  &    UK    \\
+    \midrule
+    GDP per capita (USD) &  5,300  &  2,700 &  35,300   \\
+    GDP growth (\%)    &  11.2  &   8.4   &  2.9   \\
+    Competitiveness  &  4.6    &  4.3   &  5.4   \\
+    Regulatory quality &  4.8 &  4.9  &  9.8   \\
+    Rule of law   &  4.6  &  5.8  &  9.3    \\
+    Investor protection & 5  & 6  &  8   \\
+    Financial sophistication  &  3.3  &  4.9  &  6.2  \\
+    Macro stability    &  6.0  &  4.2  &  5.2   \\
+    Control of corruption    & 3.8  &  5.3  &  9.4  \\
+    \bottomrule
+    \end{tabular}
+    \caption{Measures of performance and institutional quality
+    in China, India, and the UK.
+    Competitiveness index is an overall measure of institutional quality.
+    Sources:  CIA Factbook, Economist Intelligence Unit, World Economic Forum,
+    World Bank.}
+    \label{tab:institutions}
+\end{table}
+
+
+Your summer intern collects the data in Table \ref{tab:institutions}
+and explains what each of the indicators means.
+In addition, she points out that
+the World Economic Forum (WEF) collects survey responses about
+the biggest problems faced by businesses.
+In China they are:  access to financing, bureaucracy, corruption, and policy instability.
+In India:  infrastructure, bureaucracy, labor regulations, and corruption. And in the UK:  taxes, education of workforce, and bureaucracy.
+
+Based on this information and your own experience,
+which country would you recommend? Why?
+
+Answer.
+This is a relatively unstructured question,  but also a realistic one.
+A good answer probably touches on the following points:
+%
+\begin{itemize}
+\item Country performance.
+The guess is that returns will reflect country performance.
+To the extent China is growing faster,
+it's probably the better bet.
+
+\item General institutions.
+Institutions are helpful for predicting future performance,
+and for indicating whether that growth will be claimed
+by the people who produce it.
+If you look at ``competitiveness,'' the WEF's overall measure of
+institutional quality, China ranks (slightly) higher.
+Most measures will find little difference between them,
+this one favors China by a small amount.
+Corruption is an issue in both places, although there's
+some indication that India controls it better.
+Bureaucracy is an issue in both countries.
+Political instability is mentioned as an issue in China,
+and could be relevant in the sense that changing regulations
+are difficult to deal with.
+
+\item Investment-specific institutions.
+There are specific institutions that pertain directly to financial
+markets; as we've seen, it takes a lot of regulatory infrastructure
+to make financial markets work well, even in developed countries.
+Here India looks somewhat better than China.
+Overall regulatory quality is better,
+as are investor protection, rule of law, and financial sophistication. Access to financing is an issue in China,
+but that's irrelevant to this endeavor.
+
+\item Bottom line.
+India has, in some respects, more developed
+institutions for capital market activity.
+It's partly a matter of history, partly of how the countries
+have evolved over the last 30 years.
+It takes a fairly sophisticated set of institutions to get
+bond and equity markets to work effectively,
+and China probably has further to go in this dimension right now.
+\end{itemize}
+
+
+\end{enumerate}
+\setlength{\leftmargini}{\oldleftmargini}
+
 
 \section*{If you're looking for more}
 
@@ -247,4 +455,4 @@ One of the leading sources is the World Bank's Doing Business, available at
 
 The reports of the Economist Intelligence Unit are thoughtful aggregators
 of this kind of information.
-We'll discuss other sources in class.
+%We'll discuss other sources in class.

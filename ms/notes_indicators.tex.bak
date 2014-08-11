@@ -268,7 +268,7 @@ although it's not particularly important for our purposes.
 We used year-on-year growth rates instead of monthly
 growth rates.
 We could use either, but the year-on-year pictures are smoother
-and, therefore, more attractive.
+and, in our view, more attractive.
 We'd see a similar pattern with monthly growth rates, but the correlations would be both smaller and choppier. }
 
 
@@ -400,7 +400,7 @@ current value of an indicator is relative to past experience.
     \caption{New claims and housing starts.}
     \label{fig:newclaims_hs}%
     \centering
-    \includegraphics[width=0.9\textwidth]{Figures/scorecard_2.pdf}
+    \includegraphics[width=0.9\textwidth]{\figpath Figures/scorecard_2.pdf}
     \begin{minipage}{0.85\textwidth}
     {\footnotesize The two panels show, respectively,
     new claims for unemployment insurance

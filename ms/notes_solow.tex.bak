@@ -182,7 +182,7 @@ its steady state.
 \begin{figure}[h]
     \caption{The Solow model.}
     \centering
-    \includegraphics[width=0.8\textwidth]{Figures/solow1.pdf}\\
+    \includegraphics[width=0.8\textwidth]{\figpath Figures/solow1.pdf}\\
     \label{fig:solow1}
 \end{figure}
 
@@ -233,7 +233,7 @@ $ A = 1$, $s = 0.2$, $\delta = 0.1$, and $\alpha = 1/3$.
 \caption{The impact of the saving rate in the Solow model.}
     \label{fig:solow2}
     \centering
-    \includegraphics[width=0.8\textwidth]{Figures/solow2.pdf}\\
+    \includegraphics[width=0.8\textwidth]{\figpath Figures/solow2.pdf}\\
 \end{figure}
 The line marked ``saving per worker'' is the first expression on
 the right side of equation (\ref{eq:dk}):  $ s A k^\alpha $. The

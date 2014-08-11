@@ -1,7 +1,7 @@
 \chapter{International Trade}\label{chp:intr}
 \hypertarget{trade}{}
 
-\input{Blurbs/blurbs_trade}
+\input{\blurbpath Blurbs/blurbs_trade}
 \rule{\textwidth}{1pt}
 
 Virtually all economists, liberal or conservative, believe that
@@ -641,7 +641,7 @@ reasons, and trade is unlikely to be a major factor in most cases.
 and workers to take jobs where their productivity is highest.
 
 \item There can be both winners and losers from trade,
-but, in theory, the gains outweigh the losses in every country.
+but, in theory, the winners gain more than the losers lose.  
 \end{enumerate}
 \setlength{\leftmargini}{\oldleftmargini}
 

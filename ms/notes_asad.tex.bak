@@ -1,7 +1,7 @@
 \chapter{Aggregate Supply and Demand}\label{chp:asad}
 \hypertarget{asad}{}
 
-\input{Blurbs/blurbs_asad}
+\input{\blurbpath Blurbs/blurbs_asad}
 \rule{\textwidth}{1pt}
 
 We've seen that economic fluctuations follow regular patterns

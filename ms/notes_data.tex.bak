@@ -1,7 +1,7 @@
 \chapter{Macroeconomic Data} \label{chp:macd}
 \hypertarget{data}{}
 
-\input{Blurbs/blurbs_data}
+\input{\blurbpath Blurbs/blurbs_data}
 \rule{\textwidth}{1pt}
 
 Gross Domestic Product (GDP) is our primary measure of macroeconomic performance:
@@ -231,7 +231,7 @@ system isn't perfect.
 %        Statistical Discrepancy            &31.9                 \\
 %            \bottomrule
 %\end{tabular*}
-\input{Tables/tab_nipa_income}
+\input{\tabpath Tables/tab_nipa_income}
 \begin{minipage}{0.7\textwidth}
 \footnotesize{%
 \smallskip

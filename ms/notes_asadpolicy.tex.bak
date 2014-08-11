@@ -227,7 +227,7 @@ We should resist demand shocks and accommodate supply shocks.
 The difficulty, in practice, is knowing which is which.
 If we guess wrong, we can make things worse, perhaps a lot worse.
 
-By some interpretations, the Fed made exactly that mistake in the 1970s.
+By some interpretations, the Fed made exactly this mistake in the 1970s.
 With output falling and inflation rising, the Fed increased the money
 supply to keep output up.
 With hindsight, the OPEC oil price increase is understood to be an
@@ -235,13 +235,13 @@ adverse supply shock.
 It reduced output, but there was little we could do about it.
 When we increased the money supply, the consequence was that low
 output was accompanied by even higher inflation\index{inflation} than before.
-Having failed to understand the nature of the problem,
-we gave it a name:  stagflation.
+Having failed to understand the problem,
+we decided to give it a name:  stagflation.
 
 
 \section*{Executive summary}
 
-\setlength{\leftmargini}{.5\oldleftmargini}
+%\setlength{\leftmargini}{.5\oldleftmargini}
 \begin{enumerate}
 \item We typically think of the goals of macroeconomic
 policy as keeping inflation low and output near the long-run
@@ -251,12 +251,12 @@ supply curve.
 triggered by shifts in demand and accommodate/acquiesce
 to changes triggered by shifts in supply.
 \end{enumerate}
-\setlength{\leftmargini}{\oldleftmargini}
+%\setlength{\leftmargini}{\oldleftmargini}
 
 %\begin{comment}
 \section*{Review questions}
 
-\setlength{\leftmargini}{.5\oldleftmargini}
+%\setlength{\leftmargini}{.5\oldleftmargini}
 \begin{enumerate}
 \item Consider the situation in Figure \ref{fig:asad-m},
 where an adverse demand shock moves us from A to B.
@@ -365,6 +365,9 @@ After the shift, we move to a new short-run equilibrium at B,
 where the new AS crosses AD.
 Evidently output falls and prices rise.
 
+Eventually we move to a new long-run equilibrium at C,
+where AD crosses the new AS$^*$.
+At this point, output has fallen more and prices have risen more.
 
 \begin{center}
 \begin{figure*}[t]
@@ -408,12 +411,7 @@ Evidently output falls and prices rise.
 \end{picture}
 \end{figure*}
 \end{center}
-%\bigskip\bigskip
 
-
-Eventually we move to a new long-run equilibrium at C,
-where AD crosses the new AS$^*$.
-At this point, output has fallen more and prices have risen more.
 
 \item The central bank \index{central bank} has two goals:  stable prices and output
 at its long-run equilibrium.
@@ -428,6 +426,57 @@ So the central bank \index{central bank} could shift AD to the left, giving us t
 long-run output but lower prices.
 The central bank \index{central bank} would accomplish this by reducing the money supply,
 which it might do by targeting a higher interest rate.
+\end{enumerate}
+
+% =============================================================================
+\item The supply and demand of Abenomics.
+Shinzo Abe was elected Prime Minister of Japan in December 2012
+after two decades of slow growth and falling prices.
+He pledged dramatic policy changes to revive the Japanese economy,
+dubbed the ``three arrows'' of ``Abenomics.''
+We consult the Economist Intelligence Unit for specifics:
+%
+\begin{itemize}
+\item Fiscal stimulus.  A sizeable economic stimulus package was passed by parliament in
+February 2013, and a smaller one in October.
+This is expected to produce a budget deficit of 8\% in 2013.
+\item Monetary stimulus. A plan to double Japan's
+money supply within two years was implemented in April 2013 to help to achieve the Bank of Japan's
+target of 2\%  inflation.
+\item Structural reform.
+This is less clearly articulated, but some observers hope for a range of micro-based reforms,
+including loosening product-market regulations that reduce productivity,
+tightening corporate requirements for funding pensions,
+creating a more flexible labor market,
+and reducing subsidies to an inefficient agricultural sector.
+\end{itemize}
+%
+Your mission is to explore the impact of the three arrows using the aggregate supply and demand
+framework.
+\begin{enumerate}
+\item Explain, for each ``arrow,'' whether it affects supply or demand.
+Which way does each one shift the appropriate curve(s)?
+\item Compare the short- and long-term impact on output of the three policies.
+Which are likely to have the greatest impact in the short term?
+In the long term?
+\end{enumerate}
+
+Answer.
+\begin{enumerate}
+\item We have:
+\begin{itemize}
+\item Fiscal stimulus. This shifts aggregate demand to the right.
+\item Monetary stimulus. Same.
+\item Structural reform. This shifts both aggregate supply curves to the right.
+\end{itemize}
+
+\item Fiscal and monetary stimulus will raise output in the short run.
+They have no long-run impact on output.
+
+Structural reform, on the other hand, raises output both short-term and long-term.
+In this respect, it's likely the most important of the arrows.
+It's also, unfortunately, the one that's been executed least aggressively,
+in large part because it raises more difficult political issues.
 \end{enumerate}
 
 
@@ -484,7 +533,8 @@ which it might do by targeting a higher interest rate.
 %than output growth.
 %\end{enumerate}
 \end{enumerate}
-\setlength{\leftmargini}{\oldleftmargini}
+%\setlength{\leftmargini}{\oldleftmargini}
+
 
 \section*{If you're looking for more}
 

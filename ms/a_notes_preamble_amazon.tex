@@ -4,7 +4,7 @@
 % see esp indexing w/ package makeidx
 % more at:  http://en.wikibooks.org/wiki/LaTeX/Indexing
 
-% link colors etc:  black for Amazon, blue for the online version 
+% link colors etc:  black for Amazon, blue for the online version
 \usepackage[colorlinks=true,
             allcolors=blue,
 %            linkcolor=black,
@@ -26,8 +26,8 @@
 
 % list spacing
 \usepackage{enumitem}
-\setitemize{leftmargin=*, topsep=-3pt, partopsep=0pt}
-\setenumerate{leftmargin=*, topsep=0pt}
+\setitemize{leftmargin=*, topsep=0pt, partopsep=0pt}
+\setenumerate{leftmargin=*, topsep=0pt, partopsep=0pt}
 
 % set paths for graphics and tables
 % http://kawahara.ca/latex-how-to-programmatically-change-the-path-of-your-figures/
@@ -51,16 +51,19 @@
 % Adjust fonts for chapter and section headings
 % old version
 \usepackage[medium, compact]{titlesec}
-\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
-\titleformat{\subsection}{\normalsize\bfseries}{\thesection}{1em}{}
+\titleformat{\section}{\large\bfseries\sffamily}{\thesection\sffamily}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries\sffamily}{\thesection}{1em}{}
+\titleformat{\part}{\bfseries\huge\sffamily}{}{0pt}{Part \thepart\\}  % edited by LC
+\titleformat{\chapter}{\bfseries\huge\sffamily}{}{0pt}
+        {\ifnum\thechapter>0\resizebox{!}{25pt}{\thechapter}\\ \fi} 
 
 % LC  version
-%\usepackage[medium, compact, sf, bf]{titlesec} % edited by LC
-%\titleformat{\section}{\large\bfseries\sffamily}{\thesection}{1em}{}  % edited by LC
-%\titleformat{\subsection}{\normalsize\bfseries\sffamily}{\thesection}{1em}{}  % edited by LC
-%\titleformat{\part}{\bfseries\huge\sffamily\uppercase}{}{0pt}{Part \thepart\\}  % edited by LC
+%\usepackage[medium, compact, sf, bf]{titlesec} 
+%\titleformat{\section}{\large\bfseries\sffamily}{\thesection}{1em}{}  
+%\titleformat{\subsection}{\normalsize\bfseries\sffamily}{\thesection}{1em}{}  
+%\titleformat{\part}{\bfseries\huge\sffamily\uppercase}{}{0pt}{Part \thepart\\}  
 %\titleformat{\chapter}{\bfseries\huge\sffamily\uppercase}{}{0pt}
-%        {\ifnum\thechapter>0\resizebox{!}{30pt}{\thechapter}\\ \fi}  % edited by LC
+%        {\ifnum\thechapter>0\resizebox{!}{30pt}{\thechapter}\\ \fi} 
 
 % to kill off awkward pagebreaks -- manually
 \usepackage{needspace}

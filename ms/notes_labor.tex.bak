@@ -2,7 +2,7 @@
 \hypertarget{labor}{}
 \label{ch:labor}
 
-\input{Blurbs/blurbs_labor}
+\input{\blurbpath Blurbs/blurbs_labor}
 \rule{\textwidth}{1pt}
 
 Some of the most important markets for aggregate economic performance
@@ -462,7 +462,7 @@ if it decreases its number of positions from one period to the
 next. The economy's overall job destruction is the sum of the
 decreases in jobs across all establishments that destroyed jobs.
 The sum of job creation and job destruction is referred to as
-\textit{job reallocation\index{labor!job reallocation rate}} or 
+\textit{job reallocation\index{labor!job reallocation rate}} or
 \textit{job turnover}. \index{labor!job turnover rate} \index{labor!job creation rate}
 \index{labor!job destruction rate}
 Job creation,
@@ -631,8 +631,8 @@ or
 \[
     \Delta u_{t+1} \;\;=\;\; se_t-au_t .
 \]
-Unemployment rises over time if more employed people lose their jobs 
-than unemployed people find new jobs, and it falls over time if the reverse is true. 
+Unemployment rises over time if more employed people lose their jobs
+than unemployed people find new jobs, and it falls over time if the reverse is true.
 (Formally, this should remind you of the dynamics of capital accumulation in the Solow  model).
 Since $u_t+e_t=1$, we can write this as
 \begin{equation}
@@ -715,7 +715,7 @@ Notice that a high separation rate $s$ has two important effects on the economy:
 
 \section*{Executive summary}
 
-\setlength{\leftmargini}{.5\oldleftmargini}
+%\setlength{\leftmargini}{.5\oldleftmargini}
 \begin{enumerate}
 \item Labor-market indicators include employment (the number of
 people working), unemployment (the number not working who would
@@ -738,11 +738,12 @@ economy respond to the inevitable changes in products and industries that occur.
 %In practice, the main effect has been more output,
 %which we get by reallocating labor across sectors.
 \end{enumerate}
-\setlength{\leftmargini}{\oldleftmargini}
+%\setlength{\leftmargini}{\oldleftmargini}
+
 
 \section*{Review questions}
 
-\setlength{\leftmargini}{.5\oldleftmargini}
+%\setlength{\leftmargini}{.5\oldleftmargini}
 \begin{enumerate}
 \item Labor-market indicators.
 You are the mayor of a small village whose
@@ -933,7 +934,7 @@ thereby increasing long-run unemployment and making periods of high unemployment
 last longer (i.e., making $\lambda$ closer to one).
 \end{enumerate}
 \end{enumerate}
-\setlength{\leftmargini}{\oldleftmargini}
+%\setlength{\leftmargini}{\oldleftmargini}
 
 
 \section*{If you're looking for more}

@@ -2,6 +2,8 @@
 \begin{titlepage}
 %\pagenumbering{roman}
 
+% *** FONTS 
+{\sffamily 
 \begin{center}
 \textsc{}\\[1.5in]
 {\Huge\bf The Global Economy} \\ [0.5in]
@@ -16,14 +18,14 @@
 \begin{center}
 \textsc{}\\[1.5in]
 {\Huge\bf The Global Economy} \\ [0.25in]
-{\huge\bf Version 3.0}
+{\huge\bf Version 2.1}
 
 \vspace*{1.00in}
 {\huge\bf NYU Stern Economics}
+} % *** END SF FONTS 
 
 \vfill
-%{\includegraphics[width=0.65\textwidth]{../Figures/stern_logo3.pdf}\\
-{\includegraphics[width=0.65\textwidth]{\figpath stern_black1.png}\\
+{\includegraphics[width=0.65\textwidth]{\figpath Figures/stern_black1.png}\\
 %\textsc{\large Department of Economics}\\
 [1.5in]
 }
@@ -45,7 +47,8 @@ The most recent version of this document, and related materials,
 will be posted at
 
 \vspace*{\parskip}
-\centerline{\url{http://www.stern.nyu.edu/GEMatter}.}
+%\centerline{\url{http://www.stern.nyu.edu/GEMatter}.}
+\centerline{\url{https://github.com/DaveBackus/Amazon_Global_Economy}.}
 
 %\vspace{0.15 in}
 This version was created \today.
@@ -56,7 +59,7 @@ Copyright \copyright \ \number\year \ by New York University's Center for Global
 \begin{minipage}{0.9in}
 \begin{flushleft}
 \vspace{0.12in}
-\includegraphics[width=0.9in]{../Figures/by_sa.pdf} \\
+\includegraphics[width=0.9in]{\figpath Figures/by_sa.pdf} \\
 \vfill
 \vspace{0.27in}
 \phantom{m}
@@ -77,8 +80,8 @@ Copyright \copyright \ \number\year \ by New York University's Center for Global
 % check this out re spacing after ch title
 % http://tex.stackexchange.com/questions/33982/paragraph-spacing-affecting-table-of-contents?rq=1
 
-% reduce spacing in toc
-\parskip = 0.0\bigskipamount
+% reduce spacing in toc (does this do anything?)
+%\parskip = \bigskipamount
 \tableofcontents
 %\addcontentsline{toc}{chapter}{Contents} % circular?
 %\listoffigures
@@ -98,9 +101,9 @@ The idea behind the course is to use the tools of macroeconomics
 to assess the economic performance of countries
 and the challenges facing businesses operating in them.
 We emphasize data;
-virtually every chapter includes links to useful data sources.
+virtually every chapter includes links to data sources.
 The book is designed as background reading for the in-class experience.
-It focuses on tools,
+The focus is on tools,
 leaving us to spend most of our class time on applications.
 
 We have posted all of our materials online
@@ -110,15 +113,17 @@ that they will reciprocate.
 Dave Backus, Gian Luca Clementi, Tom Cooley, Joe Foudy, Kim Ruhl, Kim Schoenholtz,
 Laura Veldkamp, Venky Venkateswaran, Paul Wachtel, Mike Waugh, and Stan Zin.
 This set of notes is available online
-through the
-\href{http://www.stern.nyu.edu/experience-stern/about/departments-centers-initiatives/centers-of-research/global-economy-business/index.htm}
-{Center for Global Economy and Business}
+%through the
+%\href{http://www.stern.nyu.edu/experience-stern/about/departments-centers-initiatives/centers-of-research/global-economy-business/index.htm}
+%{Center for Global Economy and Business}
 at
 
 \vspace*{\parskip}
-\centerline{\url{http://www.stern.nyu.edu/GEMatter}.}
+\centerline{\url{https://github.com/DaveBackus/Amazon_Global_Economy}.}
+%\centerline{\url{http://www.stern.nyu.edu/GEMatter}.}
 
-The same site includes the Stata files used to generate figures and tables.
+The same site includes all of the files used to produce the manuscript,
+including the Stata programs used to generate figures and tables.
 The online version of the notes includes color graphs
 and an extensive collection of links.
 We offer an inexpensive black-and-white printed version through Amazon,
@@ -126,9 +131,9 @@ self-published through their CreateSpace facility,
 which we were delighted with.
 %(search ``amazon self-publish'').
 
-Additional materials are available to those who ask nicely.
-That includes slides (some of us use Beamer, but most use Powerpoint),
-problem sets, exams, and R code for a variety of data sources.
+%Additional materials are available to those who ask nicely.
+%That includes slides (some of us use Beamer, but most use Powerpoint),
+%problem sets, exams, and R code for a variety of data sources.
 We're equally interested in your thoughts:  on the course,
 the materials, teaching macroeconomics, or anything else that crosses
 your mind.
