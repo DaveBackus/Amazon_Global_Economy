@@ -10,6 +10,7 @@
 ## Intermediate documents:
 *.dvi
 *.bak 
+*.tex.bak
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
 *.bbl
@@ -25,6 +26,7 @@
 *.synctex.gz
 *.synctex.gz(busy)
 *.pdfsync
+*.synctex
 
 ## Auxiliary and intermediate files from other packages:
 

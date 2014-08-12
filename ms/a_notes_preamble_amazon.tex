@@ -10,7 +10,7 @@
 %            linkcolor=black,
 %            citecolor=black,
 %            urlcolor=blue,
-            bookmarks=false,
+            bookmarks=true,
             pdfstartview={FitV},
             pdftitle={The Global Economy},
             pdfsubject={A course in macroeconomics for business students},
@@ -23,6 +23,11 @@
 \usepackage{comment}
 \usepackage{layout}
 \usepackage{booktabs}
+
+%Clean up the compiler output, so it is easier to find real problems.
+\hbadness = 12000                %Loosen under/overfull box warning
+\hfuzz = 5.0pt                  %No overfill warning is less than 5pt overhang
+\pdfoptionpdfminorversion 6     %Kill off warning  about pdf version
 
 % list spacing
 \usepackage{enumitem}
@@ -55,15 +60,20 @@
 \titleformat{\subsection}{\normalsize\bfseries\sffamily}{\thesection}{1em}{}
 \titleformat{\part}{\bfseries\huge\sffamily}{}{0pt}{Part \thepart\\}  % edited by LC
 \titleformat{\chapter}{\bfseries\huge\sffamily}{}{0pt}
-        {\ifnum\thechapter>0\resizebox{!}{25pt}{\thechapter}\\ \fi} 
+        {\ifnum\thechapter>0\resizebox{!}{25pt}{\thechapter}\\ \fi}
+%This handles the chapters that are not numbered, such as long-term overview and preface.
+\titleformat{name=\chapter,numberless}{\bfseries\huge\sffamily}{\sffamily}{0em}{}
+
+
+
 
 % LC  version
-%\usepackage[medium, compact, sf, bf]{titlesec} 
-%\titleformat{\section}{\large\bfseries\sffamily}{\thesection}{1em}{}  
-%\titleformat{\subsection}{\normalsize\bfseries\sffamily}{\thesection}{1em}{}  
-%\titleformat{\part}{\bfseries\huge\sffamily\uppercase}{}{0pt}{Part \thepart\\}  
+%\usepackage[medium, compact, sf, bf]{titlesec}
+%\titleformat{\section}{\large\bfseries\sffamily}{\thesection}{1em}{}
+%\titleformat{\subsection}{\normalsize\bfseries\sffamily}{\thesection}{1em}{}
+%\titleformat{\part}{\bfseries\huge\sffamily\uppercase}{}{0pt}{Part \thepart\\}
 %\titleformat{\chapter}{\bfseries\huge\sffamily\uppercase}{}{0pt}
-%        {\ifnum\thechapter>0\resizebox{!}{30pt}{\thechapter}\\ \fi} 
+%        {\ifnum\thechapter>0\resizebox{!}{30pt}{\thechapter}\\ \fi}
 
 % to kill off awkward pagebreaks -- manually
 \usepackage{needspace}
@@ -78,7 +88,9 @@
 % see http://tex.stackexchange.com/questions/49877/table-of-contents-spacing
 % problem:  messes up spacing and fonts of table and figure lists in toc, so killed them off
 \usepackage{tocloft}
-\renewcommand\cftchapafterpnum{\vskip10pt}
+\renewcommand\cftchapafterpnum{\vskip3pt}
+\renewcommand{\cftchapfont}{\sffamily \large}               %San serif font for chapter headings
+\renewcommand{\cftpartfont}{\sffamily \Large}               %San serif font for part headings
 
 %%%%%%%%%%%%%%%%%%%%%%Margins%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % http://en.wikibooks.org/wiki/LaTeX/Page_Layout

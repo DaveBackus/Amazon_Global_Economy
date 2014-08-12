@@ -51,7 +51,7 @@ local temp3 = m(2002m8);
 
 *Make the figure.  The first 2 lines plot the 4 data series. The rest of the code formats the figure.;
 *Note: if you name the graphs they will open as tabs in the viewer, rather than replace the previous graph.; 
-graph twoway tsline idx_eu idx_jp  idx_ch idx_al if tin(2001m1, 2012m6), 
+graph twoway tsline idx_eu idx_jp  idx_ch idx_al if tin(2001m1, 2014m6), 
 	lp(solid dash dash_dot longdash_dot ) lc(blue red black purple)
 	ylab(,nogrid tp(outside))
 	tlab(2001m1 2003m1 2005m1 2007m1 2009m1 2011m7,nogrid tp(outside))
@@ -139,7 +139,7 @@ local temp = m(2004m3);
 
 *Make the figure.  The first line plots the 2 data series. The rest of the code formats the figure.;
 *Note: if you name the graphs they will open as tabs in the viewer, rather than replace the previous graph.; 
-graph twoway (tsline  dep inf_diff  if tin(2000m1, 2011m6), lc(blue red) lp(solid dash)  
+graph twoway (tsline  dep inf_diff  if tin(2000m1, 2014m6), lc(blue red) lp(solid dash)  
 	ylab(,nogrid tp(outside) axis(1))
 	tti("")
 	yti("{bf} Rate (percent)", margin(medsmall) axis(1))

@@ -19,7 +19,7 @@ set more off;
 
 *All the figures in this chapter cover the same timespan.;
 local start_date "1960q1";
-local end_date "2013q2";
+local end_date "2014q2";
 
 *********************************Figure: US GDP levels and growth rates*********************************************;
 * GDPC1 = real GDP (quarterly);
@@ -181,20 +181,31 @@ graph export us_emp_gdp.eps, replace;
 * GDPC1 = real GDP (quarterly);
 * SP500 = S&P 500 price index (daily);
 
+*FRED doesn't carry historical S&P500 data anymore.  (Thanks, lawyers.);
+insheet using sp500.csv, clear;
+rename date temp;
+*Turn the string into a date;
+gen temp2 = date(temp, "MDY");	format temp2 %td;
+*Extract the quarterly dates;		
+gen date = qofd(temp2); 			format date %tq;
+*Average to get a quarterly value;
+collapse (mean) SP500=close, by(date);
+save temp.dta, replace;
+
+*The old code.  Keep it around in case FRED gets SP data back.;
 *Load all the data we will need from FRED. It's easiest to grab all the annual, monthly and quarterly data separately;  
 *Drop the FRED supplied string variable "date" and create a STATA date variable.; 
 *We will save the data to a temporary file so that we can transform the weekly data, then;
 *merge the two variables into one dataset.;
-freduse SP500,clear;
-drop date;
-format daten %td;
-gen date = qofd(daten);
-format date %tq;
-
+*freduse SP500,clear;
+*drop date;
+*format daten %td;
+*gen date = qofd(daten);
+*format date %tq;
 *The collapse command tranforms the daily data into quarterly by averaging the daily observations.;
 *We will save the data to a temporary file so that we can merge it with the quarterly variables;
-collapse (mean) SP500, by(date);
-save temp.dta, replace;
+*collapse (mean) SP500, by(date);
+*save temp.dta, replace;
 
 *Load all the data we will need from FRED. Drop the FRED supplied string variable "date";
 *and create a STATA date variable.;

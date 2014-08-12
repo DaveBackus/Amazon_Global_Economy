@@ -2,9 +2,9 @@
 clear all;
 set varabbrev off;
 set more off;
-cd "C:\Users\kruhl\ge-textbook\Tables";
+cd "C:\Users\kruhl\GitHub\Amazon_Global_Economy\Tables";
 
-local table_year = 2012;		/*Year of the data for the table*/
+local table_year = 2013;		/*Year of the data for the table*/
 
 
 /*TABLE 18.1*/

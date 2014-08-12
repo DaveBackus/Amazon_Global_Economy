@@ -62,7 +62,7 @@ local temp2 = q(2008q1);
 *Make the figure.  The first line plots the 2 data series. The date range is specified in the "tin" statement.;
 *The second line plots the arrow.  The rest of the code formats the figure. Note: if you name the graphs;
 *they will open as tabs in the viewer, rather than replace the previous graph.;  
-twoway  (tsline gdp_gr ind_gr if tin(1960q1, 2013q2), lp(solid dash) lc(blue red))
+twoway  (tsline gdp_gr ind_gr if tin(1960q1, 2014q2), lp(solid dash) lc(blue red))
 		(pcarrow y1 x1 y2 x2, lc(black) mc(black)),
 		ylab(,nogrid tp(outside))
 		tlab(,nogrid tp(outside))
@@ -84,19 +84,31 @@ graph export us_gdp_indprod.eps, replace;
 * SP500 = S&P 500 price index (daily);
 * INDPRO = industrial production index (monthly);
 
-*Load all the data we will need from FRED. It's easiest to grab all the annual, monthly and quarterly data separately;  
-*Drop the FRED supplied string variable "date" and create a STATA date variable.; 
-freduse SP500, clear;
-drop date;
-format daten %td;
-gen date = mofd(daten);
-format date %tm;
+*FRED doesn't carry historical S&P500 data anymore.  (Thanks, lawyers.);
+insheet using sp500.csv, clear;
+rename date temp;
+*Turn the string into a date;
+gen temp2 = date(temp, "MDY");	format temp2 %td;
+*Extract the monthly dates;		
+gen date = mofd(temp2); 			format date %tm;
+rename close SP500;
+save temp.dta, replace;
 
+
+*Load all the data we will need from FRED. It's easiest to grab all the annual, monthly and quarterly data separately;  
+
+*Old code;
+*Drop the FRED supplied string variable "date" and create a STATA date variable.; 
+*freduse SP500, clear;
+*drop date;
+*format daten %td;
+*gen date = mofd(daten);
+*format date %tm;
 *The collapse command tranforms the daily data into monthly by averaging the daily observations.;
 *We will save the data to a temporary file so that we can transform the monthly data, then;
 *merge the two variables into one dataset.;
-collapse (mean) SP500, by(date);
-save temp.dta, replace;
+*collapse (mean) SP500, by(date);
+*save temp.dta, replace;
 
 *Load the data from FRED.;
 *Drop the FRED supplied string variable "date" and create a STATA date variable.;
@@ -118,7 +130,7 @@ gen sp5_gr = (S12.SP500/L12.SP500)*100;
 
 *Make the figure. The date range is specified in the "tin" statement. The yline and xline commands draw;
 *horizontal and vertical lines in the plot. The rest of the code formats the figure.;  
-xcorr ind_gr sp5_gr if tin(1960m1, 2010m12),
+xcorr ind_gr sp5_gr if tin(1960m1, 2013m12),
 	yline(0, lc(black) lw(thin))
 	xline(0, lc(black) lw(thin))
 	lcolor(black) mcolor(black)
@@ -184,7 +196,7 @@ gen hrs_gr = (S12.AWHMAN/L12.AWHMAN)*100;
 *The date range is specified in the "tin" statement. The yline and xline commands draw;
 *horizontal and vertical lines in the plot. The rest of the code formats the figure.; 
 local start_date "1968m1";
-local end_date "2010m12";
+local end_date "2013m12";
 xcorr ind_gr emp_gr if tin(`start_date', `end_date'),
 	yline(0, lc(black) lw(thin))
 	xline(0, lc(black) lw(thin))
@@ -274,7 +286,7 @@ gen purch_gr = (S12.NAPM/L12.NAPM)*100;
 *The date range is specified in the "tin" statement. The yline and xline commands draw;
 *horizontal and vertical lines in the plot. The rest of the code formats the figure.; 
 local start_date "1961m1";
-local end_date "2010m12";
+local end_date "2013m12";
 xcorr ind_gr permit_gr if tin(`start_date', `end_date'),
 	yline(0, lc(black) lw(thin))
 	xline(0, lc(black) lw(thin))
@@ -343,6 +355,9 @@ graph export xcsurvey.eps, replace;
 * INDPRO = industrial production index (monthly);
 * IC4WSA = 4-week moving average of initial claims (weekly);
 
+local start_date 1970m1;
+local end_date 2014m5;
+
 *Load all the data we will need from FRED. It's easiest to grab all the annual, monthly and quarterly data separately;  
 *Drop the FRED supplied string variable "date" and create a STATA date variable.; 
 *We will save the data to a temporary file so that we can transform the weekly data, then;
@@ -389,7 +404,7 @@ local temp = m(1990m1);
 *Make the figure.  The first line plots the data.  The yline commands draw horizontal lines at the;
 *mean, mean+s.d., and mean-s.d.  The other lines are formatting.  Name the figure to save it to memory;
 *we will combine figures later.;
-twoway scatter ind_gr date if tin(1970m1, 2013m5), mstyle(none) connect(direct) lc(black)
+twoway scatter ind_gr date if tin(`start_date', `end_date'), mstyle(none) connect(direct) lc(black)
 	yline(`r(mean)', lc(black))
 	yline(`meanplus', lc(black) lpattern(dash))
 	yline(`meanminus', lc(black) lpattern(dash))
@@ -408,7 +423,7 @@ qui sum emp_gr;
 local meanplus = `r(mean)'+`r(sd)';
 local meanminus = `r(mean)'-`r(sd)';
 local temp = m(1992m1); 
-twoway scatter emp_gr date if tin(1970m1, 2013m5),
+twoway scatter emp_gr date if tin(`start_date', `end_date'),
 	mstyle(none) connect(direct) lc(black)
 	yline(`r(mean)', lc(black))
 	yline(`meanplus', lc(black) lpattern(dash))
@@ -435,7 +450,7 @@ local meanplus = `r(mean)'+`r(sd)';
 local meanminus = `r(mean)'-`r(sd)';
 local temp = m(1988m6); 
 local temp2 = m(1992m1);
-twoway scatter IC4WSA date if tin(1970m1, 2013m5),
+twoway scatter IC4WSA date if tin(`start_date', `end_date'),
 	mstyle(none) connect(direct) lc(black)
 	yline(`r(mean)', lc(black))
 	yline(`meanplus', lc(black) lpattern(dash))
@@ -456,7 +471,7 @@ local meanplus = `r(mean)'+`r(sd)';
 local meanminus = `r(mean)'-`r(sd)';
 local temp = m(1996m1); 
 local temp2 = m(1990m1);
-twoway scatter HOUST date if tin(1970m1, 2013m5),
+twoway scatter HOUST date if tin(`start_date', `end_date'),
 	mstyle(none) connect(direct) lc(black)
 	yline(`r(mean)', lc(black))
 	yline(`meanplus', lc(black) lpattern(dash))
