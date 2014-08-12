@@ -50,8 +50,8 @@
 \usepackage[indentunit=2.0em, justific=RaggedRight, columnsep=2.5em]{idxlayout}
 
 %Turn off ligatures to make pdf searchable, turn on ligatures to make font pretty
-%\usepackage{microtype}
-%\DisableLigatures{encoding = *, family = * }
+\usepackage{microtype}
+\DisableLigatures{encoding = *, family = * }
 
 % Adjust fonts for chapter and section headings
 % old version
@@ -91,6 +91,7 @@
 \renewcommand\cftchapafterpnum{\vskip3pt}
 \renewcommand{\cftchapfont}{\sffamily \large}               %San serif font for chapter headings
 \renewcommand{\cftpartfont}{\sffamily \Large}               %San serif font for part headings
+\renewcommand{\cftsecfont}{\sffamily}               %San serif font for part headings
 
 %%%%%%%%%%%%%%%%%%%%%%Margins%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % http://en.wikibooks.org/wiki/LaTeX/Page_Layout
