@@ -22,11 +22,11 @@
 
 ## Build tool auxiliary files:
 *.fdb_latexmk
-*.syntex 
+*.synctex 
 *.synctex.gz
 *.synctex.gz(busy)
 *.pdfsync
-*.synctex
+
 
 ## Auxiliary and intermediate files from other packages:
 
@@ -87,3 +87,4 @@ sympy-plots-for-*.tex/
 
 # xindy
 *.xdy
+*.synctex
