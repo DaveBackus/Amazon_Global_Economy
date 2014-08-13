@@ -4,6 +4,11 @@ set varabbrev off;
 set more off;
 cd "C:\Users\kruhl\GitHub\Amazon_Global_Economy\Tables";
 
+**August 2014 -- KR;
+**DO NOT USE.  The FRED BOP stuff just isn't very useful right now.  It's easier to update the table by hand from BEA.;
+
+
+
 local table_year = 2013;		/*Year of the data for the table*/
 
 
@@ -42,17 +47,19 @@ qui sum NET_CAPINC if year == `table_year';
 
 /*Net Taxes and Transfers from ROW*/
 
-gen NET_TAXESTRANS = BOPGA;
+gen NET_TAXESTRANS = BOPGA + BOPCATA;
 qui sum NET_TAXESTRANS if year == `table_year';
 	file write fout "Unilateral Current Transfers from ROW     & $"  %8.1fc (r(mean)) "$ \\" _n;
 
 
 /*Current Account*/
 
-gen NET_CC = BOPBCAA;
+gen NET_CC = BOPBCAA + BOPCATA;
 qui sum NET_CC if year == `table_year';
-	file write fout "\textbf{Current Account}     & $\mathbf{"  %8.1fc (r(mean)) "}$ \\" _n;
+	file write fout "\textbf{Current and Capital Account}     & $\mathbf{"  %8.1fc (r(mean)) "}$ \\" _n;
 file write fout "\addlinespace" _n;
+
+*************************************************************************************************************;
 
 /*Net Direct Investment in US*/
 
@@ -79,7 +86,7 @@ qui sum NET_LOANS if year == `table_year';
 
 gen NET_CAPITALFINACCOUNT = BOPCATA + BOPOA + BOPIA + BOPIPCA;
 qui sum NET_CAPITALFINACCOUNT if year == `table_year';
-	file write fout "\textbf{Capital and Financial Account (inflows)}     & $\mathbf{"  %8.1fc (r(mean)) "}$ \\" _n;
+	file write fout "\textbf{Financial Account (inflows)}     & $\mathbf{"  %8.1fc (r(mean)) "}$ \\" _n;
 file write fout "\addlinespace" _n;
 
 /*Statistical Discrepancy*/

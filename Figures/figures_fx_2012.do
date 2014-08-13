@@ -54,7 +54,7 @@ local temp3 = m(2002m8);
 graph twoway tsline idx_eu idx_jp  idx_ch idx_al if tin(2001m1, 2014m6), 
 	lp(solid dash dash_dot longdash_dot ) lc(blue red black purple)
 	ylab(,nogrid tp(outside))
-	tlab(2001m1 2003m1 2005m1 2007m1 2009m1 2011m7,nogrid tp(outside))
+	tlab(2001m1 2003m1 2005m1 2007m1 2009m1 2011m1 2013m1 2015m1,nogrid tp(outside))
 	tti("")
 	yti("{bf} January 2001 = 100", margin(medsmall))
 	text(110 `temp' "Yen")
@@ -98,6 +98,7 @@ local temp = m(1998m6);
 graph twoway (tsline  dep inf_diff, lc(blue red) lp(solid dash)  
 	ylab(0 20 40 60 80 100,nogrid tp(outside) axis(1))
 	tti("")
+	tlab(1985m1 1990m1 1995m1 2000m1 2005m1,nogrid tp(outside))
 	yti("{bf} Rate (percent)", margin(medsmall) axis(1))
 	text(110 `temp' "Exchange rate depreciation", place(s))
 	text(38 `temp' "Inflation" "differential", place(e) justification(left))
