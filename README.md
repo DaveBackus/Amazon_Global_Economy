@@ -7,6 +7,6 @@ Materials for NYU's Global Economy course text:  LaTeX files, figures, etc.  All
  * More [course materials] (https://github.com/DaveBackus/Global_Economy) (slides, problem sets, etc) 
  * One version of [the course]  (https://sites.google.com/site/nyusternglobal/home) 
 
-Send questions and comments to Dave Backus and Kim Ruhl at NYU.  
+Send questions and comments to Dave Backus and Kim Ruhl at NYU.  Or add them on our wiki (see wiki link to the right, write access might require a GitHub account, which you should have anyway). 
 
 Part of the #nyuecon collection.
