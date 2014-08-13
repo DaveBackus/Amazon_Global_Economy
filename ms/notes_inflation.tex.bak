@@ -138,9 +138,13 @@ both variables for the US.
 The figure suggests that the theory is a reasonable approximation of the data, at least
 over the last fifty years or so.
 The two increasing lines ($P$ and $M/Y$)
-show some short-run differences, but their movements are similar.
-Velocity itself wiggles around a little, but is not
-much different now than it was in 1960.
+show some differences, but their long-run movements are similar.
+Overall, velocity has been flat, 
+but since the financial crisis of 2007-09 it has 
+fallen amid record low interests. 
+Time will tell whether or not the change is temporary.  
+%Velocity itself wiggles around a little, but is not
+%much different now than it was in 1960.
 %
 \begin{figure}[ht]
     \caption{The quantity theory in the long run.}
@@ -150,10 +154,10 @@ much different now than it was in 1960.
 \end{figure}
 %
 
-The evidence for short-run changes is much different.
+The short-run evidence for the quantity theory is much weaker.  
 When we look at year-on-year growth rates,
 as we do in Figure~\ref{fig:quantity_short},
-velocity has as much short-run volatility as $M/Y$.
+we see that velocity has as much short-run volatility as $M/Y$.
 As a consequence,
 movements in prices are virtually unrelated to movements in money.
 To put it bluntly, the quantity theory is a poor guide to short-run fluctuations
