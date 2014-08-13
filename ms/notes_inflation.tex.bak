@@ -142,7 +142,7 @@ show some short-run differences, but their movements are similar.
 Velocity itself wiggles around a little, but is not
 much different now than it was in 1960.
 %
-\begin{figure}[h]
+\begin{figure}[ht]
     \caption{The quantity theory in the long run.}
     \label{fig:quantity_long}
     \centering
@@ -163,7 +163,7 @@ in inflation\index{inflation} rates.\index{quantity theory of money|)}
 %figure out the impact of monetary policy on real output,
 %inflation, and interest rates.
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \caption{The quantity theory in the short run.}
     \label{fig:quantity_short}
     \centering
@@ -552,9 +552,9 @@ Even official transactions were switched to either US dollars or
 Answer.  There's a long tradition of each country having its own currency,
 but there's good reason to think at least some countries would be better
 off using someone else's.
-Zimbabwe has shown no ability to manage it99s own currency effectively,
+Zimbabwe has shown no ability to manage it's own currency effectively,
 so using another sounds like a move in the right direction.
-There are other examples --- Panama and Colombia use the US dollar --- and perhaps there should be more.
+There are other examples --- Panama and Ecuador use the US dollar --- and perhaps there should be more.
 
 \item Interest rates and inflation.  Go to
 \href{http://research.stlouisfed.org/fred2/}{FRED} and find

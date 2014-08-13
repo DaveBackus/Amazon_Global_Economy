@@ -338,7 +338,8 @@ while the correlations are
 smaller than with (say) employment, the leads are substantial
 (ten months or so).
 The next two are popular private surveys.
-\href{http://research.stlouisfed.org/fred2/series/UMCSENT}{consumer sentiment}, based on a survey of consumers
+\href{http://research.stlouisfed.org/fred2/series/UMCSENT}{Consumer sentiment},
+based on a survey of consumers
 collected by the University of Michigan, reflects consumers' optimism about current and future economic conditions.
 The \href{http://research.stlouisfed.org/fred2/series/NAPM}{purchasing managers index} is what we call a ``diffusion index.''
 It's based on a survey of purchasing managers who report whether
@@ -433,7 +434,7 @@ There are private indicators also,
 but the government indicators are widely used and publicly available.
 
 In the business-cycle scorecard\index{business cycle!scorecard},
-we rate each pro-cyclical indicators \index{cyclical indicators}
+we rate each pro-cyclical indicator \index{cyclical indicators}
  as strong positive if
 the current value of the indicator is above the
 ``mean plus one standard deviation'' line,
@@ -446,14 +447,18 @@ For   countercyclical   \index{business cycle!countercyclical}
 for example, strong positive means below the ``mean minus one standard deviation'' line.
 
 This is a rough cut, to be sure, but a useful one.
-It leads to this summary of economic conditions as of June 2013
+It leads to this summary of economic conditions as of August 2014
 based on the four indicators we have seen so far:
 \begin{itemize}
-    \item Industrial production:  Production varied in recent months, but shows a modest growth trend. Assessment:  weak negative
+    \item Industrial production:
+    Growth has been close to the mean over the last couple years.
+    Assessment:  weak positive.
 
-    \item Employment growth:  The most recent numbers show steady but modest gains, slightly below average. Assessment:  weak negative.
+    \item Employment growth:  The most recent numbers show steady moderate growth.
+    Assessment:  weak positive.
 
-    \item New claims:  They are the only countercyclical indicator in our list. They have fallen dramatically over the last two years, and are now slightly below the long-run average. Assessment:  weak positive.
+    \item New claims:  They are the only countercyclical indicator in our list. They have fallen dramatically over the last two years, and are now below the long-run average.
+        Assessment:  weak positive.
 
     \item Housing starts:  They remain very low by historical standards, although there has been improvement since 2009. Assessment:  strong negative.
 \end{itemize}
@@ -467,20 +472,19 @@ based on the four indicators we have seen so far:
             &  Strong    &  Weak  &  Weak   &  Strong  \\
 Indicator   &  Negative  & Negative & Positive & Positive \\
 \midrule
-Industrial production  &&x&  \\
-Employment             && x &  \\
+Industrial production  & &  & x \\
+Employment             & &  & x \\
 New Claims             && &x \\
 Housing starts         & x &  \\
 \midrule
-Summary                & 1 & 2 & 1 & 0 \\
+Summary                & 1 & 0 & 3 & 0 \\
 \bottomrule
 \end{tabular}
 \label{tab:scorecard}
 \end{table}
 
-These assessments are collected in Table \ref{tab:scorecard}
-for a recent date.
-Overall, we see three negatives and one positives,
+These assessments are collected in Table \ref{tab:scorecard}.
+Overall, we see three weak positives and one strong negative,
 a mixed set of signals that's not unusual.
 A more extensive analysis would use more indicators,
 decide how much weight to give each one,
@@ -748,7 +752,8 @@ Ditto the WSJ, Yahoo, etc.
 %{\it Business Cycle Indicators Handbook\/}.
 
 \item The CME has a nice report,
-``Impact of economic indicators on CME group markets,''
+``\href{http://www.cmegroup.com/education/featured-reports/impact-of-economic-indicators.html}
+{Impact of economic indicators},''
 on the information content of common indicators for futures prices.
 %\href{http://www.cmegroup.com/trading/economic-events/files/Economic-Indicators-WhitePaper.pdf}
 
@@ -766,7 +771,7 @@ on the information content of common indicators for futures prices.
 %%See \href{http://nber.org/releases/}{link}.
 \end{itemize}
 %
-Most statistical software packages have a one-line command to compute
+Most statistical software packages have one-line commands to compute
 cross-correlation functions.
 You can also do it in a spreadsheet, but it's a lot more cumbersome.
 
@@ -788,7 +793,7 @@ Symbol & Definition\\
 $\mathrm{ccf}$             &Cross-correlation function \\
 $\mathrm{ccf}(k)$         &Correlation of ($x_t, y_{t-k}$) at lag $k$\\
 $\gamma_{t,t+k}$         &Continuously compounded growth rate from $t$ to $t+k$\\
-$\hat{x}$                & Estimate of $x$\\
+$\widehat{x}$                & Estimate of $x$\\
 $f_t$                     & Futures price at time $t$\\
 %$p_m$                     &Price of an $m$-year zero-coupon bond \index{bond}\\
 %$y_m$                     &yield \index{bond!bond yield}

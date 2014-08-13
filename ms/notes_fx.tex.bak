@@ -140,7 +140,7 @@ by the Chinese central bank \index{central bank} at a value of about eight yuan 
 More on this in the next chapter.
 
 %
-\begin{figure}[h!]
+\begin{figure}[!ht]
     \caption{The US dollar against other major currencies.}
     \label{fig:exch_rates}
     \centering
@@ -201,9 +201,9 @@ with entertainment, computes dollar prices of the Big Mac around the
 world.
 The idea is that it's the same product everywhere, so differences
 in prices reflect deviations from the law of one price.
-In July 2012, Big Mac prices were \$4.33 in the US,
-\$4.34 in the Euro Zone, \$4.09 in Japan, \$4.16 in Argentina,
-and \$2.45 in China. The price differences also vary
+In July 2014, Big Mac prices were \$4.80 in the US,
+\$4.95 in the Euro Zone, \$3.64 in Japan, \$2.57 in Argentina,
+and \$2.73 in China. The price differences also vary
 widely over time. For example, In January 2006, Big Mac prices  were \$3.15 in the US,
 \$3.55 in the Euro Zone, \$2.19 in Japan, \$2.50 in Argentina,
 and \$2.45 in China. Perhaps it's no surprise that the law of one price doesn't hold --- you can imagine the mess involved in trying to arbitrage price
@@ -306,7 +306,7 @@ but like everything we know about exchange rates,
 not very useful for short-term movements outside very
 very-high-inflation situations.
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \caption{Venezuelan depreciation and inflation differential.}
     \label{fig:venezuela}
     \centering
@@ -333,7 +333,7 @@ probably had nothing to do with central bank \index{central bank} interventions.
 In developed countries, it's not unusual to see deviations of
 the real exchange rate from one of 30-40 percent in either direction.
 Figure~\ref{fig:us_euro} shows this for the dollar-euro.
-\begin{figure}[h]
+\begin{figure}[ht]
     \caption{Dollar versus euro and inflation differential.}
     \label{fig:us_euro}
     \centering
@@ -482,7 +482,7 @@ it's very hard to beat a random walk consistently.
 
 \section*{Executive summary}
 
-\setlength{\leftmargini}{.5\oldleftmargini}
+%\setlength{\leftmargini}{.5\oldleftmargini}
 \begin{enumerate}
 \item In the long run, exchange rates tend to
 equalize prices of products across countries (PPP).
@@ -490,11 +490,12 @@ equalize prices of products across countries (PPP).
 \item In the short run, exchange-rate movements are large
 and unpredictable.
 \end{enumerate}
-\setlength{\leftmargini}{\oldleftmargini}
+%\setlength{\leftmargini}{\oldleftmargini}
+
 
 \section*{Review questions}
 
-\setlength{\leftmargini}{.5\oldleftmargini}
+%\setlength{\leftmargini}{.5\oldleftmargini}
 \begin{enumerate}
 \item Purchasing power parity for Big Macs.
 The Economist reports the following data for
@@ -590,10 +591,8 @@ Since the Euro interest rate is higher, we'd expect the euro to increase in valu
 Neither works well:  an $R^2$ of 0.05 would be good over
 periods of a few months.\index{interest rate|)}
 \end{enumerate}
-\setlength{\leftmargini}{\oldleftmargini}
+%\setlength{\leftmargini}{\oldleftmargini}
 
-
-%\end{comment}
 
 \section*{If you're looking for more}
 

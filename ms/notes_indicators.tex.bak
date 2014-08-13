@@ -166,7 +166,7 @@ And if the correlation is --0.8,
 observations with large values of $x$
 tend to have small values of $y$ --- and vice versa.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
     \caption{Cross-correlations: the S\&P 500 and industrial production.}
     \label{fig:ccf-sp500}%
     \centering
@@ -384,7 +384,7 @@ one standard deviation (the dashed lines).
 The lines are useful benchmarks for telling how strong the
 current value of an indicator is relative to past experience.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
      \caption{Industrial production and employment.}
     \label{fig:ip_emp}%
     \centering
@@ -396,7 +396,7 @@ current value of an indicator is relative to past experience.
     \end{minipage}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
     \caption{New claims and housing starts.}
     \label{fig:newclaims_hs}%
     \centering
@@ -459,7 +459,7 @@ based on the four indicators we have seen so far:
 \end{itemize}
 
 
-\begin{table}[h!]
+\begin{table}[!ht]
 \centering
 \caption{Business-cycle scorecard in action} %:  US economic conditions in January 2010.}
 \begin{tabular}{lcccc}
@@ -622,7 +622,7 @@ about the future.
 
 \section*{Executive summary}
 
-\setlength{\leftmargini}{.5\oldleftmargini}
+%\setlength{\leftmargini}{.5\oldleftmargini}
 \begin{enumerate}
 \item Fluctuations in economic activity can be (partially)
 predicted by a number of indicators.
@@ -633,11 +633,12 @@ for example, whether one indicator leads another.
 
 \item Markets are useful aggregators of information --- and increasingly popular sources of economic forecasts.
 \end{enumerate}
-\setlength{\leftmargini}{\oldleftmargini}
+%\setlength{\leftmargini}{\oldleftmargini}
+
 
 \section*{Review questions}
 
-\setlength{\leftmargini}{.5\oldleftmargini}
+%\setlength{\leftmargini}{.5\oldleftmargini}
 \begin{enumerate}
 \item Terminology. Consider economic indicators in general.
 \begin{enumerate}
@@ -719,12 +720,13 @@ but if they are, we'd expect futures markets to do as well as any
 other method.  To implement the idea, you'd need to define (and
 possibly quantify) a terrorist event.
 \end{enumerate}
-\setlength{\leftmargini}{\oldleftmargini}
+%\setlength{\leftmargini}{\oldleftmargini}
+
 
 \section*{If you're looking for more}
 
 There are many sources of leading indicators around the world
-and lots of guides to them.
+and almost as many guides to them.
 Among them:
 %
 \begin{itemize}

@@ -226,8 +226,8 @@ You should recognize this as equation (\ref{eq:gbc-bdynamics1})
 in slightly different form.
 Here's how it looks with real numbers.
 
-{\bf Example (US, 2012).}
-Consider US government debt and deficits in 2012,
+{\bf Example (US, 2013).}
+Consider US government debt and deficits in 2013,
 expressed in trillions of US dollars:
 
 \begin{center}
@@ -785,7 +785,7 @@ $Y$    &Nominal GDP\\
 \end{table}
 
 \needspace{8\baselineskip}
-\begin{table}[htb]
+\begin{table}[H]
 \centering
 \caption{Data table.}
 \begin{tabular*}{0.9\textwidth}{l@{\extracolsep{\fill}}l}

@@ -1,7 +1,7 @@
 \chapter{Mathematics Review}\label{chp:math}
 \hypertarget{math}{}
 
-\input{Blurbs/blurbs_math}
+\input{\blurbpath Blurbs/blurbs_math}
 \rule{\textwidth}{1pt}
 
 Mathematics is a precise and efficient language for expressing quantitative ideas,
@@ -611,7 +611,7 @@ All of the series used in this book are listed in what FRED calls
 a Published Data List:
 
 \vspace*{\parskip}
-\centerline{\url{http://research.stlouisfed.org/pdl/???},}
+\centerline{\url{http://research.stlouisfed.org/pdl/649},}
 
 Names of relevant variables are listed at the end of every chapter.
 
@@ -734,7 +734,10 @@ Answer.  4.889, 1.616.
 What is the most recent data point?
 \item Based on these graphs, how are recessions reflected in these three series?
 \end{enumerate}
-Helpful hints: Usually, you will be asked to find the data yourself, so you should familiarize yourself with the various Categories of data on FRED. For this exercise, you can find the data by typing the series name (e.g., PCEPI) into the search box on the FRED website. Doing so will produce a simple graph of the entire series. To alter the graph settings, click ``Edit Graph.'' The new page provides options to change the graph scale, line style, line width, mark type/width, color, date range, frequency, and units. Set the date range as instructed. For example, to graph the percentage change from a year ago, change the ``Units.'' To graph the ratio of two series, graph the first series and click ``Edit Graph.'' Near the bottom of the page, click ``Add Data Series.'' Then click ``Line 1'' and search for the second series. In the ``Formula'' box, type ``a/b''. Use the ``Redraw Graph'' command at the bottom of the page to show the new graph.
+Helpful hints: Usually you will be asked to find the data yourself, so you should familiarize yourself with the various categories of data on FRED. For this exercise, you can find the data by typing the series name (e.g., PCEPI) into the search box on the FRED website. Doing so will produce a simple graph of the entire series.  Set the date range using the start and end boxes above the graph.  To alter the graph settings, click ``Graph Settings.'' The drop down box provides options to change the graph type and font.  Or, you can click ``Edit Data Series 1" to alter the line style, line width, mark type/width, color, frequency, and units. For example, to graph the percentage change from a year ago, change the ``Units.''
+
+To graph the ratio of two series, graph the first series and click ``Add Data Series'' and  choose ``Modify Existing Series."  Search for the second series, and click  ``Add Series." Under ``Edit Data Series 1," click ``Create your own data transformation," then type ``a/b" in the formula box and click ``Apply."
+
 
 
 \begin{comment}
