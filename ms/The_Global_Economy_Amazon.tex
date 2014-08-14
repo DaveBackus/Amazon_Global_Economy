@@ -86,7 +86,8 @@
 %%%%%%%%%%%%%%%%%%%%%Index Stuff%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Add the index to the TOC
 \clearpage
-\addcontentsline{toc}{chapter}{\indexname}
+\addcontentsline{toc}{part}{\indexname}
+%\addcontentsline{toc}{chapter}{\indexname} KR: index should not be a chapter of Crises and other Topics
 
 %%This command is a cludge to get a line break in the index.  The negative hspace is the twice the "indentunit," set in the preamble.
 \newcommand*\idxbreak{\\ \hspace{4em}}
