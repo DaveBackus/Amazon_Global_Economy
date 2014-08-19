@@ -63,7 +63,7 @@ graph twoway tsline gdp_gr if tin(`start_date', `end_date'), lp(solid) lc(blue)
 
 *Combine the 4 plots into one plot.  Save the figure.  On a PC, you can't directly save to PDF.;
 graph combine gdp_graph gdp_gr_graph, cols(1) graphregion(color(white));
-graph export us_gdp.eps, replace;
+graph export us_gdp.eps, replace fontface(Times);
 
 
 ****************************Figure: US GDP, consumption, investment growth rates************************************;
@@ -118,7 +118,7 @@ graph twoway (tsline gdp_gr con_gr inv_gr if tin(`start_date', `end_date'), lp(s
 	name(us_inv_cons_gdp);
 
 *Save the figure.  On a PC, you can't directly save to PDF.;
-graph export us_inv_cons_gdp.eps, replace; 
+graph export us_inv_cons_gdp.eps, replace fontface(Times); 
 
 
 ****************************Figure: US GDP, consumption, investment growth rates************************************;
@@ -175,7 +175,7 @@ graph twoway tsline gdp_gr emp_gr if tin(`start_date', `end_date'), lp(solid das
 	name(us_emp_gdp);
 
 *Save the figure.  On a PC, you can't directly save to PDF.;
-graph export us_emp_gdp.eps, replace;  
+graph export us_emp_gdp.eps, replace fontface(Times);  
 
 ******************************Figure: US GDP, S&P 500 growth rates**************************************************;
 * GDPC1 = real GDP (quarterly);
@@ -250,5 +250,5 @@ twoway (tsline gdp_gr sp500_gr if tin(`start_date', `end_date'), lp(solid dash) 
 		graphregion(color(white));
 		
 *Save the figure.  On a PC, you can't directly save to PDF.;		
-graph export us_gdp_sp500.eps, replace;
+graph export us_gdp_sp500.eps, replace fontface(Times);
 

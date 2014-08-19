@@ -70,7 +70,7 @@ graph twoway (tsline  m_y price vel, lc(blue red black) lp(solid dash dash_dot)
 	name(long_fig));
 
 *Save the figure.  On a PC, you can't directly save to PDF.;	
-graph export long.eps, replace;
+graph export long.eps, replace fontface(Times);
 
 
 *******************************************************************************************************************;
@@ -134,7 +134,7 @@ graph twoway (tsline  hp_m_y_1 hp_vel_1, lc(blue red ) lp(solid dash ) yline(0)
 	name(short_1));
 
 *Save the figure.  On a PC, you can't directly save to PDF.;	
-graph export short_1.eps, replace;
+graph export short_1.eps, replace fontface(Times);
 
 
 *******************************************************************************************************************;
@@ -177,7 +177,7 @@ graph twoway (tsline  greek_rate infl if tin(1985m1, 2005m12), lc(blue red ) lp(
 	graphregion(color(white) ));
 
 *Save the figure.  On a PC, you can't directly save to PDF.;	
-graph export greece.eps, replace;
+graph export greece.eps, replace fontface(Times);
 
 
 

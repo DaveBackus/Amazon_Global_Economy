@@ -67,7 +67,7 @@ graph twoway tsline idx_eu idx_jp  idx_ch idx_al if tin(2001m1, 2014m6),
 	name(exchange);
 
 *Save the figure.  On a PC, you can't directly save to PDF.;		
-graph export exchange.eps, replace;
+graph export exchange.eps, replace fontface(Times);
 
 
 *******************************************************************************************************************;
@@ -108,7 +108,7 @@ graph twoway (tsline  dep inf_diff, lc(blue red) lp(solid dash)
 	name(venezuela) );
 	
 *Save the figure.  On a PC, you can't directly save to PDF.;		
-graph export venezuela.eps, replace;
+graph export venezuela.eps, replace fontface(Times);
 
 
 *******************************************************************************************************************;
@@ -152,7 +152,7 @@ graph twoway (tsline  dep inf_diff  if tin(2000m1, 2014m6), lc(blue red) lp(soli
 	name(us_eruor) );
 
 *Save the figure.  On a PC, you can't directly save to PDF.;		
-graph export us_euro.eps, replace;
+graph export us_euro.eps, replace fontface(Times);
 
 
 
