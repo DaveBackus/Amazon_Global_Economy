@@ -76,7 +76,7 @@ twoway  (tsline gdp_gr ind_gr if tin(1960q1, 2014q2), lp(solid dash) lc(blue red
 		name(us_gdp_indprod);
 
 *Save the figure.  On a PC, you can't directly save to PDF.;
-graph export us_gdp_indprod.eps, replace;
+graph export us_gdp_indprod.eps, replace fontface(Times);
 
 
 
@@ -145,7 +145,7 @@ xcorr ind_gr sp5_gr if tin(1960m1, 2013m12),
 	name(xcsp500);
 
 *Save the figure.  On a PC, you can't directly save to PDF.;
-graph export xcsp500.eps, replace;
+graph export xcsp500.eps, replace fontface(Times);
 
 
 
@@ -255,7 +255,7 @@ xcorr ind_gr hrs_gr if tin(`start_date', `end_date'),
 
 *Combine the 4 plots into one plot.  Save the figure.  On a PC, you can't directly save to PDF.;
 graph combine xemp xune xclm xhrs,graphregion(color(white) );
-graph export xclabor.eps, replace;
+graph export xclabor.eps, replace fontface(Times);
 
 
 
@@ -345,7 +345,7 @@ xcorr ind_gr purch_gr if tin(`start_date', `end_date'),
 
 *Combine the 4 plots into one plot.  Save the figure.  On a PC, you can't directly save to PDF.;
 graph combine xpermit xstart xsent xpurch,graphregion(color(white) );
-graph export xcsurvey.eps, replace;
+graph export xcsurvey.eps, replace fontface(Times);
 
 
 
@@ -440,7 +440,7 @@ twoway scatter emp_gr date if tin(`start_date', `end_date'),
 
 *Combine the 2 plots into one plot.  Save the figure.  On a PC, you can't directly save to PDF.;
 graph combine gind gemp,cols(1) graphregion(color(white) );
-graph export scorecard_1.eps, replace;
+graph export scorecard_1.eps, replace fontface(Times);
 
 
 *Same as above, but for new claims;
@@ -488,4 +488,4 @@ twoway scatter HOUST date if tin(`start_date', `end_date'),
 	
 *Combine the 2 plots into one plot.  Save the figure.  On a PC, you can't directly save to PDF.;
 graph combine gclaim gstarts,cols(1) graphregion(color(white) );
-graph export scorecard_2.eps, replace;
+graph export scorecard_2.eps, replace fontface(Times);

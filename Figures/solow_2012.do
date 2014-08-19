@@ -53,8 +53,7 @@ twoway 	(scatter Y K, mstyle(none) connect(direct) lc(red))
 		name(solow1);
 		
 *Save the figure.  On a PC, you can't directly save to PDF.;
-graph export solow1.eps, replace;
-
+graph export solow1.eps, replace fontface(Times);
 
 ********************************Figure: The effect of a higher savings rate******************************************;
 *In this figure we express everything in per-capita terms, so divide through by the population.;
@@ -82,4 +81,4 @@ twoway 	(scatter s2 k, mstyle(none) connect(direct) lc(blue) lpattern(_####) )
 		name(solow2);
 
 *Save the figure.  On a PC, you can't directly save to PDF.;
-graph export solow2.eps, replace;
+graph export solow2.eps, replace fontface(Times);
