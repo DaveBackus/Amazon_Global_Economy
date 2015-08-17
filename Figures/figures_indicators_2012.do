@@ -6,6 +6,7 @@
 
 *Kim J. Ruhl;
 *September 7, 2012;
+
 *******************************************************************************************************************;
 *******************************************************************************************************************;
 
@@ -62,10 +63,10 @@ local temp2 = q(2008q1);
 *Make the figure.  The first line plots the 2 data series. The date range is specified in the "tin" statement.;
 *The second line plots the arrow.  The rest of the code formats the figure. Note: if you name the graphs;
 *they will open as tabs in the viewer, rather than replace the previous graph.;  
-twoway  (tsline gdp_gr ind_gr if tin(1960q1, 2014q2), lp(solid dash) lc(blue red))
+twoway  (tsline gdp_gr ind_gr if tin(1960q1, 2015q2), lp(solid dash) lc(blue red))
 		(pcarrow y1 x1 y2 x2, lc(black) mc(black)),
 		ylab(,nogrid tp(outside))
-		tlab(,nogrid tp(outside))
+		tlab(1960q1(40)2020q1,nogrid tp(outside))
 		tti("")
 		yti("{bf} Growth rate (annual)", margin(medsmall))
 		text(-5 `temp' "GDP", place(s))
@@ -75,9 +76,8 @@ twoway  (tsline gdp_gr ind_gr if tin(1960q1, 2014q2), lp(solid dash) lc(blue red
 		graphregion(color(white) )
 		name(us_gdp_indprod);
 
-*Save the figure.  On a PC, you can't directly save to PDF.;
-graph export us_gdp_indprod.eps, replace fontface(Times);
-
+*Save the figure.;
+graph export us_gdp_indprod.pdf, replace fontface(Times);
 
 
 ************************Figure: Cross-correlation plot S&P 500 and industrial production****************************;
@@ -130,7 +130,7 @@ gen sp5_gr = (S12.SP500/L12.SP500)*100;
 
 *Make the figure. The date range is specified in the "tin" statement. The yline and xline commands draw;
 *horizontal and vertical lines in the plot. The rest of the code formats the figure.;  
-xcorr ind_gr sp5_gr if tin(1960m1, 2013m12),
+xcorr ind_gr sp5_gr if tin(1960m1, 2015m6),
 	yline(0, lc(black) lw(thin))
 	xline(0, lc(black) lw(thin))
 	lcolor(black) mcolor(black)
@@ -144,9 +144,8 @@ xcorr ind_gr sp5_gr if tin(1960m1, 2013m12),
 	graphregion(color(white) )
 	name(xcsp500);
 
-*Save the figure.  On a PC, you can't directly save to PDF.;
-graph export xcsp500.eps, replace fontface(Times);
-
+*Save the figure. ;
+graph export xcsp500.pdf, replace fontface(Times);
 
 
 **********Figure: 4-panel cross-correlation plot of employment indicators and industrial procution *****************;
@@ -196,7 +195,7 @@ gen hrs_gr = (S12.AWHMAN/L12.AWHMAN)*100;
 *The date range is specified in the "tin" statement. The yline and xline commands draw;
 *horizontal and vertical lines in the plot. The rest of the code formats the figure.; 
 local start_date "1968m1";
-local end_date "2013m12";
+local end_date "2015m6";
 xcorr ind_gr emp_gr if tin(`start_date', `end_date'),
 	yline(0, lc(black) lw(thin))
 	xline(0, lc(black) lw(thin))
@@ -253,10 +252,9 @@ xcorr ind_gr hrs_gr if tin(`start_date', `end_date'),
 	graphregion(color(white) )
 	name(xhrs);
 
-*Combine the 4 plots into one plot.  Save the figure.  On a PC, you can't directly save to PDF.;
-graph combine xemp xune xclm xhrs,graphregion(color(white) );
-graph export xclabor.eps, replace fontface(Times);
-
+*Combine the 4 plots into one plot.  Save the figure.;
+graph combine xemp xune xclm xhrs,graphregion(color(white) ) name(xclabor);
+graph export xclabor.pdf, replace fontface(Times);
 
 
 **********Figure: 4-panel cross-correlation plot of employment indicators and industrial procution *****************;
@@ -286,7 +284,7 @@ gen purch_gr = (S12.NAPM/L12.NAPM)*100;
 *The date range is specified in the "tin" statement. The yline and xline commands draw;
 *horizontal and vertical lines in the plot. The rest of the code formats the figure.; 
 local start_date "1961m1";
-local end_date "2013m12";
+local end_date "2015m6";
 xcorr ind_gr permit_gr if tin(`start_date', `end_date'),
 	yline(0, lc(black) lw(thin))
 	xline(0, lc(black) lw(thin))
@@ -343,10 +341,10 @@ xcorr ind_gr purch_gr if tin(`start_date', `end_date'),
 	graphregion(color(white) )
 	name(xpurch);
 
-*Combine the 4 plots into one plot.  Save the figure.  On a PC, you can't directly save to PDF.;
-graph combine xpermit xstart xsent xpurch,graphregion(color(white) );
-graph export xcsurvey.eps, replace fontface(Times);
-
+*Combine the 4 plots into one plot.  Save the figure.;
+graph combine xpermit xstart xsent xpurch,graphregion(color(white)) name(xcsurvey) ;
+ 
+graph export xcsurvey.pdf, replace fontface(Times);
 
 
 *****************************Figure: time series plots and standard deviation bands ********************************;
@@ -356,7 +354,7 @@ graph export xcsurvey.eps, replace fontface(Times);
 * IC4WSA = 4-week moving average of initial claims (weekly);
 
 local start_date 1970m1;
-local end_date 2014m5;
+local end_date 2015m6;
 
 *Load all the data we will need from FRED. It's easiest to grab all the annual, monthly and quarterly data separately;  
 *Drop the FRED supplied string variable "date" and create a STATA date variable.; 
@@ -438,9 +436,9 @@ twoway scatter emp_gr date if tin(`start_date', `end_date'),
 	nodraw
 	name(gemp);
 
-*Combine the 2 plots into one plot.  Save the figure.  On a PC, you can't directly save to PDF.;
-graph combine gind gemp,cols(1) graphregion(color(white) );
-graph export scorecard_1.eps, replace fontface(Times);
+*Combine the 2 plots into one plot.  Save the figure.;
+graph combine gind gemp,cols(1) graphregion(color(white) ) name(scorecard_1);
+graph export scorecard_1.pdf, replace fontface(Times);
 
 
 *Same as above, but for new claims;
@@ -486,6 +484,6 @@ twoway scatter HOUST date if tin(`start_date', `end_date'),
 	nodraw
 	name(gstarts);
 	
-*Combine the 2 plots into one plot.  Save the figure.  On a PC, you can't directly save to PDF.;
-graph combine gclaim gstarts,cols(1) graphregion(color(white) );
-graph export scorecard_2.eps, replace fontface(Times);
+*Combine the 2 plots into one plot.  Save the figure.;
+graph combine gclaim gstarts,cols(1) graphregion(color(white) ) name(scorecard_2);
+graph export scorecard_2.pdf, replace fontface(Times);

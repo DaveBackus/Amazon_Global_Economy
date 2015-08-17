@@ -13,8 +13,13 @@ There are 5 chapters with figures.  Each chapter has an associated STATA do-file
 5.  Exchange rate fluctuations associated file: "figures_fx_2012.d0"
 
 The comma separated file "ge_data.csv" contains a few data series that are not directly accessed from FRED through STATA.
-The comma separated file "sp500.csv" contains the sp500 data, which is no longer available from FRED.  Download it from Yahoo Finance, instead. 
+The comma separated file "sp500.csv" contains the sp500 data, which is no longer available from FRED.  Download it from Yahoo Finance, instead (historical prices on the left-hand sidebar). 
 
 The STATA do-files are written for STATA 11, and make use of the STATA user-written program "freduse."  This program can be installed by issuing the command "ssc install freduse."
+
+Update August 14, 2015
+Stata for Windows can now save figures in pdf format.  Life is a little simpler now. 
+
+Did we drop the Greek interest rate - inflation figure from the book?
 
  

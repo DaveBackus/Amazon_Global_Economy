@@ -19,7 +19,7 @@ set more off;
 
 *All the figures in this chapter cover the same timespan.;
 local start_date "1960q1";
-local end_date "2014q2";
+local end_date "2015q2";
 
 *********************************Figure: US GDP levels and growth rates*********************************************;
 * GDPC1 = real GDP (quarterly);
@@ -36,7 +36,7 @@ tsset date, quarterly;
 *They will be combined later.;  
 graph twoway tsline GDPC1 if tin(`start_date', `end_date'), lp(solid) lc(blue)  
 	ylab(,nogrid tp(crossing))
-	tlab(,nogrid tp(crossing))
+	tlab(1960q1(40)2020q1,nogrid tp(crossing))
 	tti("")
 	yti("{bf} U.S. dollars (billions)", margin(medsmall))
 	legend(bmargin(medium))
@@ -53,7 +53,7 @@ gen gdp_gr = S4.GDPC1/L4.GDPC1*100;
 *They will be combined later.;  
 graph twoway tsline gdp_gr if tin(`start_date', `end_date'), lp(solid) lc(blue)  
 	ylab(,nogrid tp(crossing))
-	tlab(,nogrid tp(crossing))
+	tlab(1960q1(40)2020q1,nogrid tp(crossing))
 	tti("")
 	yti("{bf} Year-on-year growth rate", margin(medsmall))
 	legend(bmargin(medium))
@@ -61,10 +61,9 @@ graph twoway tsline gdp_gr if tin(`start_date', `end_date'), lp(solid) lc(blue)
 	graphregion(color(white))
 	name(gdp_gr_graph);
 
-*Combine the 4 plots into one plot.  Save the figure.  On a PC, you can't directly save to PDF.;
+*Combine the 4 plots into one plot.  Save the figure.;
 graph combine gdp_graph gdp_gr_graph, cols(1) graphregion(color(white));
-graph export us_gdp.eps, replace fontface(Times);
-
+graph export us_gdp.pdf, replace fontface(Times);
 
 ****************************Figure: US GDP, consumption, investment growth rates************************************;
 * GDPC1 = real GDP (quarterly);
@@ -106,7 +105,7 @@ graph twoway (tsline gdp_gr con_gr inv_gr if tin(`start_date', `end_date'), lp(s
 	(pcarrow y1 x1 y2 x2, lc(black) mc(black))
 	(pcarrow y3 x3 y4 x4, lc(black) mc(black)),  
 	ylab(,nogrid tp(crossing))
-	tlab(,nogrid tp(crossing))
+	tlab(1960q1(40)2020q1,nogrid tp(crossing))
 	tti("")
 	yti("{bf} Year-on-year growth rate", margin(medsmall))
 	text(-30 `temp' "GDP", place(se))
@@ -117,8 +116,8 @@ graph twoway (tsline gdp_gr con_gr inv_gr if tin(`start_date', `end_date'), lp(s
 	graphregion(color(white))
 	name(us_inv_cons_gdp);
 
-*Save the figure.  On a PC, you can't directly save to PDF.;
-graph export us_inv_cons_gdp.eps, replace fontface(Times); 
+*Save the figure.;
+graph export us_inv_cons_gdp.pdf, replace fontface(Times); 
 
 
 ****************************Figure: US GDP, consumption, investment growth rates************************************;
@@ -164,7 +163,7 @@ local temp2 = q(2005q1);
 *they will open as tabs in the viewer, rather than replace the previous graph.;  
 graph twoway tsline gdp_gr emp_gr if tin(`start_date', `end_date'), lp(solid dash ) lc(blue red)  
 	ylab(,nogrid tp(crossing))
-	tlab(,nogrid tp(crossing))
+	tlab(1960q1(40)2020q1,nogrid tp(crossing))
 	tti("")
 	yti("{bf} Year-on-year growth rate", margin(medsmall))
 	legend(off)
@@ -174,8 +173,8 @@ graph twoway tsline gdp_gr emp_gr if tin(`start_date', `end_date'), lp(solid das
 	graphregion(color(white))
 	name(us_emp_gdp);
 
-*Save the figure.  On a PC, you can't directly save to PDF.;
-graph export us_emp_gdp.eps, replace fontface(Times);  
+*Save the figure.;
+graph export us_emp_gdp.pdf, replace fontface(Times);  
 
 ******************************Figure: US GDP, S&P 500 growth rates**************************************************;
 * GDPC1 = real GDP (quarterly);
@@ -240,7 +239,7 @@ replace x2 = q(1998q2) in 1; replace y2 = 2 in 1;
 twoway (tsline gdp_gr sp500_gr if tin(`start_date', `end_date'), lp(solid dash) lc(blue red))
 		(pcarrow y1 x1 y2 x2, lc(black) mc(black)),  
 		ylab(,nogrid tp(crossing))
-		tlab(,nogrid tp(crossing))
+		tlab(1960q1(40)2020q1,nogrid tp(crossing))
 		tti("")
 		yti("{bf} Year-on-year growth rate", margin(medsmall))
 		legend(off)
@@ -249,6 +248,6 @@ twoway (tsline gdp_gr sp500_gr if tin(`start_date', `end_date'), lp(solid dash) 
 		plotregion(lstyle(none)color(white) margin(medium) )
 		graphregion(color(white));
 		
-*Save the figure.  On a PC, you can't directly save to PDF.;		
-graph export us_gdp_sp500.eps, replace fontface(Times);
+*Save the figure.;		
+graph export us_gdp_sp500.pdf, replace fontface(Times);
 

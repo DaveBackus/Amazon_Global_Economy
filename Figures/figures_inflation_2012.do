@@ -69,8 +69,8 @@ graph twoway (tsline  m_y price vel, lc(blue red black) lp(solid dash dash_dot)
 	graphregion(color(white) )
 	name(long_fig));
 
-*Save the figure.  On a PC, you can't directly save to PDF.;	
-graph export long.eps, replace fontface(Times);
+*Save the figure.  ;	
+graph export long.pdf, replace fontface(Times);
 
 
 *******************************************************************************************************************;
@@ -122,7 +122,7 @@ local temp = q(2008q1);
 
 *Make the figure.  The first line plots the 2 data series. The rest of the code formats the figure.;
 *Note: if you name the graphs they will open as tabs in the viewer, rather than replace the previous graph.; 
-graph twoway (tsline  hp_m_y_1 hp_vel_1, lc(blue red ) lp(solid dash ) yline(0)  
+graph twoway (tsline  hp_m_y_1 hp_vel_1, lc(blue red ) lp(solid dash ) yline(0, lc(black))  
 	ylab(-5.0 -2.5 0 2.5 5.0 7.5,nogrid tp(outside) axis(1) format(%02.1f))
 	tti("")
 	yti("{bf} Deviation from trend (percent)", margin(medsmall) axis(1))
@@ -133,8 +133,8 @@ graph twoway (tsline  hp_m_y_1 hp_vel_1, lc(blue red ) lp(solid dash ) yline(0)
 	graphregion(color(white) )
 	name(short_1));
 
-*Save the figure.  On a PC, you can't directly save to PDF.;	
-graph export short_1.eps, replace fontface(Times);
+*Save the figure.  ;	
+graph export short_1.pdf, replace fontface(Times);
 
 
 *******************************************************************************************************************;
@@ -176,8 +176,8 @@ graph twoway (tsline  greek_rate infl if tin(1985m1, 2005m12), lc(blue red ) lp(
 	text(6.5 `temp' "Inflation rate", place(w))
 	graphregion(color(white) ));
 
-*Save the figure.  On a PC, you can't directly save to PDF.;	
-graph export greece.eps, replace fontface(Times);
+*Save the figure. ;	
+graph export greece.pdf, replace fontface(Times);
 
 
 

@@ -51,7 +51,7 @@ local temp3 = m(2002m8);
 
 *Make the figure.  The first 2 lines plot the 4 data series. The rest of the code formats the figure.;
 *Note: if you name the graphs they will open as tabs in the viewer, rather than replace the previous graph.; 
-graph twoway tsline idx_eu idx_jp  idx_ch idx_al if tin(2001m1, 2014m6), 
+graph twoway tsline idx_eu idx_jp  idx_ch idx_al if tin(2001m1, 2015m6), 
 	lp(solid dash dash_dot longdash_dot ) lc(blue red black purple)
 	ylab(,nogrid tp(outside))
 	tlab(2001m1 2003m1 2005m1 2007m1 2009m1 2011m1 2013m1 2015m1,nogrid tp(outside))
@@ -66,8 +66,8 @@ graph twoway tsline idx_eu idx_jp  idx_ch idx_al if tin(2001m1, 2014m6),
 	graphregion(color(white))
 	name(exchange);
 
-*Save the figure.  On a PC, you can't directly save to PDF.;		
-graph export exchange.eps, replace fontface(Times);
+*Save the figure.  ;		
+graph export exchange.pdf, replace fontface(Times);
 
 
 *******************************************************************************************************************;
@@ -107,8 +107,8 @@ graph twoway (tsline  dep inf_diff, lc(blue red) lp(solid dash)
 	graphregion(color(white)) 
 	name(venezuela) );
 	
-*Save the figure.  On a PC, you can't directly save to PDF.;		
-graph export venezuela.eps, replace fontface(Times);
+*Save the figure. ;		
+graph export venezuela.pdf, replace fontface(Times);
 
 
 *******************************************************************************************************************;
@@ -140,7 +140,7 @@ local temp = m(2004m3);
 
 *Make the figure.  The first line plots the 2 data series. The rest of the code formats the figure.;
 *Note: if you name the graphs they will open as tabs in the viewer, rather than replace the previous graph.; 
-graph twoway (tsline  dep inf_diff  if tin(2000m1, 2014m6), lc(blue red) lp(solid dash)  
+graph twoway (tsline  dep inf_diff  if tin(2000m1, 2015m6), lc(blue red) lp(solid dash)  
 	ylab(,nogrid tp(outside) axis(1))
 	tti("")
 	yti("{bf} Rate (percent)", margin(medsmall) axis(1))
@@ -151,8 +151,8 @@ graph twoway (tsline  dep inf_diff  if tin(2000m1, 2014m6), lc(blue red) lp(soli
 	graphregion(color(white) )
 	name(us_eruor) );
 
-*Save the figure.  On a PC, you can't directly save to PDF.;		
-graph export us_euro.eps, replace fontface(Times);
+*Save the figure. ;		
+graph export us_euro.pdf, replace fontface(Times);
 
 
 

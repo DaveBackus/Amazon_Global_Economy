@@ -1,10 +1,18 @@
+*******************************************************************************;
+**This file creates the files 
+**tab_nipa_expenditure.tex
+**tab_nipa_income.tex
+**which are used in the ``macro data" chapter.
+********************************************************************************;
+
+
 # delimit;
 clear all;
 set varabbrev off;
 set more off;
 cd "C:\Users\kruhl\GitHub\Amazon_Global_Economy\Tables";
 
-local table_year = 2013;		/*Year of the data for the table*/
+local table_year = 2014;		/*Year of the data for the table*/
 
 /*--------------------------------------------------------------------------------------------------*/
 /*TABLE 2.4*/
