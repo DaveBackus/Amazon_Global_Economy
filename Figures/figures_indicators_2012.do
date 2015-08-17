@@ -354,7 +354,7 @@ graph export xcsurvey.pdf, replace fontface(Times);
 * IC4WSA = 4-week moving average of initial claims (weekly);
 
 local start_date 1970m1;
-local end_date 2015m6;
+local end_date 2015m7;
 
 *Load all the data we will need from FRED. It's easiest to grab all the annual, monthly and quarterly data separately;  
 *Drop the FRED supplied string variable "date" and create a STATA date variable.; 
